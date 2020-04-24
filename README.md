@@ -29,6 +29,11 @@ OpenGXT uses reStructuredText with [Sphinx](http://www.sphinx-doc.org).
    make html
 ```
 
+### Preview
+
+![screenshot](https://github.com/mangosystem/opengxt_docs/blob/master/images/OpenGXT-Online-processes.png?width=600)
+
+
 ## Sphinx Syntax
 
   - For more information, please see:
