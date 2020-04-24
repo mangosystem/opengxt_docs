@@ -1,0 +1,338 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ko" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ko" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>폴리곤 피처레이어로 래스터 추출 &mdash; OpenGXT for Server 1.0 문서</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="색인" href="../../../genindex.html" />
+    <link rel="search" title="검색" href="../../../search.html" />
+    <link rel="next" title="래스터 조건 평가" href="rastercon.html" />
+    <link rel="prev" title="원으로 래스터 추출" href="rasterclipbycircle.html" /> 
+  
+  <!-- BOTTOM RIGHT RIBBON: START COPYING HERE -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+  <!-- BOTTOM RIGHT RIBBON: END COPYING HERE -->
+  
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> OpenGXT for Server
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0-stable
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="문서에서 검색하기" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">OpenGXT 알아보기</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">OpenGXT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html#id5">라이선스</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html#id6">참여하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html#id7">활용사례</a></li>
+</ul>
+<p class="caption"><span class="caption-text">OGC 서비스 이해하기</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../webprocessingservice/index.html">Open Geospatial Consortium (OGC)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../webprocessingservice/index.html#web-processing-service">Web Processing Service</a></li>
+</ul>
+<p class="caption"><span class="caption-text">설치하기</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../install/index.html">GeoServer에 설치하기</a></li>
+</ul>
+<p class="caption"><span class="caption-text">시작하기</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart/index.html">GeoServer에서 시작하기</a></li>
+</ul>
+<p class="caption"><span class="caption-text">분석 프로세스</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">분석 프로세스 개요</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html#id2">벡터 데이터 분석</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html#id3">래스터 데이터 분석</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">래스터 분석 프로세스</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../rasterdescriptive/index.html">기술통계(Raster Descriptive)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../conversion/index.html">변환(Conversion)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../classification/index.html">분류(Classification)</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">래스터 데이터 추출(Extraction)</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="rasterextraction.html">셀값으로 래스터 추출</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rasterclipbygeometry.html">폴리곤으로 래스터 추출</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rasterclipbyextent.html">영역으로 래스터 추출</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rasterclipbycircle.html">원으로 래스터 추출</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">폴리곤 피처레이어로 래스터 추출</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rastercon.html">래스터 조건 평가</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rastersetnull.html">래스터 Null값 설정</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../density/index.html">밀도분석(Density)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../distance/index.html">거리분석(Distance)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../math/index.html">수학연산(Math)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../interpolation/index.html">공간내삽(Interpolation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../zonal/index.html">구역통계(Zonal Statistics)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../projection/index.html">좌표변환(Projection)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../surface/index.html">지형분석(Surface Analysis)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../utilities/index.html">래스터 처리 도구(Utilities)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html#id4">공간통계 분석</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">OpenGXT for Server</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">OpenGXT</a> &raquo;</li>
+        
+          <li><a href="../../index.html">분석 프로세스 개요</a> &raquo;</li>
+        
+          <li><a href="../index.html">래스터 분석 프로세스</a> &raquo;</li>
+        
+          <li><a href="index.html">래스터 데이터 추출(Extraction)</a> &raquo;</li>
+        
+      <li>폴리곤 피처레이어로 래스터 추출</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <!-- a href="../../../_sources/processes/raster/extraction/rasterclipbyfeatures.rst.txt" rel="nofollow"> View page source</a -->
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="rasterclipbyfeatures">
+<span id="id1"></span><h1>폴리곤 피처레이어로 래스터 추출<a class="headerlink" href="#rasterclipbyfeatures" title="제목 주소">¶</a></h1>
+<p>폴리곤 피처레이어로 래스터를 추출합니다.</p>
+<p><strong>Syntax</strong></p>
+<p>RasterClipByFeatures (GridCoverage2D inputCoverage, SimpleFeatureCollection cropFeatures) : GridCoverage2D</p>
+<p><strong>Input Parameters</strong></p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 50%" />
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Identifier</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+<td><p><strong>Type</strong></p></td>
+<td><p><strong>Default</strong></p></td>
+<td><p><strong>Required</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>inputCoverage</p></td>
+<td><p>잘라낼 입력 래스터 레이어입니다.</p></td>
+<td><p>GridCoverage2D</p></td>
+<td></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>cropFeatures</p></td>
+<td><p>래스터를 잘라낼 폴리곤 또는 멀티폴리곤 유형의 레이어입니다.</p></td>
+<td><p>SimpleFeatureCollection</p></td>
+<td></td>
+<td><p>✓</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Process Outputs</strong></p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 50%" />
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Identifier</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+<td><p><strong>Type</strong></p></td>
+<td><p><strong>Default</strong></p></td>
+<td><p><strong>Required</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>result</p></td>
+<td><p>잘라낸 출력 래스터 레이어입니다.</p></td>
+<td><p>GridCoverage2D</p></td>
+<td></td>
+<td><p>✓</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Constraints</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>inside 파라미터가 False인 경우 원을 제외한 지역을 반환한다.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Examples</strong></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="rastercon.html" class="btn btn-neutral float-right" title="래스터 조건 평가" accesskey="n" rel="next">다음 <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="rasterclipbycircle.html" class="btn btn-neutral float-left" title="원으로 래스터 추출" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 이전</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2010-2020, Mango System inc., CC-SA
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+  <!-- BOTTOM RIGHT RIBBON: START COPYING HERE -->
+  <a class="github-fork-ribbon right-bottom fixed" href="https://github.com/mapplus/spatial_statistics_for_geotools_udig" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+  <!-- BOTTOM RIGHT RIBBON: END COPYING HERE -->
+
+</body>
+</html>
