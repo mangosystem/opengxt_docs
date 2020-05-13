@@ -7,7 +7,7 @@
 
 OpenGXT documentation is provided using a [Attribution 3.0 Unported](LICENSE.md) license.
 
-  - [GitHub](https://github.com/mapplus/spatial_statistics_for_geotools_udig)
+  - [GitHub](https://github.com/mapplus/opengxt)
   - [OpenGXT for Server online documentation](http://www.mangosystem.com:8080/opengxt)
 
 ## How to write Documentation

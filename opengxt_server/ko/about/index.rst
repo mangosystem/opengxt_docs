@@ -24,15 +24,15 @@ OpenGXT의 공간분석기능은 Geometry, 벡터, 래스터, 공간통계, 사�
 -----------------------------
 **GeoTools Developer Guide**
 
-  - `Korean v1.0 - 2MB(PDF) <https://github.com/mapplus/spatial_statistics_for_geotools_udig/blob/master/docs/manual/GeoTools_Process_1.0_Developer_Guide_ko_v.1.0.pdf>`_  
-  - `Korean v1.0-latest - 2MB(PDF) <https://github.com/mapplus/spatial_statistics_for_geotools_udig/blob/master/docs/manual/GeoTools_Process_1.0_Developer_Guide_ko_v.1.latest.pdf>`_  
+  - `Korean v1.0 - 2MB(PDF) <https://github.com/mangosystem/opengxt/blob/master/docs/manual/GeoTools_Process_1.0_Developer_Guide_ko_v.1.0.pdf>`_  
+  - `Korean v1.0-latest - 2MB(PDF) <https://github.com/mangosystem/opengxt/blob/master/docs/manual/GeoTools_Process_1.0_Developer_Guide_ko_v.1.latest.pdf>`_  
 
 
 **GeoServer WPS Processes Manual**
 
-  - `Korean v1.0 - 2MB(PDF) <https://github.com/mapplus/spatial_statistics_for_geotools_udig/blob/master/docs/manual/GeoServer_WPS_1.0_User_Manual_ko_v.1.0.pdf>`_  
-  - `Korean v2.x-latest - 33MB(PDF) <https://github.com/mapplus/spatial_statistics_for_geotools_udig/blob/master/docs/manual/GeoServer_WPS_1.0_User_Manual_ko_v.2.latest.pdf>`_  
-  - `English v2.x-latest - 21MB(PDF) <https://github.com/mapplus/spatial_statistics_for_geotools_udig/blob/master/docs/manual/GeoServer_WPS_1.0_User_Manual_en_v.2.latest.pdf>`_  
+  - `Korean v1.0 - 2MB(PDF) <https://github.com/mangosystem/opengxt/blob/master/docs/manual/GeoServer_WPS_1.0_User_Manual_ko_v.1.0.pdf>`_  
+  - `Korean v2.x-latest - 33MB(PDF) <https://github.com/mangosystem/opengxt/blob/master/docs/manual/GeoServer_WPS_1.0_User_Manual_ko_v.2.latest.pdf>`_  
+  - `English v2.x-latest - 21MB(PDF) <https://github.com/mangosystem/opengxt/blob/master/docs/manual/GeoServer_WPS_1.0_User_Manual_en_v.2.latest.pdf>`_  
 
 
 **uDig Processing Toolbox Manual**
@@ -64,7 +64,7 @@ OpenGXT의 공간분석기능은 Geometry, 벡터, 래스터, 공간통계, 사�
 
 OpenGXT는 소스코드에서부터, 지역화, 배포에 이르기까지 모든 과정이 공개되어 있으며, GitHub, Transifex, SourceForge 등 오픈소스를 지원하는 플랫폼을 활용합니다.
 
-  - `GitHub <https://github.com/mapplus/spatial_statistics_for_geotools_udig>`_  
+  - `GitHub <https://github.com/mangosystem/opengxt>`_  
   - `Transifex 지역화 <https://www.transifex.com/mangosystem/ss-rd/dashboard>`_  
   - `SourceForge 배포 <https://sourceforge.net/projects/mango-spatialstatistics>`_  
 

@@ -13,7 +13,7 @@ OGC 국제표준과 Open Source GIS에 기반하여 개발한 공간(통계)분�
 
 OpenGXT는 오픈소스로 공개되어 있으며 GitHub에서 확인이 가능합니다.
 
-  - `OpenGXT on GitHub <https://github.com/mapplus/spatial_statistics_for_geotools_udig/>`_
+  - `OpenGXT on GitHub <https://github.com/mangosystem/opengxt/>`_
 
 .. image:: images/architecture.png
 
