@@ -19,4 +19,5 @@
    rastertri
    rasterroughness
    rastercurvature
+   rastercutfill
    rasterflowdirection

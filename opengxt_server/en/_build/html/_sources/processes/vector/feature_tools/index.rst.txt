@@ -13,14 +13,13 @@ These processes are for conversions such as Geometry type conversion, and format
    multiparttosinglepart
    featureenvelopetopolygon
    pointstoline
-   ringmap
-   windrosemap
    hublinesbyid
    hublinesbydistance
    featuretoline
    featuretopolygon
    verticestopoints
    repairgeometry
+   forcedimension
    pointsalonglines
    polygonsalonglines
    splitlineatpoint
@@ -32,5 +31,7 @@ These processes are for conversions such as Geometry type conversion, and format
    featuretominimumrectangle
    featuretoconvexhull
    featuretominimumboundingcircle
+   ringmap
+   windrosemap
    flowmap
    reproject

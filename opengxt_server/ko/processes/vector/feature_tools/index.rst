@@ -13,14 +13,13 @@
    multiparttosinglepart
    featureenvelopetopolygon
    pointstoline
-   ringmap
-   windrosemap
    hublinesbyid
    hublinesbydistance
    featuretoline
    featuretopolygon
    verticestopoints
    repairgeometry
+   forcedimension
    pointsalonglines
    polygonsalonglines
    splitlineatpoint
@@ -32,5 +31,7 @@
    featuretominimumrectangle
    featuretoconvexhull
    featuretominimumboundingcircle
+   ringmap
+   windrosemap
    flowmap
    reproject

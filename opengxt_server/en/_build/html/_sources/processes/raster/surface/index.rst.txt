@@ -19,4 +19,5 @@ Perform the terrain analysis.
    rastertri
    rasterroughness
    rastercurvature
+   rastercutfill
    rasterflowdirection
