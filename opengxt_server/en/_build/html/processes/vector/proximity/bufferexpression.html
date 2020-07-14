@@ -215,7 +215,7 @@
 <span id="bufferexpression"></span><h1>Buffer Features<a class="headerlink" href="#buffer-features" title="Permalink to this headline">¶</a></h1>
 <p>Buffers a features using a certain distance expression.</p>
 <p><strong>Syntax</strong></p>
-<p>BufferFeatures (SimpleFeatureCollection inputFeatures, Expression distance, DistanceUnit distanceUnit, Integer quadrantSegments) : SimpleFeatureCollection</p>
+<p>BufferFeatures (SimpleFeatureCollection inputFeatures, Expression distance, DistanceUnit distanceUnit, Integer quadrantSegments, BufferEndCapStyle endCapStyle, BufferJoinStyle joinStyle): SimpleFeatureCollection</p>
 <p><strong>Input Parameters</strong></p>
 <table class="colwidths-given docutils align-default">
 <colgroup>
@@ -256,6 +256,18 @@
 <td><p>8</p></td>
 <td></td>
 </tr>
+<tr class="row-even"><td><p>endCapStyle</p></td>
+<td><p>The end cap style parameter controls how line endings are handled in the buffer.</p></td>
+<td><p>BufferEndCapStyle</p></td>
+<td><p>Round</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>joinStyle</p></td>
+<td><p>The join style parameter specifies whether round, mitre or beveled joins should be used when offsetting corners in a line.</p></td>
+<td><p>BufferJoinStyle</p></td>
+<td><p>Round</p></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <p><strong>Process Outputs</strong></p>
@@ -286,6 +298,8 @@
 <blockquote>
 <div><ul class="simple">
 <li><p>distanceUnit: Default(Default), Meters, Kilometers, Inches, Feet, Yards, Miles, NauticalMiles</p></li>
+<li><p>endCapStyle: Round(기본값), Flat, Square</p></li>
+<li><p>joinStyle: Round(기본값), Mitre, Bevel</p></li>
 </ul>
 </div></blockquote>
 <p><strong>Examples</strong></p>

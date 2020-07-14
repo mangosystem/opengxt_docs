@@ -283,6 +283,89 @@
 </ul>
 </div></blockquote>
 <p><strong>Examples</strong></p>
+<p>다음은 mincircle( [geom] ) 을 처리한 예입니다. 이와 같이 필드의 연산을 이용한 속성값 계산뿐만 아니라 Geometry 변환까지 처리가 가능합니다.</p>
+<blockquote>
+<div><img alt="../../../_images/calculatefield.png" src="../../../_images/calculatefield.png" />
+</div></blockquote>
+<p><strong>Advanced Expression</strong></p>
+<p>Expression 파라미터의 다양한 활용 예제이며, [geom] 은 PostGIS, Shapefile 등의 Geometry 필드 이름입니다.</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 45%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>구분</strong></p></td>
+<td><p><strong>표현식</strong></p></td>
+<td><p><strong>반환값</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>일반 수식</p></td>
+<td><p>round([pop2008] / (area( [geom] ) / 1000000)).</p></td>
+<td><p>Numeric</p></td>
+</tr>
+<tr class="row-odd"><td><p>면적</p></td>
+<td><p>area( [geom] )</p></td>
+<td><p>Numeric</p></td>
+</tr>
+<tr class="row-even"><td><p>둘레/길이</p></td>
+<td><p>geomLength( [geom] )</p></td>
+<td><p>Numeric</p></td>
+</tr>
+<tr class="row-odd"><td><p>중심점의 X 좌표</p></td>
+<td><p>getX( centroid( [geom]))</p></td>
+<td><p>Numeric</p></td>
+</tr>
+<tr class="row-even"><td><p>폴리곤을 라인으로</p></td>
+<td><p>boundary( [geom] )</p></td>
+<td><p>Geometry</p></td>
+</tr>
+<tr class="row-odd"><td><p>버퍼</p></td>
+<td><p>bufferWithSegments( [geom], 250, 16)</p></td>
+<td><p>Polygon</p></td>
+</tr>
+<tr class="row-even"><td><p>무게중심점</p></td>
+<td><p>centroid( [geom])</p></td>
+<td><p>Point</p></td>
+</tr>
+<tr class="row-odd"><td><p>폴리곤에 포함되는 내부 점</p></td>
+<td><p>interiorPoint( [geom] )</p></td>
+<td><p>Point</p></td>
+</tr>
+<tr class="row-even"><td><p>폴리곤 또는 라인의 시작점</p></td>
+<td><p>startPoint( [geom] )</p></td>
+<td><p>Point</p></td>
+</tr>
+<tr class="row-odd"><td><p>폴리곤 또는 라인의 끝점</p></td>
+<td><p>endPoint( [geom])</p></td>
+<td><p>Point</p></td>
+</tr>
+<tr class="row-even"><td><p>폴리곤, 라인, 멀티포인트의Convex Hull</p></td>
+<td><p>convexHull( [geom] )</p></td>
+<td><p>Polygon</p></td>
+</tr>
+<tr class="row-odd"><td><p>폴리곤, 라인, 멀티포인트를 둘러싸는 최소 원</p></td>
+<td><p>mincircle( [geom] )</p></td>
+<td><p>Polygon</p></td>
+</tr>
+<tr class="row-even"><td><p>폴리곤, 라인, 멀티포인트를 포함하는 영역의 최소 반경 라인</p></td>
+<td><p>minimumdiameter( [geom] )</p></td>
+<td><p>Line</p></td>
+</tr>
+<tr class="row-odd"><td><p>폴리곤, 라인, 멀티포인트를 포함하는 영역의 최소 반경 영역</p></td>
+<td><p>minrectangle( [geom] )</p></td>
+<td><p>Polygon</p></td>
+</tr>
+<tr class="row-even"><td><p>폴리곤, 라인, 멀티포인트를 포함하는 최소 8각형 영역</p></td>
+<td><p>octagonalenvelope( [geom] )</p></td>
+<td><p>Polygon</p></td>
+</tr>
+<tr class="row-odd"><td><p>x offset, y offset 만큼 이동</p></td>
+<td><p>offset( [geom], 4000, 3000)</p></td>
+<td><p>Geometry</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 
 

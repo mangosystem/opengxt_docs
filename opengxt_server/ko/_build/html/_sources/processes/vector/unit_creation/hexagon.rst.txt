@@ -69,3 +69,7 @@ Hexagon (ReferencedEnvelope extent, SimpleFeatureCollection boundsSource, Double
 
 
 **Examples**
+
+폴리곤 레이어 영역을 extent와 boundsSource로 설정하고 1500(extent의 좌표 단위) 크기의 Hexagonal Grid를 생성 후, 각 셀별로 포함되는 포인트의 수를 계산 후 주제도를 작성한 예입니다.
+
+  .. image:: images/hexagon.png

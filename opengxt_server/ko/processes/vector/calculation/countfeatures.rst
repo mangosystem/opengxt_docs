@@ -54,3 +54,5 @@ CountFeatures (SimpleFeatureCollection inputFeatures, Filter filter) : Integer
  - 레이어와 필터를 이용하여 피처의 수를 계산하여 반환한다.
 
 **Examples**
+
+설정한 필터 표현식과 일치하는 피처의 개수를 Integer 값으로 반환합니다.

@@ -54,3 +54,7 @@ ClipWithFeatures (SimpleFeatureCollection inputFeatures, SimpleFeatureCollection
  - clipFeatures는 반드시 Polygon 또는 MultiPolygon 피처 타입이어야 한다.
 
 **Examples**
+
+임의의 폴리곤 레이어를 이용하여 읍면동경계 폴리곤 레이어를 clip한 예입니다.
+
+  .. image:: images/clipwithfeatures.png

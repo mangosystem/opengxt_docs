@@ -61,3 +61,5 @@ SumAreas (SimpleFeatureCollection inputFeatures, Filter filter, AreaUnit areaUni
  - 폴리곤 레이어와 필터를 이용하여 피처의 Geometry 면적 합을 반환한다.
 
 **Examples**
+
+폴리곤 레이어의 모든 피처의 면적 합을 Double 값으로 반환합니다.

@@ -54,3 +54,7 @@ ClipWithGeometry (SimpleFeatureCollection inputFeatures, Geometry clipGeometry) 
  - clipGeometry는 반드시 Polygon 또는 MultiPolygon이어야 한다.
 
 **Examples**
+
+읍면동 경계 데이터에서 폴리곤 지오메트리로 clip한 결과입니다.
+
+  .. image:: images/clipwithgeometry.png

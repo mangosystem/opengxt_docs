@@ -70,3 +70,7 @@ SingleSidedBuffer (SimpleFeatureCollection inputFeatures, Expression distance, D
 
 
 **Examples**
+
+버퍼 거리값이 양수인 경우 다음과 같인 라인 진행방향의 왼쪽을 기준으로 버퍼가 생성됩니다.
+
+  .. image:: images/singlesidedbuffer.png

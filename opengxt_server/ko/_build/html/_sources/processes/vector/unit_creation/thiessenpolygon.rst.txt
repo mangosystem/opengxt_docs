@@ -64,3 +64,7 @@ ThiessenPolygon (SimpleFeatureCollection inputFeatures, ThiessenAttributeMode at
 
 
 **Examples**
+
+전국의 기차/전철역을 기준으로 현재화면 범위의 Thiessen Polygon을 생성한 예입니다.
+
+  .. image:: images/thiessenpolygon.png

@@ -56,3 +56,7 @@ Update (SimpleFeatureCollection inputFeatures, SimpleFeatureCollection updateFea
 
 
 **Examples**
+
+두 폴리곤 레이어간 Update Overlay 분석을 수행한 결과입니다. Input 레이어와 Update 레이어가 중첩되는 부분은 Update 레이어의 피처로 대체됩니다.
+
+  .. image:: images/update.png

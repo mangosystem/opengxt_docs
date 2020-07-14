@@ -55,3 +55,7 @@ RandomPointsPerFeatures (SimpleFeatureCollection polygonFeatures, Expression exp
  - 수식을 이용하는 경우 폴리곤 레이어의 각 피처별로 랜덤 포인트의 개수 설정이 가능하다.
 
 **Examples**
+
+폴리곤 레이어의 지역별 인구밀도 속성정보를 이용한 Random Point 생성 예입니다.
+
+  .. image:: images/randompointsperfeatures.png

@@ -75,3 +75,7 @@ CalculateXYCoordinate (SimpleFeatureCollection inputFeatures, String xField, Str
 
 
 **Examples**
+
+폴리곤 레이어의 중심값을 기준으로 xcoord, ycoord 필드에 targetCRS를 EPSG:4326(WGS84 경위도 좌표계)으로 계산한 예입니다.
+
+  .. image:: images/calculatexycoordinate.png

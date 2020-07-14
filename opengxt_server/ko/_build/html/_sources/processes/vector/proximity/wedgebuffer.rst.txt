@@ -85,3 +85,7 @@ WedgeBuffer (SimpleFeatureCollection pointFeatures, Expression azimuth, Expressi
 
 
 **Examples**
+
+포인트 레이어의 속성을 이용하여 Wedge 버퍼를 수행한 결과입니다.
+
+  .. image:: images/wedgebuffer.png

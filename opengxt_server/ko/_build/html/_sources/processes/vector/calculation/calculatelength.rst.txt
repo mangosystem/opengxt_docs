@@ -63,3 +63,7 @@ CalculateLength (SimpleFeatureCollection inputFeatures, String lengthField, Dist
 
 
 **Examples**
+
+폴리곤의 면적값을 ara 필드에 계산한 결과입니다.
+
+  .. image:: images/calculatelength.png

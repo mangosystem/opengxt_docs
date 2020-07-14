@@ -75,3 +75,8 @@ Near (SimpleFeatureCollection inputFeatures, SimpleFeatureCollection nearFeature
  - maximumDistance가 설정되고 설정된 거리 안에 피처가 없는 경우 Null값이 입력된다.
 
 **Examples**
+
+포인트 레이어의 속성을 이용하여 Wedge 버퍼를 수행한 결과입니다.
+
+  .. image:: images/near.png
+

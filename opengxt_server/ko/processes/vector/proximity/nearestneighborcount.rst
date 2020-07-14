@@ -75,3 +75,7 @@ NearestNeighborCount (SimpleFeatureCollection inputFeatures, String countField, 
 
 
 **Examples**
+
+주요도로에서 500미터 반경 내의 포인트 수를 graduated symbol로 표현한 결과입니다.
+
+  .. image:: images/nearestneighborcount.png

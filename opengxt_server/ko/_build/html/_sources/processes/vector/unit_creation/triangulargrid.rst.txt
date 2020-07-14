@@ -67,3 +67,7 @@ TriangularGrid (ReferencedEnvelope extent, SimpleFeatureCollection boundsSource,
  - boundsSource 파라미터를 설정한 경우 boundsSource와 Intersect되는 삼각형만 생성한다.
 
 **Examples**
+
+폴리곤 레이어 영역을 extent와 boundsSource로 설정하고 반경 2500(extent의 좌표 단위)의 Triangular 격자를 생성한 예입니다.
+
+  .. image:: images/triangulargrid.png

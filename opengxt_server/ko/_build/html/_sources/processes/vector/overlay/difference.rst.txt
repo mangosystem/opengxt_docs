@@ -54,3 +54,7 @@ Difference (SimpleFeatureCollection inputFeatures, SimpleFeatureCollection diffe
  - 출력 레이어의 피처 타입과 필드는 inputFeatures 레이어를 따른다.
 
 **Examples**
+
+두 폴리곤 레이어간 Difference Overlay 분석을 수행한 결과입니다.
+
+  .. image:: images/difference.png

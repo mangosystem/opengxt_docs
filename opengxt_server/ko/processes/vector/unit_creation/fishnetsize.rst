@@ -74,3 +74,7 @@ FishnetSize (ReferencedEnvelope extent, SimpleFeatureCollection boundsSource, Bo
 
 
 **Examples**
+
+폴리곤 레이어 영역을 extent와 boundsSource로 설정하고 가로, 세로 2,500 간격(extent의 좌표 단위)의 Fishnet 격자를 생성한 예입니다.
+
+  .. image:: images/fishnetsize.png

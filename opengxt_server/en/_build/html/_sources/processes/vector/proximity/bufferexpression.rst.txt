@@ -7,7 +7,7 @@ Buffers a features using a certain distance expression.
 
 **Syntax**
 
-BufferFeatures (SimpleFeatureCollection inputFeatures, Expression distance, DistanceUnit distanceUnit, Integer quadrantSegments) : SimpleFeatureCollection
+BufferFeatures (SimpleFeatureCollection inputFeatures, Expression distance, DistanceUnit distanceUnit, Integer quadrantSegments, BufferEndCapStyle endCapStyle, BufferJoinStyle joinStyle): SimpleFeatureCollection
 
 **Input Parameters**
 
@@ -44,6 +44,18 @@ BufferFeatures (SimpleFeatureCollection inputFeatures, Expression distance, Dist
      - 8
      - 
 
+   * - endCapStyle
+     - The end cap style parameter controls how line endings are handled in the buffer.
+     - BufferEndCapStyle
+     - Round
+     -
+
+   * - joinStyle
+     - The join style parameter specifies whether round, mitre or beveled joins should be used when offsetting corners in a line.
+     - BufferJoinStyle
+     - Round
+     -
+
 **Process Outputs**
 
 .. list-table::
@@ -64,6 +76,8 @@ BufferFeatures (SimpleFeatureCollection inputFeatures, Expression distance, Dist
 **Constraints**
 
  - distanceUnit: Default(Default), Meters, Kilometers, Inches, Feet, Yards, Miles, NauticalMiles
+ - endCapStyle: Round(기본값), Flat, Square
+ - joinStyle: Round(기본값), Mitre, Bevel
 
 **Examples**
 

@@ -76,3 +76,7 @@ CalculateArea (SimpleFeatureCollection inputFeatures, String areaField, AreaUnit
 
 
 **Examples**
+
+폴리곤의 면적값을 ara 필드에 계산한 결과입니다.
+
+  .. image:: images/calculatearea.png

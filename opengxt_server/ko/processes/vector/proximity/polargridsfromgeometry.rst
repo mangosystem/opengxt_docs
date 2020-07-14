@@ -82,3 +82,7 @@ PolarGridsFromGeometry (Geometry origin, CoordinateReferenceSystem forcedCRS, St
 
 
 **Examples**
+
+포인트(POINT (14136522.58319524 4513573.676204068))를 중심으로 반경 500, 1000, 1500, 2000, 2500 미터 간격의 Polar Grid를 생성한 결과입니다.
+
+  .. image:: images/polargridsfromgeometry.png

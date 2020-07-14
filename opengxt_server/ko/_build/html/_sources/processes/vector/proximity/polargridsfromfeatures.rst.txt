@@ -76,3 +76,7 @@ PolarGridsFromFeatures (SimpleFeatureCollection origin, String radius, DistanceU
 
 
 **Examples**
+
+시군구청을 기준으로 반경 250,500,750,1000,1250,1500 미터의 8방향 Polar Grid를 생성 후 각 셀마다 아파트의 수를 계산할 결과를 지도화한 결과입니다.
+
+  .. image:: images/polargridsfromfeatures.png

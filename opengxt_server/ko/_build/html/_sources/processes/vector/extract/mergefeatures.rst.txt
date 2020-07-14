@@ -51,3 +51,7 @@ MergeFeatures (SimpleFeatureCollection features) : SimpleFeatureCollection
 
 
 **Examples**
+
+3개의 폴리곤 레이어를 하나의 레이어로 병합한 결과입니다.
+
+  .. image:: images/mergefeatures.png

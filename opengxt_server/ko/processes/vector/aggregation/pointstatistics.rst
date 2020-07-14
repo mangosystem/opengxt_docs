@@ -7,7 +7,7 @@
 
 **Syntax**
 
-PointStatistics (SimpleFeatureCollection polygonFeatures, SimpleFeatureCollection pointFeatures, String countField, String statisticsFields) : SimpleFeatureCollection
+PointStatistics (SimpleFeatureCollection polygonFeatures, SimpleFeatureCollection pointFeatures, String countField, String statisticsFields): SimpleFeatureCollection
 
 **Input Parameters**
 
@@ -105,3 +105,7 @@ PointStatistics (SimpleFeatureCollection polygonFeatures, SimpleFeatureCollectio
 
 
 **Examples**
+
+시군구별 주유소의 유가 평균(Mean.price)을 계산 후 지도화한 결과입니다.
+
+  .. image:: images/pointstatistics.png

@@ -75,3 +75,7 @@ MultipleRingBuffer (SimpleFeatureCollection inputFeatures, String distances, Dis
 
 
 **Examples**
+
+시군구청 포인트를 250,500,750,1000,1250,1500미터 간격으로 Buffer 분석을 처리한 결과입니다.
+
+  .. image:: images/multipleringbuffer.png

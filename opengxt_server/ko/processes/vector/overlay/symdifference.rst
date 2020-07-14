@@ -56,3 +56,7 @@ SymDifference (SimpleFeatureCollection inputFeatures, SimpleFeatureCollection di
 
 
 **Examples**
+
+두 폴리곤 레이어간 Symmetrical Difference Overlay 분석을 수행한 결과입니다. 두 레이어의 속성값을 모두 포함합니다.
+
+  .. image:: images/symdifference.png

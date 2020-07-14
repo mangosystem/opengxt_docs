@@ -62,3 +62,7 @@ SelectFeatures (SimpleFeatureCollection inputFeatures, Filter filter, String att
 
 
 **Examples**
+
+서울시 읍면동 경계 데이터에서 강남구만 선택하고 geom, sgg_nm, emd_cd, emd_nm 필드만 추출한 결과입니다.
+
+  .. image:: images/selectfeatures.png

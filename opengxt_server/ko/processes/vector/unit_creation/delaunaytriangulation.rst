@@ -54,3 +54,7 @@ DelaunayTriangulation (SimpleFeatureCollection inputFeatures, Geometry clipArea)
  - clipArea 파라미터가 주어지면 해당 영역으로 클립한 폴리곤을 반환한다.
 
 **Examples**
+
+포인트를 이용하여 행정경계 등 폴리곤 레이어의 영역 내에만 Delaunay Triangulation Polygon을 생성한 예입니다.
+
+  .. image:: images/delaunaytriangulation.png

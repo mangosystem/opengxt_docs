@@ -70,3 +70,7 @@ ExtractValuesToPoints (SimpleFeatureCollection pointFeatures, String valueField,
 
 
 **Examples**
+
+시군구청 포인트 데이터에 DEM의 표고값을 계산한 결과입니다.
+
+  .. image:: images/extractvaluestopoints.png
