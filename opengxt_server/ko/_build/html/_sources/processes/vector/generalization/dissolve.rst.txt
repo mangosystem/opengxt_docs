@@ -103,3 +103,7 @@ Dissolve (SimpleFeatureCollection inputFeatures, String dissolveField, String st
        - CNT_필드명
 
 **Examples**
+
+읍면동 경계를 시군구이름(sgg_nm) 필드와 fst.sid_nm, sum.pop2007, sum.pop2008, sum.pts 집계필드를 설정하고 Dissolve를 수행한 결과입니다.
+
+  .. image:: images/dissolve.png

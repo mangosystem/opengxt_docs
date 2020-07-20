@@ -79,5 +79,12 @@ PointsToLine (SimpleFeatureCollection inputFeatures, String lineField, String so
  - sortField 파라미터를 설정하면 sortField로 정렬한 포인트를 이용하여 라인을 생성한다.
  - closeLine 파라미터가 True인 경우 시작점과 끝점을 연결하여 폴리곤을 생성한다.
 
-
 **Examples**
+
+카테고리와 일련번호를 포함한 포인트를 Line올 변환한 결과입니다. 일련번호 순서에 따라 라인이 생성되며 2개의 카테고리로 구성됩니다.
+
+  .. image:: images/pointstoline1.png
+
+위 예에서 closeLine을 True로 설정하면 폴리곤이 생성됩니다.
+
+  .. image:: images/pointstoline2.png

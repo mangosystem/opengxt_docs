@@ -99,7 +99,7 @@ SpatialOLS (SimpleFeatureCollection inputFeatures, String dependentVariable, Str
 
 a1_2000 필드를 종속변수로, a2_2000, a3_2000, a4_2000 필드를 설명변수로 분석한 결과는 다음의 XML 포맷으로 반환됩니다.
 
-  .. code-block::
+.. code-block:: XML
 
     <?xml version="1.0" encoding="UTF-8"?>
     <OrdinaryLeastSquares>

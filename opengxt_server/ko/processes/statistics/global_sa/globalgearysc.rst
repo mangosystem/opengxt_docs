@@ -82,7 +82,7 @@ GlobalGearysC (SimpleFeatureCollection inputFeatures, String inputField, Spatial
 
 **Examples**
 
-  .. code-block::
+.. code-block:: XML
 
     <?xml version="1.0" encoding="utf-8"?>
     <GlobalGearysC>

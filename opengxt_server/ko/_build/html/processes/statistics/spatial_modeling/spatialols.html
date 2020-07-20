@@ -316,148 +316,146 @@
 </div></blockquote>
 <p><strong>Examples</strong></p>
 <p>a1_2000 필드를 종속변수로, a2_2000, a3_2000, a4_2000 필드를 설명변수로 분석한 결과는 다음의 XML 포맷으로 반환됩니다.</p>
-<blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;OrdinaryLeastSquares&gt;
-  &lt;ModelName&gt;Ordinary Least Squares(OLS) Regression&lt;/ModelName&gt;
-  &lt;Dataset&gt;seoul_series&lt;/Dataset&gt;
-  &lt;DependentVariable&gt;a1_2000&lt;/DependentVariable&gt;
-  &lt;NumberOfObservations&gt;25&lt;/NumberOfObservations&gt;
-  &lt;NumberOfVariables&gt;4&lt;/NumberOfVariables&gt;
-  &lt;DegreesOfFreedom&gt;21&lt;/DegreesOfFreedom&gt;
-  &lt;MeanDependentVar&gt;18229.716524000003&lt;/MeanDependentVar&gt;
-  &lt;SdDependentVar&gt;5222.973372203831&lt;/SdDependentVar&gt;
-  &lt;RSquared&gt;0.2524024367985146&lt;/RSquared&gt;
-  &lt;AdjustedRSquared&gt;0.14560278491258805&lt;/AdjustedRSquared&gt;
-  &lt;SumSquaredResidual&gt;4.8945722348412424E8&lt;/SumSquaredResidual&gt;
-  &lt;SigmaSquare&gt;2.3307486832577344E7&lt;/SigmaSquare&gt;
-  &lt;SeOfRegression&gt;4827.782807104866&lt;/SeOfRegression&gt;
-  &lt;SigmaSquareML&gt;1.957828893936497E7&lt;/SigmaSquareML&gt;
-  &lt;SeOfRegressionML&gt;4424.736030472888&lt;/SeOfRegressionML&gt;
-  &lt;FStatistic&gt;2.363326399800135&lt;/FStatistic&gt;
-  &lt;PValue&gt;0.10015684828181148&lt;/PValue&gt;
-  &lt;LogLikelihood&gt;-245.3476108684226&lt;/LogLikelihood&gt;
-  &lt;AIC&gt;498.6952217368452&lt;/AIC&gt;
-  &lt;AICc&gt;503.8531164736873&lt;/AICc&gt;
-  &lt;SchwarzCriterion&gt;503.57072503631804&lt;/SchwarzCriterion&gt;
-  &lt;Summary&gt;
-    &lt;Variable&gt;
-      &lt;Variable&gt;CONSTANT&lt;/Variable&gt;
-      &lt;Coefficient&gt;-89839.01661165891&lt;/Coefficient&gt;
-      &lt;StandardError&gt;45251.64301979817&lt;/StandardError&gt;
-      &lt;TStatistic&gt;-1.9853205456507557&lt;/TStatistic&gt;
-      &lt;Probability&gt;0.060320415845298396&lt;/Probability&gt;
-    &lt;/Variable&gt;
-    &lt;Variable&gt;
-      &lt;Variable&gt;a2_2000&lt;/Variable&gt;
-      &lt;Coefficient&gt;1015.5016202521613&lt;/Coefficient&gt;
-      &lt;StandardError&gt;459.27386712849943&lt;/StandardError&gt;
-      &lt;TStatistic&gt;2.2111025532572612&lt;/TStatistic&gt;
-      &lt;Probability&gt;0.03825397847242593&lt;/Probability&gt;
-    &lt;/Variable&gt;
-    &lt;Variable&gt;
-      &lt;Variable&gt;a3_2000&lt;/Variable&gt;
-      &lt;Coefficient&gt;657.585445515956&lt;/Coefficient&gt;
-      &lt;StandardError&gt;687.1537990129104&lt;/StandardError&gt;
-      &lt;TStatistic&gt;0.9569698173255696&lt;/TStatistic&gt;
-      &lt;Probability&gt;0.3494719862156815&lt;/Probability&gt;
-    &lt;/Variable&gt;
-    &lt;Variable&gt;
-      &lt;Variable&gt;a4_2000&lt;/Variable&gt;
-      &lt;Coefficient&gt;74.91087027691356&lt;/Coefficient&gt;
-      &lt;StandardError&gt;575.0254410828144&lt;/StandardError&gt;
-      &lt;TStatistic&gt;0.13027401037396014&lt;/TStatistic&gt;
-      &lt;Probability&gt;0.8975891001920921&lt;/Probability&gt;
-    &lt;/Variable&gt;
-  &lt;/Summary&gt;
-  &lt;VarianceInflationFactor&gt;
-    &lt;VIF&gt;
-      &lt;Variable&gt;a2_2000&lt;/Variable&gt;
-      &lt;Value&gt;1.0512492909076563&lt;/Value&gt;
-    &lt;/VIF&gt;
-    &lt;VIF&gt;
-      &lt;Variable&gt;a3_2000&lt;/Variable&gt;
-      &lt;Value&gt;1.219785000060916&lt;/Value&gt;
-    &lt;/VIF&gt;
-    &lt;VIF&gt;
-      &lt;Variable&gt;a4_2000&lt;/Variable&gt;
-      &lt;Value&gt;1.178277144719415&lt;/Value&gt;
-    &lt;/VIF&gt;
-  &lt;/VarianceInflationFactor&gt;
-  &lt;Multicollinearity&gt;124.00930330161376&lt;/Multicollinearity&gt;
-  &lt;NormOfErrors&gt;
-    &lt;Diagnostics&gt;
-      &lt;Category&gt;Test on Normality of Errors&lt;/Category&gt;
-      &lt;Name&gt;Jarque-Bera&lt;/Name&gt;
-      &lt;DeegreesOfFreedom&gt;2.0&lt;/DeegreesOfFreedom&gt;
-      &lt;Value&gt;0.7273519517018467&lt;/Value&gt;
-      &lt;Probability&gt;0.6951163927538146&lt;/Probability&gt;
-    &lt;/Diagnostics&gt;
-  &lt;/NormOfErrors&gt;
-  &lt;HrcDiagnostics&gt;
-    &lt;Diagnostics&gt;
-      &lt;Category&gt;Diagnostics for Heteroskedasticity Random Coefficients&lt;/Category&gt;
-      &lt;Name&gt;Breusch-Pagan&lt;/Name&gt;
-      &lt;DeegreesOfFreedom&gt;3.0&lt;/DeegreesOfFreedom&gt;
-      &lt;Value&gt;5.083212261808894&lt;/Value&gt;
-      &lt;Probability&gt;0.16580435989410658&lt;/Probability&gt;
-    &lt;/Diagnostics&gt;
-    &lt;Diagnostics&gt;
-      &lt;Category&gt;Diagnostics for Heteroskedasticity Random Coefficients&lt;/Category&gt;
-      &lt;Name&gt;Koenker-Bassett&lt;/Name&gt;
-      &lt;DeegreesOfFreedom&gt;3.0&lt;/DeegreesOfFreedom&gt;
-      &lt;Value&gt;6.588607922676707&lt;/Value&gt;
-      &lt;Probability&gt;0.08623276842110539&lt;/Probability&gt;
-    &lt;/Diagnostics&gt;
-  &lt;/HrcDiagnostics&gt;
-  &lt;SpatialDiagnostics&gt;
-    &lt;Diagnostics&gt;
-      &lt;Category&gt;Diagnostics for Spatial Dependence&lt;/Category&gt;
-      &lt;Name&gt;Moran&#39;s I (error)&lt;/Name&gt;
-      &lt;DeegreesOfFreedom&gt;-0.10552682243608924&lt;/DeegreesOfFreedom&gt;
-      &lt;Value&gt;0.3551094963676925&lt;/Value&gt;
-      &lt;Probability&gt;0.7225075633055715&lt;/Probability&gt;
-    &lt;/Diagnostics&gt;
-    &lt;Diagnostics&gt;
-      &lt;Category&gt;Diagnostics for Spatial Dependence&lt;/Category&gt;
-      &lt;Name&gt;Lagrange Multiplier (lag)&lt;/Name&gt;
-      &lt;DeegreesOfFreedom&gt;1.0&lt;/DeegreesOfFreedom&gt;
-      &lt;Value&gt;0.3716414743314847&lt;/Value&gt;
-      &lt;Probability&gt;0.5421108807877426&lt;/Probability&gt;
-    &lt;/Diagnostics&gt;
-    &lt;Diagnostics&gt;
-      &lt;Category&gt;Diagnostics for Spatial Dependence&lt;/Category&gt;
-      &lt;Name&gt;Robust LM (lag)&lt;/Name&gt;
-      &lt;DeegreesOfFreedom&gt;1.0&lt;/DeegreesOfFreedom&gt;
-      &lt;Value&gt;0.09009324883412162&lt;/Value&gt;
-      &lt;Probability&gt;0.5940365045566063&lt;/Probability&gt;
-    &lt;/Diagnostics&gt;
-    &lt;Diagnostics&gt;
-      &lt;Category&gt;Diagnostics for Spatial Dependence&lt;/Category&gt;
-      &lt;Name&gt;Lagrange Multiplier (error)&lt;/Name&gt;
-      &lt;DeegreesOfFreedom&gt;1.0&lt;/DeegreesOfFreedom&gt;
-      &lt;Value&gt;0.5656327223255544&lt;/Value&gt;
-      &lt;Probability&gt;0.4519995940481525&lt;/Probability&gt;
-    &lt;/Diagnostics&gt;
-    &lt;Diagnostics&gt;
-      &lt;Category&gt;Diagnostics for Spatial Dependence&lt;/Category&gt;
-      &lt;Name&gt;Robust LM (error)&lt;/Name&gt;
-      &lt;DeegreesOfFreedom&gt;1.0&lt;/DeegreesOfFreedom&gt;
-      &lt;Value&gt;0.28408449682819137&lt;/Value&gt;
-      &lt;Probability&gt;0.5940365045566063&lt;/Probability&gt;
-    &lt;/Diagnostics&gt;
-    &lt;Diagnostics&gt;
-      &lt;Category&gt;Diagnostics for Spatial Dependence&lt;/Category&gt;
-      &lt;Name&gt;Lagrange Multiplier (SARMA)&lt;/Name&gt;
-      &lt;DeegreesOfFreedom&gt;2.0&lt;/DeegreesOfFreedom&gt;
-      &lt;Value&gt;0.655725971159676&lt;/Value&gt;
-      &lt;Probability&gt;0.7204617265887313&lt;/Probability&gt;
-    &lt;/Diagnostics&gt;
-  &lt;/SpatialDiagnostics&gt;
-&lt;/OrdinaryLeastSquares&gt;
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;OrdinaryLeastSquares&gt;</span>
+  <span class="nt">&lt;ModelName&gt;</span>Ordinary Least Squares(OLS) Regression<span class="nt">&lt;/ModelName&gt;</span>
+  <span class="nt">&lt;Dataset&gt;</span>seoul_series<span class="nt">&lt;/Dataset&gt;</span>
+  <span class="nt">&lt;DependentVariable&gt;</span>a1_2000<span class="nt">&lt;/DependentVariable&gt;</span>
+  <span class="nt">&lt;NumberOfObservations&gt;</span>25<span class="nt">&lt;/NumberOfObservations&gt;</span>
+  <span class="nt">&lt;NumberOfVariables&gt;</span>4<span class="nt">&lt;/NumberOfVariables&gt;</span>
+  <span class="nt">&lt;DegreesOfFreedom&gt;</span>21<span class="nt">&lt;/DegreesOfFreedom&gt;</span>
+  <span class="nt">&lt;MeanDependentVar&gt;</span>18229.716524000003<span class="nt">&lt;/MeanDependentVar&gt;</span>
+  <span class="nt">&lt;SdDependentVar&gt;</span>5222.973372203831<span class="nt">&lt;/SdDependentVar&gt;</span>
+  <span class="nt">&lt;RSquared&gt;</span>0.2524024367985146<span class="nt">&lt;/RSquared&gt;</span>
+  <span class="nt">&lt;AdjustedRSquared&gt;</span>0.14560278491258805<span class="nt">&lt;/AdjustedRSquared&gt;</span>
+  <span class="nt">&lt;SumSquaredResidual&gt;</span>4.8945722348412424E8<span class="nt">&lt;/SumSquaredResidual&gt;</span>
+  <span class="nt">&lt;SigmaSquare&gt;</span>2.3307486832577344E7<span class="nt">&lt;/SigmaSquare&gt;</span>
+  <span class="nt">&lt;SeOfRegression&gt;</span>4827.782807104866<span class="nt">&lt;/SeOfRegression&gt;</span>
+  <span class="nt">&lt;SigmaSquareML&gt;</span>1.957828893936497E7<span class="nt">&lt;/SigmaSquareML&gt;</span>
+  <span class="nt">&lt;SeOfRegressionML&gt;</span>4424.736030472888<span class="nt">&lt;/SeOfRegressionML&gt;</span>
+  <span class="nt">&lt;FStatistic&gt;</span>2.363326399800135<span class="nt">&lt;/FStatistic&gt;</span>
+  <span class="nt">&lt;PValue&gt;</span>0.10015684828181148<span class="nt">&lt;/PValue&gt;</span>
+  <span class="nt">&lt;LogLikelihood&gt;</span>-245.3476108684226<span class="nt">&lt;/LogLikelihood&gt;</span>
+  <span class="nt">&lt;AIC&gt;</span>498.6952217368452<span class="nt">&lt;/AIC&gt;</span>
+  <span class="nt">&lt;AICc&gt;</span>503.8531164736873<span class="nt">&lt;/AICc&gt;</span>
+  <span class="nt">&lt;SchwarzCriterion&gt;</span>503.57072503631804<span class="nt">&lt;/SchwarzCriterion&gt;</span>
+  <span class="nt">&lt;Summary&gt;</span>
+    <span class="nt">&lt;Variable&gt;</span>
+      <span class="nt">&lt;Variable&gt;</span>CONSTANT<span class="nt">&lt;/Variable&gt;</span>
+      <span class="nt">&lt;Coefficient&gt;</span>-89839.01661165891<span class="nt">&lt;/Coefficient&gt;</span>
+      <span class="nt">&lt;StandardError&gt;</span>45251.64301979817<span class="nt">&lt;/StandardError&gt;</span>
+      <span class="nt">&lt;TStatistic&gt;</span>-1.9853205456507557<span class="nt">&lt;/TStatistic&gt;</span>
+      <span class="nt">&lt;Probability&gt;</span>0.060320415845298396<span class="nt">&lt;/Probability&gt;</span>
+    <span class="nt">&lt;/Variable&gt;</span>
+    <span class="nt">&lt;Variable&gt;</span>
+      <span class="nt">&lt;Variable&gt;</span>a2_2000<span class="nt">&lt;/Variable&gt;</span>
+      <span class="nt">&lt;Coefficient&gt;</span>1015.5016202521613<span class="nt">&lt;/Coefficient&gt;</span>
+      <span class="nt">&lt;StandardError&gt;</span>459.27386712849943<span class="nt">&lt;/StandardError&gt;</span>
+      <span class="nt">&lt;TStatistic&gt;</span>2.2111025532572612<span class="nt">&lt;/TStatistic&gt;</span>
+      <span class="nt">&lt;Probability&gt;</span>0.03825397847242593<span class="nt">&lt;/Probability&gt;</span>
+    <span class="nt">&lt;/Variable&gt;</span>
+    <span class="nt">&lt;Variable&gt;</span>
+      <span class="nt">&lt;Variable&gt;</span>a3_2000<span class="nt">&lt;/Variable&gt;</span>
+      <span class="nt">&lt;Coefficient&gt;</span>657.585445515956<span class="nt">&lt;/Coefficient&gt;</span>
+      <span class="nt">&lt;StandardError&gt;</span>687.1537990129104<span class="nt">&lt;/StandardError&gt;</span>
+      <span class="nt">&lt;TStatistic&gt;</span>0.9569698173255696<span class="nt">&lt;/TStatistic&gt;</span>
+      <span class="nt">&lt;Probability&gt;</span>0.3494719862156815<span class="nt">&lt;/Probability&gt;</span>
+    <span class="nt">&lt;/Variable&gt;</span>
+    <span class="nt">&lt;Variable&gt;</span>
+      <span class="nt">&lt;Variable&gt;</span>a4_2000<span class="nt">&lt;/Variable&gt;</span>
+      <span class="nt">&lt;Coefficient&gt;</span>74.91087027691356<span class="nt">&lt;/Coefficient&gt;</span>
+      <span class="nt">&lt;StandardError&gt;</span>575.0254410828144<span class="nt">&lt;/StandardError&gt;</span>
+      <span class="nt">&lt;TStatistic&gt;</span>0.13027401037396014<span class="nt">&lt;/TStatistic&gt;</span>
+      <span class="nt">&lt;Probability&gt;</span>0.8975891001920921<span class="nt">&lt;/Probability&gt;</span>
+    <span class="nt">&lt;/Variable&gt;</span>
+  <span class="nt">&lt;/Summary&gt;</span>
+  <span class="nt">&lt;VarianceInflationFactor&gt;</span>
+    <span class="nt">&lt;VIF&gt;</span>
+      <span class="nt">&lt;Variable&gt;</span>a2_2000<span class="nt">&lt;/Variable&gt;</span>
+      <span class="nt">&lt;Value&gt;</span>1.0512492909076563<span class="nt">&lt;/Value&gt;</span>
+    <span class="nt">&lt;/VIF&gt;</span>
+    <span class="nt">&lt;VIF&gt;</span>
+      <span class="nt">&lt;Variable&gt;</span>a3_2000<span class="nt">&lt;/Variable&gt;</span>
+      <span class="nt">&lt;Value&gt;</span>1.219785000060916<span class="nt">&lt;/Value&gt;</span>
+    <span class="nt">&lt;/VIF&gt;</span>
+    <span class="nt">&lt;VIF&gt;</span>
+      <span class="nt">&lt;Variable&gt;</span>a4_2000<span class="nt">&lt;/Variable&gt;</span>
+      <span class="nt">&lt;Value&gt;</span>1.178277144719415<span class="nt">&lt;/Value&gt;</span>
+    <span class="nt">&lt;/VIF&gt;</span>
+  <span class="nt">&lt;/VarianceInflationFactor&gt;</span>
+  <span class="nt">&lt;Multicollinearity&gt;</span>124.00930330161376<span class="nt">&lt;/Multicollinearity&gt;</span>
+  <span class="nt">&lt;NormOfErrors&gt;</span>
+    <span class="nt">&lt;Diagnostics&gt;</span>
+      <span class="nt">&lt;Category&gt;</span>Test on Normality of Errors<span class="nt">&lt;/Category&gt;</span>
+      <span class="nt">&lt;Name&gt;</span>Jarque-Bera<span class="nt">&lt;/Name&gt;</span>
+      <span class="nt">&lt;DeegreesOfFreedom&gt;</span>2.0<span class="nt">&lt;/DeegreesOfFreedom&gt;</span>
+      <span class="nt">&lt;Value&gt;</span>0.7273519517018467<span class="nt">&lt;/Value&gt;</span>
+      <span class="nt">&lt;Probability&gt;</span>0.6951163927538146<span class="nt">&lt;/Probability&gt;</span>
+    <span class="nt">&lt;/Diagnostics&gt;</span>
+  <span class="nt">&lt;/NormOfErrors&gt;</span>
+  <span class="nt">&lt;HrcDiagnostics&gt;</span>
+    <span class="nt">&lt;Diagnostics&gt;</span>
+      <span class="nt">&lt;Category&gt;</span>Diagnostics for Heteroskedasticity Random Coefficients<span class="nt">&lt;/Category&gt;</span>
+      <span class="nt">&lt;Name&gt;</span>Breusch-Pagan<span class="nt">&lt;/Name&gt;</span>
+      <span class="nt">&lt;DeegreesOfFreedom&gt;</span>3.0<span class="nt">&lt;/DeegreesOfFreedom&gt;</span>
+      <span class="nt">&lt;Value&gt;</span>5.083212261808894<span class="nt">&lt;/Value&gt;</span>
+      <span class="nt">&lt;Probability&gt;</span>0.16580435989410658<span class="nt">&lt;/Probability&gt;</span>
+    <span class="nt">&lt;/Diagnostics&gt;</span>
+    <span class="nt">&lt;Diagnostics&gt;</span>
+      <span class="nt">&lt;Category&gt;</span>Diagnostics for Heteroskedasticity Random Coefficients<span class="nt">&lt;/Category&gt;</span>
+      <span class="nt">&lt;Name&gt;</span>Koenker-Bassett<span class="nt">&lt;/Name&gt;</span>
+      <span class="nt">&lt;DeegreesOfFreedom&gt;</span>3.0<span class="nt">&lt;/DeegreesOfFreedom&gt;</span>
+      <span class="nt">&lt;Value&gt;</span>6.588607922676707<span class="nt">&lt;/Value&gt;</span>
+      <span class="nt">&lt;Probability&gt;</span>0.08623276842110539<span class="nt">&lt;/Probability&gt;</span>
+    <span class="nt">&lt;/Diagnostics&gt;</span>
+  <span class="nt">&lt;/HrcDiagnostics&gt;</span>
+  <span class="nt">&lt;SpatialDiagnostics&gt;</span>
+    <span class="nt">&lt;Diagnostics&gt;</span>
+      <span class="nt">&lt;Category&gt;</span>Diagnostics for Spatial Dependence<span class="nt">&lt;/Category&gt;</span>
+      <span class="nt">&lt;Name&gt;</span>Moran&#39;s I (error)<span class="nt">&lt;/Name&gt;</span>
+      <span class="nt">&lt;DeegreesOfFreedom&gt;</span>-0.10552682243608924<span class="nt">&lt;/DeegreesOfFreedom&gt;</span>
+      <span class="nt">&lt;Value&gt;</span>0.3551094963676925<span class="nt">&lt;/Value&gt;</span>
+      <span class="nt">&lt;Probability&gt;</span>0.7225075633055715<span class="nt">&lt;/Probability&gt;</span>
+    <span class="nt">&lt;/Diagnostics&gt;</span>
+    <span class="nt">&lt;Diagnostics&gt;</span>
+      <span class="nt">&lt;Category&gt;</span>Diagnostics for Spatial Dependence<span class="nt">&lt;/Category&gt;</span>
+      <span class="nt">&lt;Name&gt;</span>Lagrange Multiplier (lag)<span class="nt">&lt;/Name&gt;</span>
+      <span class="nt">&lt;DeegreesOfFreedom&gt;</span>1.0<span class="nt">&lt;/DeegreesOfFreedom&gt;</span>
+      <span class="nt">&lt;Value&gt;</span>0.3716414743314847<span class="nt">&lt;/Value&gt;</span>
+      <span class="nt">&lt;Probability&gt;</span>0.5421108807877426<span class="nt">&lt;/Probability&gt;</span>
+    <span class="nt">&lt;/Diagnostics&gt;</span>
+    <span class="nt">&lt;Diagnostics&gt;</span>
+      <span class="nt">&lt;Category&gt;</span>Diagnostics for Spatial Dependence<span class="nt">&lt;/Category&gt;</span>
+      <span class="nt">&lt;Name&gt;</span>Robust LM (lag)<span class="nt">&lt;/Name&gt;</span>
+      <span class="nt">&lt;DeegreesOfFreedom&gt;</span>1.0<span class="nt">&lt;/DeegreesOfFreedom&gt;</span>
+      <span class="nt">&lt;Value&gt;</span>0.09009324883412162<span class="nt">&lt;/Value&gt;</span>
+      <span class="nt">&lt;Probability&gt;</span>0.5940365045566063<span class="nt">&lt;/Probability&gt;</span>
+    <span class="nt">&lt;/Diagnostics&gt;</span>
+    <span class="nt">&lt;Diagnostics&gt;</span>
+      <span class="nt">&lt;Category&gt;</span>Diagnostics for Spatial Dependence<span class="nt">&lt;/Category&gt;</span>
+      <span class="nt">&lt;Name&gt;</span>Lagrange Multiplier (error)<span class="nt">&lt;/Name&gt;</span>
+      <span class="nt">&lt;DeegreesOfFreedom&gt;</span>1.0<span class="nt">&lt;/DeegreesOfFreedom&gt;</span>
+      <span class="nt">&lt;Value&gt;</span>0.5656327223255544<span class="nt">&lt;/Value&gt;</span>
+      <span class="nt">&lt;Probability&gt;</span>0.4519995940481525<span class="nt">&lt;/Probability&gt;</span>
+    <span class="nt">&lt;/Diagnostics&gt;</span>
+    <span class="nt">&lt;Diagnostics&gt;</span>
+      <span class="nt">&lt;Category&gt;</span>Diagnostics for Spatial Dependence<span class="nt">&lt;/Category&gt;</span>
+      <span class="nt">&lt;Name&gt;</span>Robust LM (error)<span class="nt">&lt;/Name&gt;</span>
+      <span class="nt">&lt;DeegreesOfFreedom&gt;</span>1.0<span class="nt">&lt;/DeegreesOfFreedom&gt;</span>
+      <span class="nt">&lt;Value&gt;</span>0.28408449682819137<span class="nt">&lt;/Value&gt;</span>
+      <span class="nt">&lt;Probability&gt;</span>0.5940365045566063<span class="nt">&lt;/Probability&gt;</span>
+    <span class="nt">&lt;/Diagnostics&gt;</span>
+    <span class="nt">&lt;Diagnostics&gt;</span>
+      <span class="nt">&lt;Category&gt;</span>Diagnostics for Spatial Dependence<span class="nt">&lt;/Category&gt;</span>
+      <span class="nt">&lt;Name&gt;</span>Lagrange Multiplier (SARMA)<span class="nt">&lt;/Name&gt;</span>
+      <span class="nt">&lt;DeegreesOfFreedom&gt;</span>2.0<span class="nt">&lt;/DeegreesOfFreedom&gt;</span>
+      <span class="nt">&lt;Value&gt;</span>0.655725971159676<span class="nt">&lt;/Value&gt;</span>
+      <span class="nt">&lt;Probability&gt;</span>0.7204617265887313<span class="nt">&lt;/Probability&gt;</span>
+    <span class="nt">&lt;/Diagnostics&gt;</span>
+  <span class="nt">&lt;/SpatialDiagnostics&gt;</span>
+<span class="nt">&lt;/OrdinaryLeastSquares&gt;</span>
 </pre></div>
 </div>
-</div></blockquote>
 </div>
 
 

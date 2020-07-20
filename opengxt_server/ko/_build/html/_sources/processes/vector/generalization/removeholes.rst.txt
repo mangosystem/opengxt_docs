@@ -56,3 +56,7 @@ RemoveHoles (SimpleFeatureCollection inputFeatures, Expression minimumArea) : Si
 
 
 **Examples**
+
+Interior Ring(Hole)을 가진 폴리곤(멀티폴리곤 포함)에서 Hole을 제거한 예입니다.
+
+  .. image:: images/removeholes.png

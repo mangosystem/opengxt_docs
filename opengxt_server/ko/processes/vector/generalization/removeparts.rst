@@ -56,3 +56,7 @@ RemoveParts (SimpleFeatureCollection inputFeatures, Expression minimumArea) : Si
 
 
 **Examples**
+
+MultiPolygon에서 특정 면적 이하의 멀티파트 폴리곤을 제거한 예입니다. 그림에서와 같이 면적이 작은 섬들이 모두 제거되었습니다.
+
+  .. image:: images/removeparts.png

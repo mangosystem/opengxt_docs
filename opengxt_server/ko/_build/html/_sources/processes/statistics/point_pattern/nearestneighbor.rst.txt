@@ -65,7 +65,7 @@ NearestNeighborIndex (SimpleFeatureCollection inputFeatures, DistanceMethod dist
 
 **Examples**
 
-  .. code-block::
+.. code-block:: XML
 
     <?xml version="1.0" encoding="utf-8"?>
     <NearestNeighborIndex>

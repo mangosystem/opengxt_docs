@@ -54,3 +54,11 @@ FeatureEnvelopeToPolygon (SimpleFeatureCollection inputFeatures, Boolean singleE
  - singleEnvelope 이 False이고 각 피처의 Geometry가 MultiLineString, MultiPolygon인 경우 Single Part로 변환 후 각각의 Geometry에 대한 Envelope 폴리곤을 반환한다.
 
 **Examples**
+
+폴리곤 피처 Geometry의 Envelope을 Polygon으로 변환한 결과입니다.
+
+  .. image:: images/featureenvelopetopolygon.png
+
+[공간 및 속성 계산] - [필드 계산하기] 기능을 이용하면 다음과 같이 폴리곤을 둘러싸는 최소경계 Envelope을 얻을 수 있습니다.
+
+  .. image:: images/minimumboundingbox.png

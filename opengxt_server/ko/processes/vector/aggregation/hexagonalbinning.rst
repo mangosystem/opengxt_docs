@@ -76,3 +76,7 @@ HexagonalBinning (SimpleFeatureCollection features, Expression weight, Reference
 
 
 **Examples**
+
+서울시의 아파트 포인트 데이터를 1000미터 크기의 Hexagon을 생성 후 시각화한 결과입니다.
+
+  .. image:: images/hexagonalbinning.png

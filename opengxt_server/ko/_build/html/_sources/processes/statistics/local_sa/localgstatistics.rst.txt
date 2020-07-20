@@ -81,3 +81,5 @@ LocalGStatistics (SimpleFeatureCollection inputFeatures, String inputField, Spat
  - Output 레이어는 inputFeatures의 모든 필드를 포함해서 GiZScore, GiMean, GiVar, GiPValue 필드가 추가된다.
 
 **Examples**
+
+  .. image:: images/localgstatistics.png

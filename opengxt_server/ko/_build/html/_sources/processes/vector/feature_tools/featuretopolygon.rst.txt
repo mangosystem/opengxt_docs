@@ -62,5 +62,8 @@ FeatureToPolygon (SimpleFeatureCollection inputFeatures, Double tolerance, Simpl
  - labelFeatures 레이어는 포인트 타입이어야 한다.
  - labelFeatures 파라미터가 Null이 아니면 이 스키마를 사용하며, 폴리곤 생성 후 폴리곤 내에 포함된 labelFeatures 포인트의 속성값을 할당한다.
 
-
 **Examples**
+
+라인 레이어를 폴리곤으로 변환한 결과입니다. 라인과 교차하면서 폐합된 모든 영역이 개별 폴리곤으로 생성됩니다.
+
+  .. image:: images/featuretopolygon.png

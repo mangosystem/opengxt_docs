@@ -61,5 +61,8 @@ ExtendLine (SimpleFeatureCollection lineFeatures, Double length, Boolean extendT
  - length 파라미터는 라인의 세그먼트가 확장할 수 있는 최대 거리이며, lineFeatures의 거리 단위를 사용한다.
  - extendTo 파라미터가 True인 경우 모든 세그먼트가 length만큼 확장한 라인을 적용한다.
 
-
 **Examples**
+
+특정 거리만큼 확장한 라인의 결과입니다.
+
+  .. image:: images/extendline.png

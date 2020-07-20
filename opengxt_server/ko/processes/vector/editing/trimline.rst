@@ -60,5 +60,8 @@ TrimLine (SimpleFeatureCollection lineFeatures, Double dangleLength, Boolean del
  - lineFeatures 레이어는 라인 타입 이어야 한다.
  - deleteShort 파라미터가 True이고, 시작/끝점 모두 다른 라인과 교차하지 않는 독립적인 라인이 dangleLength 길이보다 작으면 삭제됩니다.
 
-
 **Examples**
+
+특정 길이보다 작은 세그먼트를 잘라낸 결과입니다.
+
+  .. image:: images/trimline.png

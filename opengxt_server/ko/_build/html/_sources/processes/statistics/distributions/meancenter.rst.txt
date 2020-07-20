@@ -66,3 +66,7 @@ MeanCenter (SimpleFeatureCollection inputFeatures, String weightField, String ca
  - inputFeatures의 Centroid를 이용하여 계산한다.
 
 **Examples**
+
+서울시 아파트 분포에 대한 시군구별 Mean Center를 분석한 결과입니다.
+
+  .. image:: images/meancenter.png

@@ -66,3 +66,7 @@ StandardizedScores (SimpleFeatureCollection inputFeatures, Expression xField, Ex
  - targetField 파라미터를 설정하지 않으면 std_scr이 기본값이다.
 
 **Examples**
+
+전국 시군구 행정경계의 두 필드를 이용한 표준화 상이점수 분석결과는 다음과 같습니다. targetField의 속성값을 이용하여 표준화 상이점수 결과를 시각화하면 됩니다.
+
+  .. image:: images/standardizedscores.png

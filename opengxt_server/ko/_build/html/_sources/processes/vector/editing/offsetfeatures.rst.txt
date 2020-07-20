@@ -60,3 +60,7 @@ OffsetFeatures (SimpleFeatureCollection inputFeatures, Expression offsetX, Expre
  - 원본 위치를 기준으로 offsetX 값이 양수이면 우, 음수이면 좌로 이동하고, offsetY 값이 양수이면 상, 음수이면 하로 이동한다.
 
 **Examples**
+
+Sliver 폴리곤을 가진 원본 폴리곤 레이어에서 공유된 길이를 기준으로 Sliver 폴리곤을 제거한 원본과 결과입니다.
+
+  .. image:: images/offsetfeatures.png

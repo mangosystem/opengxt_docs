@@ -60,5 +60,9 @@ IntersectionPoints (SimpleFeatureCollection inputFeatures, SimpleFeatureCollecti
  - inputFeatures, intersectFeatures피처 레이어는 Line, Polygon모두 가능하다.
  - 출력 레이어는 inputFeatures의 필드값을 모두 포함하며, intersectIDField가 설정된 경우 intersectFearures의 값이 추가된다.
 
-
 **Examples**
+
+폴리곤 및 라인 피처 레이어간 분석을 수행한 결과입니다.
+
+  .. image:: images/intersectionpoints.png
+

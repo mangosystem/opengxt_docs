@@ -67,3 +67,7 @@ SpatialClumpMap (SimpleFeatureCollection inputFeatures, Expression radius, Dista
  - quatrantSegments 파라미터의 기본값은 8이다.
 
 **Examples**
+
+시군구청에서 2000미터 내에 포함된 아파트의 수를 계산하여 지도화한 결과입니다.
+
+  .. image:: images/spatialclumpmap.png

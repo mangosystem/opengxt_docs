@@ -76,3 +76,7 @@ CircularBinning (SimpleFeatureCollection features, Expression weight, Referenced
 
 
 **Examples**
+
+서울시의 아파트 포인트 데이터를 750미터 반경의 Circle을 생성 후 시각화한 결과입니다.
+
+  .. image:: images/circularbinning.png

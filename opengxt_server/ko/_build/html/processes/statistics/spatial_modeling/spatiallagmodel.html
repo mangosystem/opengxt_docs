@@ -316,67 +316,65 @@
 </div></blockquote>
 <p><strong>Examples</strong></p>
 <p>a1_2000 필드를 종속변수로, a2_2000, a3_2000, a4_2000 필드를 설명변수로 분석한 결과는 다음의 XML 포맷으로 반환됩니다.</p>
-<blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;SpatialLagModel&gt;
-  &lt;ModelName&gt;Maximum Likelihood Spatial Lag&lt;/ModelName&gt;
-  &lt;Dataset&gt;seoul_series&lt;/Dataset&gt;
-  &lt;DependentVariable&gt;a1_2000&lt;/DependentVariable&gt;
-  &lt;NumberOfObservations&gt;25&lt;/NumberOfObservations&gt;
-  &lt;NumberOfVariables&gt;5&lt;/NumberOfVariables&gt;
-  &lt;DegreesOfFreedom&gt;20&lt;/DegreesOfFreedom&gt;
-  &lt;MeanDependentVar&gt;18229.716524000003&lt;/MeanDependentVar&gt;
-  &lt;SdDependentVar&gt;5222.973372203831&lt;/SdDependentVar&gt;
-  &lt;LagCoefficient&gt;-0.22828542473968091&lt;/LagCoefficient&gt;
-  &lt;RSquared&gt;0.2761455213123636&lt;/RSquared&gt;
-  &lt;PseudoRSquared&gt;0.27640866645133527&lt;/PseudoRSquared&gt;
-  &lt;SpatialPseudoRSquared&gt;0.24256289672449238&lt;/SpatialPseudoRSquared&gt;
-  &lt;SigmaSquareML&gt;1.895649856469702E7&lt;/SigmaSquareML&gt;
-  &lt;SeOfRegression&gt;4353.906127226105&lt;/SeOfRegression&gt;
-  &lt;LogLikelihood&gt;-245.08902967323908&lt;/LogLikelihood&gt;
-  &lt;AkaikeCriterion&gt;500.17805934647816&lt;/AkaikeCriterion&gt;
-  &lt;SchwarzCriterion&gt;506.27243847081917&lt;/SchwarzCriterion&gt;
-  &lt;Summary&gt;
-    &lt;Variable&gt;
-      &lt;Variable&gt;CONSTANT&lt;/Variable&gt;
-      &lt;Coefficient&gt;-95376.43702193913&lt;/Coefficient&gt;
-      &lt;StandardError&gt;41547.093017760526&lt;/StandardError&gt;
-      &lt;ZStatistic&gt;-2.2956223912264493&lt;/ZStatistic&gt;
-      &lt;Probability&gt;0.02169748136498197&lt;/Probability&gt;
-    &lt;/Variable&gt;
-    &lt;Variable&gt;
-      &lt;Variable&gt;a2_2000&lt;/Variable&gt;
-      &lt;Coefficient&gt;1109.0234412138893&lt;/Coefficient&gt;
-      &lt;StandardError&gt;433.37762273421095&lt;/StandardError&gt;
-      &lt;ZStatistic&gt;2.559023316010134&lt;/ZStatistic&gt;
-      &lt;Probability&gt;0.010496670100781556&lt;/Probability&gt;
-    &lt;/Variable&gt;
-    &lt;Variable&gt;
-      &lt;Variable&gt;a3_2000&lt;/Variable&gt;
-      &lt;Coefficient&gt;689.0420222891909&lt;/Coefficient&gt;
-      &lt;StandardError&gt;620.0027530256691&lt;/StandardError&gt;
-      &lt;ZStatistic&gt;1.1113531656538684&lt;/ZStatistic&gt;
-      &lt;Probability&gt;0.2664163810038307&lt;/Probability&gt;
-    &lt;/Variable&gt;
-    &lt;Variable&gt;
-      &lt;Variable&gt;a4_2000&lt;/Variable&gt;
-      &lt;Coefficient&gt;62.425662528753676&lt;/Coefficient&gt;
-      &lt;StandardError&gt;519.9203359561636&lt;/StandardError&gt;
-      &lt;ZStatistic&gt;0.12006774540555191&lt;/ZStatistic&gt;
-      &lt;Probability&gt;0.9044294829669831&lt;/Probability&gt;
-    &lt;/Variable&gt;
-    &lt;Variable&gt;
-      &lt;Variable&gt;W_a1_2000&lt;/Variable&gt;
-      &lt;Coefficient&gt;-0.22828542473968091&lt;/Coefficient&gt;
-      &lt;StandardError&gt;0.2815172692688138&lt;/StandardError&gt;
-      &lt;ZStatistic&gt;-0.8109109090629067&lt;/ZStatistic&gt;
-      &lt;Probability&gt;0.4174168425394321&lt;/Probability&gt;
-    &lt;/Variable&gt;
-  &lt;/Summary&gt;
-&lt;/SpatialLagModel&gt;
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;SpatialLagModel&gt;</span>
+  <span class="nt">&lt;ModelName&gt;</span>Maximum Likelihood Spatial Lag<span class="nt">&lt;/ModelName&gt;</span>
+  <span class="nt">&lt;Dataset&gt;</span>seoul_series<span class="nt">&lt;/Dataset&gt;</span>
+  <span class="nt">&lt;DependentVariable&gt;</span>a1_2000<span class="nt">&lt;/DependentVariable&gt;</span>
+  <span class="nt">&lt;NumberOfObservations&gt;</span>25<span class="nt">&lt;/NumberOfObservations&gt;</span>
+  <span class="nt">&lt;NumberOfVariables&gt;</span>5<span class="nt">&lt;/NumberOfVariables&gt;</span>
+  <span class="nt">&lt;DegreesOfFreedom&gt;</span>20<span class="nt">&lt;/DegreesOfFreedom&gt;</span>
+  <span class="nt">&lt;MeanDependentVar&gt;</span>18229.716524000003<span class="nt">&lt;/MeanDependentVar&gt;</span>
+  <span class="nt">&lt;SdDependentVar&gt;</span>5222.973372203831<span class="nt">&lt;/SdDependentVar&gt;</span>
+  <span class="nt">&lt;LagCoefficient&gt;</span>-0.22828542473968091<span class="nt">&lt;/LagCoefficient&gt;</span>
+  <span class="nt">&lt;RSquared&gt;</span>0.2761455213123636<span class="nt">&lt;/RSquared&gt;</span>
+  <span class="nt">&lt;PseudoRSquared&gt;</span>0.27640866645133527<span class="nt">&lt;/PseudoRSquared&gt;</span>
+  <span class="nt">&lt;SpatialPseudoRSquared&gt;</span>0.24256289672449238<span class="nt">&lt;/SpatialPseudoRSquared&gt;</span>
+  <span class="nt">&lt;SigmaSquareML&gt;</span>1.895649856469702E7<span class="nt">&lt;/SigmaSquareML&gt;</span>
+  <span class="nt">&lt;SeOfRegression&gt;</span>4353.906127226105<span class="nt">&lt;/SeOfRegression&gt;</span>
+  <span class="nt">&lt;LogLikelihood&gt;</span>-245.08902967323908<span class="nt">&lt;/LogLikelihood&gt;</span>
+  <span class="nt">&lt;AkaikeCriterion&gt;</span>500.17805934647816<span class="nt">&lt;/AkaikeCriterion&gt;</span>
+  <span class="nt">&lt;SchwarzCriterion&gt;</span>506.27243847081917<span class="nt">&lt;/SchwarzCriterion&gt;</span>
+  <span class="nt">&lt;Summary&gt;</span>
+    <span class="nt">&lt;Variable&gt;</span>
+      <span class="nt">&lt;Variable&gt;</span>CONSTANT<span class="nt">&lt;/Variable&gt;</span>
+      <span class="nt">&lt;Coefficient&gt;</span>-95376.43702193913<span class="nt">&lt;/Coefficient&gt;</span>
+      <span class="nt">&lt;StandardError&gt;</span>41547.093017760526<span class="nt">&lt;/StandardError&gt;</span>
+      <span class="nt">&lt;ZStatistic&gt;</span>-2.2956223912264493<span class="nt">&lt;/ZStatistic&gt;</span>
+      <span class="nt">&lt;Probability&gt;</span>0.02169748136498197<span class="nt">&lt;/Probability&gt;</span>
+    <span class="nt">&lt;/Variable&gt;</span>
+    <span class="nt">&lt;Variable&gt;</span>
+      <span class="nt">&lt;Variable&gt;</span>a2_2000<span class="nt">&lt;/Variable&gt;</span>
+      <span class="nt">&lt;Coefficient&gt;</span>1109.0234412138893<span class="nt">&lt;/Coefficient&gt;</span>
+      <span class="nt">&lt;StandardError&gt;</span>433.37762273421095<span class="nt">&lt;/StandardError&gt;</span>
+      <span class="nt">&lt;ZStatistic&gt;</span>2.559023316010134<span class="nt">&lt;/ZStatistic&gt;</span>
+      <span class="nt">&lt;Probability&gt;</span>0.010496670100781556<span class="nt">&lt;/Probability&gt;</span>
+    <span class="nt">&lt;/Variable&gt;</span>
+    <span class="nt">&lt;Variable&gt;</span>
+      <span class="nt">&lt;Variable&gt;</span>a3_2000<span class="nt">&lt;/Variable&gt;</span>
+      <span class="nt">&lt;Coefficient&gt;</span>689.0420222891909<span class="nt">&lt;/Coefficient&gt;</span>
+      <span class="nt">&lt;StandardError&gt;</span>620.0027530256691<span class="nt">&lt;/StandardError&gt;</span>
+      <span class="nt">&lt;ZStatistic&gt;</span>1.1113531656538684<span class="nt">&lt;/ZStatistic&gt;</span>
+      <span class="nt">&lt;Probability&gt;</span>0.2664163810038307<span class="nt">&lt;/Probability&gt;</span>
+    <span class="nt">&lt;/Variable&gt;</span>
+    <span class="nt">&lt;Variable&gt;</span>
+      <span class="nt">&lt;Variable&gt;</span>a4_2000<span class="nt">&lt;/Variable&gt;</span>
+      <span class="nt">&lt;Coefficient&gt;</span>62.425662528753676<span class="nt">&lt;/Coefficient&gt;</span>
+      <span class="nt">&lt;StandardError&gt;</span>519.9203359561636<span class="nt">&lt;/StandardError&gt;</span>
+      <span class="nt">&lt;ZStatistic&gt;</span>0.12006774540555191<span class="nt">&lt;/ZStatistic&gt;</span>
+      <span class="nt">&lt;Probability&gt;</span>0.9044294829669831<span class="nt">&lt;/Probability&gt;</span>
+    <span class="nt">&lt;/Variable&gt;</span>
+    <span class="nt">&lt;Variable&gt;</span>
+      <span class="nt">&lt;Variable&gt;</span>W_a1_2000<span class="nt">&lt;/Variable&gt;</span>
+      <span class="nt">&lt;Coefficient&gt;</span>-0.22828542473968091<span class="nt">&lt;/Coefficient&gt;</span>
+      <span class="nt">&lt;StandardError&gt;</span>0.2815172692688138<span class="nt">&lt;/StandardError&gt;</span>
+      <span class="nt">&lt;ZStatistic&gt;</span>-0.8109109090629067<span class="nt">&lt;/ZStatistic&gt;</span>
+      <span class="nt">&lt;Probability&gt;</span>0.4174168425394321<span class="nt">&lt;/Probability&gt;</span>
+    <span class="nt">&lt;/Variable&gt;</span>
+  <span class="nt">&lt;/Summary&gt;</span>
+<span class="nt">&lt;/SpatialLagModel&gt;</span>
 </pre></div>
 </div>
-</div></blockquote>
 </div>
 
 

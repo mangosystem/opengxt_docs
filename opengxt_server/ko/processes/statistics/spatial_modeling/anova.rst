@@ -57,7 +57,7 @@ Anova (SimpleFeatureCollection inputFeatures, String fields) : AnovaResult
 
 a1_2000, a2_2000, a3_2000, a4_2000 4개의 필드를 이용하여 분산분석을 수행한 결과는 다음의 XML 포맷으로 반환됩니다.
 
-  .. code-block::
+.. code-block:: XML
 
     <?xml version="1.0" encoding="UTF-8"?>
     <Anova>

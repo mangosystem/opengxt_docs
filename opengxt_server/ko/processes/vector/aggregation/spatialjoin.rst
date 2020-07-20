@@ -76,3 +76,7 @@ SpatialJoin (SimpleFeatureCollection inputFeatures, SimpleFeatureCollection join
 
 
 **Examples**
+
+대형매장 포인트 레이어가 속한 시군구 레이어의 정보를 Spatial Join한 결과입니다. Pont나 Line 레이어의 경우 탐색반경을 설정하여 가까운 피처의 속성을 가져올 수 있습니다.
+
+  .. image:: images/spatialjoin.png

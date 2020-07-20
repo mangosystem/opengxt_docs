@@ -60,5 +60,8 @@ KNearestNeighborMap (SimpleFeatureCollection inputFeatures, Integer neighbor, Bo
  - Neighbor 파라미터는 1 이상이어야 하고 기본값은 1이다.
  - Output 레이어는 라인 피처 타입이다.
 
-
 **Examples**
+
+Neighbor 파라미터를 2로 설정하고 실행한 K-Nearest Neighbor 결과입니다.
+
+  .. image:: images/knearestneighbormap.png

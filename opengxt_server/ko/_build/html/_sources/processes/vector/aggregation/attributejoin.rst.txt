@@ -73,3 +73,7 @@ AttributeJoin (SimpleFeatureCollection inputFeatures, String primaryKey, SimpleF
  - joinType이 INNER인 경우 조인되는 inputFeatures 의 피처만을 반환한다.
 
 **Examples**
+
+대형매장과 시군구 행정경계의 시군구코드를 Join 필드로 사용하여 조인한 결과입니다.
+
+  .. image:: images/attributejoin.png

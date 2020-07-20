@@ -57,7 +57,7 @@ RasterDescribe (GridCoverage2D inputCoverage, Boolean detailed) : RasterDescribe
 
 **Examples**
 
-  .. code-block::
+.. code-block:: XML
 
     <?xml version="1.0" encoding="UTF-8"?>
     <RasterDescription>

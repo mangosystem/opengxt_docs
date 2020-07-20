@@ -80,3 +80,7 @@ FocalLQ (SimpleFeatureCollection inputFeatures, Expression xField, Expression yF
  - Output 레이어의 필드는 flq, flqd, fz 값을 반환한다.
 
 **Examples**
+
+전국 시군구의 두 필드를 이용하여 지역 특화도를 분석 후 시각화한 결과는 다음과 같습니다.
+
+  .. image:: images/focallq.png

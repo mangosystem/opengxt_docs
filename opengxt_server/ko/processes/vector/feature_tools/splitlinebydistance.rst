@@ -54,5 +54,9 @@ SplitLineByDistance (SimpleFeatureCollection lineFeatures, Expression distance) 
  - inputFeatures 파라미터는 라인 또는 폴리곤 레이어 이어야 한다.
  - distance 파라미터는 필드 또는 Function Expression 수식을 사용할 수 있다.
 
-
 **Examples**
+
+폴리곤 피처의 boundary를 100미터 간격의 라인으로 분할한 결과입니다.
+
+  .. image:: images/splitlinebydistance.png
+

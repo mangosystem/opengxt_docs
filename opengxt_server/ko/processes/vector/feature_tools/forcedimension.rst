@@ -69,3 +69,30 @@ ForceDimension(SimpleFeatureCollection inputFeatures, DimensionType dimension, E
 
 
 **Examples**
+
+다음 예는 GML에서 XY 2D 지오메트리를 Z값을 50으로 설정하여 XYZ 3D로 변환한 예입니다.
+
+1. XY 2D
+
+.. code-block:: XML
+
+    <feature:the_geom>
+      <gml:Point srsDimension="2" srsName="http://www.opengis.net/gml/srs/epsg.xml#4326">
+        <gml:pos>-74.010461 40.707588</gml:pos>
+      </gml:Point>
+    </feature:the_geom>
+
+
+2. XYZ 3D
+
+.. code-block:: XML
+
+    <feature:the_geom>
+      <gml:Point srsDimension="3" srsName="http://www.opengis.net/gml/srs/epsg.xml#4326">
+        <gml:pos>-74.010461 40.707588 50</gml:pos>
+      </gml:Point>
+    </feature:the_geom>
+
+
+
+

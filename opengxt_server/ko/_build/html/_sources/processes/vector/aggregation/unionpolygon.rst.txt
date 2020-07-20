@@ -54,3 +54,7 @@ UnionPolygon (SimpleFeatureCollection polygonFeatures, Boolean preserveHole) : S
  - preserveHole 파라미터가 False이면 모든 Interior Ring은 제거한 폴리곤을 반환한다.
 
 **Examples**
+
+시군구 경계를 모두 Union한 결과입니다. preserveHole 파라미터가 False이기 때문에 InteriorRing(Hole)이 있을 경우 모두 제거합니다.
+
+  .. image:: images/unionpolygon.png

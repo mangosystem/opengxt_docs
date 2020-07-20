@@ -63,7 +63,12 @@ ScaleFeatures (SimpleFeatureCollection inputFeatures, Expression scaleX, Express
 
 **Constraints**
 
- 
+  - scaleX, scaleY 파라미터는 Expression 표현식을 사용하여 정의할 수 있다.
+  - anchor 파라미터는 Point 지오메트리 유형이다.
 
 **Examples**
+
+폴리곤의 Centroid를 기준으로 45도 회전한 결과입니다.
+
+  .. image:: images/scalefeatures.png
 

@@ -61,5 +61,8 @@ SplitLineAtPoint (SimpleFeatureCollection lineFeatures, SimpleFeatureCollection 
  - toleralce 파라미터가 0인 경우 각 라인 피처와 교차되는 모든 포인트가 사용되며, 만약 교차되는 포인트 피처가 없는 경우 가장 가까운 한개의 포인트 피처가 라인 분할에 사용된다.
  - toleralce 파라미터가 0 이상인 경우에 탐색 반경 내의 모든 포인트 피처가 분할에 사용된다.
 
-
 **Examples**
+
+라인 레이어를 포인트 레이어로 분할한 결과입니다.
+
+  .. image:: images/splitlineatpoint.png

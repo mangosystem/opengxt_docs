@@ -67,5 +67,8 @@ PolygonsAlongLines (SimpleFeatureCollection lineFeatures, Expression distance, E
  - distance, width 파라미터는 필드 또는 Function Expression 수식을 사용할 수 있다.
  - distance, width 파라미터의 거리 단위는 lineFeatures의 좌표계 단위를 사용한다.
 
-
 **Examples**
+
+다음 예제는 라인에서 1000미터 간격으로 폭 500미터의 폴리곤을 생성한 결과입니다.
+
+  .. image:: images/polygonsalonglines.png

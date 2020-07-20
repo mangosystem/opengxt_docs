@@ -61,5 +61,12 @@ FeatureToPoint (SimpleFeatureCollection inputFeatures, Boolean inside, Boolean s
  - inputFeatures가 폴리곤이고 inside 가 Ture이면 중심점은 반드시 폴리곤 내에 포함된다.
  - singlePart가 True이고 Geometry가 MultiPart인 경우 모든 Part의 Geometry를 중심점으로 변환한다.
 
-
 **Examples**
+
+inside 파라미터가 True이고 singlePart 파라미터가 True인 경우입니다. MultiPolygon인 경우 하나의 중심점이 변환됩니다.
+
+  .. image:: images/featuretopoint1.png
+
+inside 파라미터가 True이고 singlePart 파라미터가 False인 경우입니다. MultiPolygon인 경우 Polygon의 수만큼 중심점이 변환됩니다.
+
+  .. image:: images/featuretopoint2.png

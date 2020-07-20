@@ -48,3 +48,7 @@ DeleteDuplicates (SimpleFeatureCollection inputFeatures) : SimpleFeatureCollecti
  - inputFeatures는 포인트, 라인, 폴리곤 모두 가능하며, 각 피처의 Geometry가 동일한 경우에만 중복으로 처리한다. 
 
 **Examples**
+
+다음과 같이 중복된 포인트는 하나의 피처만 저장됩니다.
+
+  .. image:: images/deleteduplicates.png

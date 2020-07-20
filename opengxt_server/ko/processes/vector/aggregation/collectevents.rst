@@ -62,3 +62,7 @@ CollectEvents (SimpleFeatureCollection inputFeatures, String countField, Double 
 
 
 **Examples**
+
+설정한 기준 거리 허용오차 이내의 포인트들을 하나로 합친 결과입니다.
+
+  .. image:: images/collectevents.png

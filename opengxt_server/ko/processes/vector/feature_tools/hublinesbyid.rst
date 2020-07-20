@@ -91,5 +91,8 @@ HubLinesByID (SimpleFeatureCollection hubFeatures, String hubIdField, SimpleFeat
  - useBezierCurve 파라미터가 True이면 두 피처간의 최단 라인을 Bezier curve로 생성한다.
  - maximumDistance 파라미터가 0보다 큰 경우 이 거리 내에 있는 피처만을 대상으로 Hub Line을 생성한다.
 
-
 **Examples**
+
+시군구청을 Hub로 설정하여 읍면동 폴리곤을 Spoke 레이어로 설정하고 시군구 코드를 기준으로Hub Line을 생성한 결과입니다.
+
+  .. image:: images/hublinesbyid.png

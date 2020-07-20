@@ -54,5 +54,9 @@ PointsAlongLines (SimpleFeatureCollection lineFeatures, Expression distance) : S
  - inputFeatures 파라미터는 라인 또는 폴리곤 레이어 이어야 한다.
  - distance 파라미터는 필드 또는 Function Expression 수식을 사용할 수 있다.
 
-
 **Examples**
+
+다음 예제는 라인 길이의 1/5 간격의 포인트를 생성한 결과입니다.
+
+  .. image:: images/pointsalonglines.png
+

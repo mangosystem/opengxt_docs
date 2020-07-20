@@ -62,3 +62,7 @@ Simplify (SimpleFeatureCollection inputFeatures, Expression tolerance, Boolean p
 
 
 **Examples**
+
+파란선은 원본, 빨간 선은 Simplify 결과 입니다.
+
+  .. image:: images/simplify.png

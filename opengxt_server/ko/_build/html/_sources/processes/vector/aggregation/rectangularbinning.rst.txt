@@ -82,3 +82,7 @@ RectangularBinning (SimpleFeatureCollection features, Expression weight, Referen
 
 
 **Examples**
+
+서울시의 아파트 포인트 데이터를 1500미터 크기의 Rectangle을 생성 후 시각화한 결과입니다.
+
+  .. image:: images/rectangularbinning.png

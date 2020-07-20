@@ -74,5 +74,8 @@ RingMap (SimpleFeatureCollection inputFeatures, String fields, String targetFiel
  - ringGap 파라미터는 1 ~ 9까지 가능하며 1이 기본값이다.
  - Output은 지시선을 표시하는 anchor 라인과 Ring Map을 생성한 ringmap 폴리곤 2개의 레이어를 반환한다.
 
-
 **Examples**
+
+서울시의 2000년부터 2005년까지의 인구자연증가율 속성을 이용하여 Ring Map을 생성한 결과입니다.
+
+  .. image:: images/ringmap.png

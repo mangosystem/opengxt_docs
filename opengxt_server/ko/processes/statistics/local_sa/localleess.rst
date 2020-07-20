@@ -87,3 +87,5 @@ LocalLeesS (SimpleFeatureCollection inputFeatures, String inputField, SpatialCon
  - Output 레이어는 inputFeatures의 모든 필드를 포함해서 LLsIndex, LLsZScore, LLsPValue 필드가 추가된다.
 
 **Examples**
+
+  .. image:: images/localleess.png

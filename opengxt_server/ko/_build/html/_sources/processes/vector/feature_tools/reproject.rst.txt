@@ -59,6 +59,3 @@ Reproject (SimpleFeatureCollection inputFeatures, CoordinateReferenceSystem forc
 
  - targetCRS가 Null인 경우 inputFeatures를 반환한다.
  - forcedCRS가 Null인 경우 inputFeatures의 CRS를 사용하고, 만일 inputFeatures의 좌표체계가 정의되어 있지 않으면 inputFeatures를 반환한다.
-
-
-**Examples**

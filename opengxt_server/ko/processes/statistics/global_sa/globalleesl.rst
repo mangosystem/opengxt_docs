@@ -94,7 +94,7 @@ GlobalLeesL (SimpleFeatureCollection inputFeatures, String xField, String yField
 
 **Examples**
 
-  .. code-block::
+.. code-block:: XML
 
     <?xml version="1.0" encoding="utf-8"?>
     <GlobalLeesL>
@@ -105,8 +105,8 @@ GlobalLeesL (SimpleFeatureCollection inputFeatures, String xField, String yField
       <Variance>0</Variance>
       <Z_Score>0</Z_Score>
       <P_Value>1</P_Value>
-      <Conceptualization>0.42206509</Conceptualization>
+      <Conceptualization>InverseDistance</Conceptualization>
       <DistanceMethod>Euclidean</DistanceMethod>
       <RowStandardization>Row</RowStandardization>
-      <DistanceThreshold>0</DistanceThreshold>
+      <DistanceThreshold>191807.950591</DistanceThreshold>
     </GlobalLeesL>

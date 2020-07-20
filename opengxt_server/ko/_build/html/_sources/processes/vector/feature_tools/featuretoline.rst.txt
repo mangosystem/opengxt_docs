@@ -55,5 +55,9 @@ FeatureToLine (SimpleFeatureCollection inputFeatures, Boolean preserveAttributes
  - inputFeatures 레이어는 라인 또는 폴리곤 타입이어야 한다.
  - preserveAttributes 파라미터의 기본값을 True이며, True인 경우 원본 피처의 속성값을 유지한다.
 
-
 **Examples**
+
+폴리곤 레이어를 라인으로 변환한 결과입니다. 
+변환된 라인은 다음 그림과 같이 폴리곤을 공유하는 세그먼트 단위로 분할됩니다.
+
+  .. image:: images/featuretoline.png

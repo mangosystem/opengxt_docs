@@ -48,3 +48,7 @@ MultipartToSinglepart (SimpleFeatureCollection inputFeatures) : SimpleFeatureCol
  - inputFeatures 파라미터는 반드시 Multipart(MultiPoint, MultiLineString, MultiPolygon) 피처 타입이어야 한다.
 
 **Examples**
+
+2개 이상의 Polygon으로 구성된 MultiPolygon을 Single Polygon으로 변환한 결과입니다.
+
+  .. image:: images/multiparttosinglepart.png

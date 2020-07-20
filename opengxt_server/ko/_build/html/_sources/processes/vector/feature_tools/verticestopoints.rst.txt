@@ -77,3 +77,7 @@ VerticesToPoints (SimpleFeatureCollection inputFeatures, PointLocationType locat
       - 라인 도는 폴리곤 지오메트리의 시작점과 끝점
 
 **Examples**
+
+라인 피처의 Mid(중간점)을 포인트로 변환한 결과입니다.
+
+  .. image:: images/verticestopoints.png

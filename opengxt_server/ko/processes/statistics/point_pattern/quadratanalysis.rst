@@ -57,7 +57,7 @@ QuadratAnalysis (SimpleFeatureCollection inputFeatures, Double cellSize) : Quadr
 
 **Examples**
 
-  .. code-block::
+.. code-block:: XML
 
     <?xml version="1.0" encoding="utf-8"?>
     <QuadratAnalysis>

@@ -60,3 +60,7 @@ LinearDirectionalMean (SimpleFeatureCollection inputFeatures, Boolean orientatio
  - inputFeatures는 반드시 라인 피처 타입이어야 한다.
 
 **Examples**
+
+길이와 방향성을 가진 라인 레이어에 대한 Linear Directional Mean 분석을 수행한 결과입니다.
+
+  .. image:: images/directionalmean.png

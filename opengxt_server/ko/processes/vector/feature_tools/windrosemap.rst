@@ -66,5 +66,8 @@ WindRoseMap (SimpleFeatureCollection inputFeatures, String weightField, Geometry
  - weightField 파라미터는 Numeric 필드이어야 하며, 설정되면 이 필드 값의 합이 결과에 반영되고 그렇지 않으면 피처의 개수가 반영된다.
  - Output은 지시선을 표시하는 anchor 라인과 windRose 폴리곤 레이어를 반환한다.
 
-
 **Examples**
+
+서울시청을 중심으로 아파트의 분포를 Wind Rose Map으로 생성한 결과입니다.
+
+  .. image:: images/windrosemap.png

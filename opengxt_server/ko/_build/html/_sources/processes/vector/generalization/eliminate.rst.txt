@@ -62,5 +62,8 @@ Eliminate (SimpleFeatureCollection inputFeatures, EliminateOption option, Filter
  - option 파라미터는 Sliver 폴리곤을 제거하는 기준으로 공유하는 길이가 가장 큰 이웃(Length), 면적이 가장 크거나(LargeArea) 작은 이웃(SmallArea)으로 Sliver 폴리곤을 편입한다.
  - exception 파라미터는 처리에 제외할 피처를 필터로 설정한다.
 
-
 **Examples**
+
+Sliver 폴리곤을 가진 원본 폴리곤 레이어에서 공유된 길이를 기준으로 Sliver 폴리곤을 제거한 원본과 결과입니다.
+
+  .. image:: images/eliminate.png

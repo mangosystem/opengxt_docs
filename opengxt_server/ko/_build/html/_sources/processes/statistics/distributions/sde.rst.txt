@@ -66,5 +66,8 @@ StandardDeviationalEllipse (SimpleFeatureCollection inputFeatures, String ellips
  - inputFeatures의 Centroid를 이용하여 계산한다.
  - Ellipse는 일반적으로 1_Standard_Deviation인 경우 68%, 2_Standard_Deviation인 경우 95%, 3_Standard_Deviation인 경우 99%의 피처를 포함한다.
 
-
 **Examples**
+
+서울시 아파트 분포에 대한 시군구별 Standard Deviational Ecclipse를 분석한 결과입니다.
+
+  .. image:: images/sde.png

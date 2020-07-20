@@ -274,70 +274,68 @@
 </div></blockquote>
 <p><strong>Examples</strong></p>
 <p>a1_2000, a2_2000, a3_2000, a4_2000 4개의 필드를 이용하여 분산분석을 수행한 결과는 다음의 XML 포맷으로 반환됩니다.</p>
-<blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;Anova&gt;
-  &lt;Treatments&gt;
-    &lt;Factor&gt;Between Groups&lt;/Factor&gt;
-    &lt;SumOfSquares&gt;6.205958517716355E9&lt;/SumOfSquares&gt;
-    &lt;DegreesOfFreedom&gt;3.0&lt;/DegreesOfFreedom&gt;
-    &lt;MeanSquare&gt;2.068652839238785E9&lt;/MeanSquare&gt;
-    &lt;FStatistics&gt;303.3275165487872&lt;/FStatistics&gt;
-    &lt;PValue&gt;1.1102230246251565E-16&lt;/PValue&gt;
-  &lt;/Treatments&gt;
-  &lt;Error&gt;
-    &lt;Factor&gt;Within Groups&lt;/Factor&gt;
-    &lt;SumOfSquares&gt;6.547070797481773E8&lt;/SumOfSquares&gt;
-    &lt;DegreesOfFreedom&gt;96.0&lt;/DegreesOfFreedom&gt;
-    &lt;MeanSquare&gt;6819865.414043513&lt;/MeanSquare&gt;
-  &lt;/Error&gt;
-  &lt;Total&gt;
-    &lt;Factor&gt;Total&lt;/Factor&gt;
-    &lt;SumOfSquares&gt;6.860665597464533E9&lt;/SumOfSquares&gt;
-    &lt;DegreesOfFreedom&gt;99.0&lt;/DegreesOfFreedom&gt;
-  &lt;/Total&gt;
-  &lt;Summary&gt;
-    &lt;Group&gt;
-      &lt;Group&gt;a1_2000&lt;/Group&gt;
-      &lt;Count&gt;25&lt;/Count&gt;
-      &lt;Minimum&gt;7902.3838&lt;/Minimum&gt;
-      &lt;Maximum&gt;28062.184&lt;/Maximum&gt;
-      &lt;Sum&gt;455742.91310000006&lt;/Sum&gt;
-      &lt;Average&gt;18229.716524000003&lt;/Average&gt;
-      &lt;Variance&gt;2.727945084675026E7&lt;/Variance&gt;
-    &lt;/Group&gt;
-    &lt;Group&gt;
-      &lt;Group&gt;a2_2000&lt;/Group&gt;
-      &lt;Count&gt;25&lt;/Count&gt;
-      &lt;Minimum&gt;96.724518&lt;/Minimum&gt;
-      &lt;Maximum&gt;105.01617&lt;/Maximum&gt;
-      &lt;Sum&gt;2515.9517890000006&lt;/Sum&gt;
-      &lt;Average&gt;100.63807156000003&lt;/Average&gt;
-      &lt;Variance&gt;4.840012157224312&lt;/Variance&gt;
-    &lt;/Group&gt;
-    &lt;Group&gt;
-      &lt;Group&gt;a3_2000&lt;/Group&gt;
-      &lt;Count&gt;25&lt;/Count&gt;
-      &lt;Minimum&gt;5.2713499&lt;/Minimum&gt;
-      &lt;Maximum&gt;11.17146&lt;/Maximum&gt;
-      &lt;Sum&gt;218.94218979999997&lt;/Sum&gt;
-      &lt;Average&gt;8.757687591999998&lt;/Average&gt;
-      &lt;Variance&gt;2.508762737460472&lt;/Variance&gt;
-    &lt;/Group&gt;
-    &lt;Group&gt;
-      &lt;Group&gt;a4_2000&lt;/Group&gt;
-      &lt;Count&gt;25&lt;/Count&gt;
-      &lt;Minimum&gt;0.22132&lt;/Minimum&gt;
-      &lt;Maximum&gt;9.58605&lt;/Maximum&gt;
-      &lt;Sum&gt;37.27112993&lt;/Sum&gt;
-      &lt;Average&gt;1.4908451972&lt;/Average&gt;
-      &lt;Variance&gt;3.4606488978589653&lt;/Variance&gt;
-    &lt;/Group&gt;
-  &lt;/Summary&gt;
-&lt;/Anova&gt;
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;Anova&gt;</span>
+  <span class="nt">&lt;Treatments&gt;</span>
+    <span class="nt">&lt;Factor&gt;</span>Between Groups<span class="nt">&lt;/Factor&gt;</span>
+    <span class="nt">&lt;SumOfSquares&gt;</span>6.205958517716355E9<span class="nt">&lt;/SumOfSquares&gt;</span>
+    <span class="nt">&lt;DegreesOfFreedom&gt;</span>3.0<span class="nt">&lt;/DegreesOfFreedom&gt;</span>
+    <span class="nt">&lt;MeanSquare&gt;</span>2.068652839238785E9<span class="nt">&lt;/MeanSquare&gt;</span>
+    <span class="nt">&lt;FStatistics&gt;</span>303.3275165487872<span class="nt">&lt;/FStatistics&gt;</span>
+    <span class="nt">&lt;PValue&gt;</span>1.1102230246251565E-16<span class="nt">&lt;/PValue&gt;</span>
+  <span class="nt">&lt;/Treatments&gt;</span>
+  <span class="nt">&lt;Error&gt;</span>
+    <span class="nt">&lt;Factor&gt;</span>Within Groups<span class="nt">&lt;/Factor&gt;</span>
+    <span class="nt">&lt;SumOfSquares&gt;</span>6.547070797481773E8<span class="nt">&lt;/SumOfSquares&gt;</span>
+    <span class="nt">&lt;DegreesOfFreedom&gt;</span>96.0<span class="nt">&lt;/DegreesOfFreedom&gt;</span>
+    <span class="nt">&lt;MeanSquare&gt;</span>6819865.414043513<span class="nt">&lt;/MeanSquare&gt;</span>
+  <span class="nt">&lt;/Error&gt;</span>
+  <span class="nt">&lt;Total&gt;</span>
+    <span class="nt">&lt;Factor&gt;</span>Total<span class="nt">&lt;/Factor&gt;</span>
+    <span class="nt">&lt;SumOfSquares&gt;</span>6.860665597464533E9<span class="nt">&lt;/SumOfSquares&gt;</span>
+    <span class="nt">&lt;DegreesOfFreedom&gt;</span>99.0<span class="nt">&lt;/DegreesOfFreedom&gt;</span>
+  <span class="nt">&lt;/Total&gt;</span>
+  <span class="nt">&lt;Summary&gt;</span>
+    <span class="nt">&lt;Group&gt;</span>
+      <span class="nt">&lt;Group&gt;</span>a1_2000<span class="nt">&lt;/Group&gt;</span>
+      <span class="nt">&lt;Count&gt;</span>25<span class="nt">&lt;/Count&gt;</span>
+      <span class="nt">&lt;Minimum&gt;</span>7902.3838<span class="nt">&lt;/Minimum&gt;</span>
+      <span class="nt">&lt;Maximum&gt;</span>28062.184<span class="nt">&lt;/Maximum&gt;</span>
+      <span class="nt">&lt;Sum&gt;</span>455742.91310000006<span class="nt">&lt;/Sum&gt;</span>
+      <span class="nt">&lt;Average&gt;</span>18229.716524000003<span class="nt">&lt;/Average&gt;</span>
+      <span class="nt">&lt;Variance&gt;</span>2.727945084675026E7<span class="nt">&lt;/Variance&gt;</span>
+    <span class="nt">&lt;/Group&gt;</span>
+    <span class="nt">&lt;Group&gt;</span>
+      <span class="nt">&lt;Group&gt;</span>a2_2000<span class="nt">&lt;/Group&gt;</span>
+      <span class="nt">&lt;Count&gt;</span>25<span class="nt">&lt;/Count&gt;</span>
+      <span class="nt">&lt;Minimum&gt;</span>96.724518<span class="nt">&lt;/Minimum&gt;</span>
+      <span class="nt">&lt;Maximum&gt;</span>105.01617<span class="nt">&lt;/Maximum&gt;</span>
+      <span class="nt">&lt;Sum&gt;</span>2515.9517890000006<span class="nt">&lt;/Sum&gt;</span>
+      <span class="nt">&lt;Average&gt;</span>100.63807156000003<span class="nt">&lt;/Average&gt;</span>
+      <span class="nt">&lt;Variance&gt;</span>4.840012157224312<span class="nt">&lt;/Variance&gt;</span>
+    <span class="nt">&lt;/Group&gt;</span>
+    <span class="nt">&lt;Group&gt;</span>
+      <span class="nt">&lt;Group&gt;</span>a3_2000<span class="nt">&lt;/Group&gt;</span>
+      <span class="nt">&lt;Count&gt;</span>25<span class="nt">&lt;/Count&gt;</span>
+      <span class="nt">&lt;Minimum&gt;</span>5.2713499<span class="nt">&lt;/Minimum&gt;</span>
+      <span class="nt">&lt;Maximum&gt;</span>11.17146<span class="nt">&lt;/Maximum&gt;</span>
+      <span class="nt">&lt;Sum&gt;</span>218.94218979999997<span class="nt">&lt;/Sum&gt;</span>
+      <span class="nt">&lt;Average&gt;</span>8.757687591999998<span class="nt">&lt;/Average&gt;</span>
+      <span class="nt">&lt;Variance&gt;</span>2.508762737460472<span class="nt">&lt;/Variance&gt;</span>
+    <span class="nt">&lt;/Group&gt;</span>
+    <span class="nt">&lt;Group&gt;</span>
+      <span class="nt">&lt;Group&gt;</span>a4_2000<span class="nt">&lt;/Group&gt;</span>
+      <span class="nt">&lt;Count&gt;</span>25<span class="nt">&lt;/Count&gt;</span>
+      <span class="nt">&lt;Minimum&gt;</span>0.22132<span class="nt">&lt;/Minimum&gt;</span>
+      <span class="nt">&lt;Maximum&gt;</span>9.58605<span class="nt">&lt;/Maximum&gt;</span>
+      <span class="nt">&lt;Sum&gt;</span>37.27112993<span class="nt">&lt;/Sum&gt;</span>
+      <span class="nt">&lt;Average&gt;</span>1.4908451972<span class="nt">&lt;/Average&gt;</span>
+      <span class="nt">&lt;Variance&gt;</span>3.4606488978589653<span class="nt">&lt;/Variance&gt;</span>
+    <span class="nt">&lt;/Group&gt;</span>
+  <span class="nt">&lt;/Summary&gt;</span>
+<span class="nt">&lt;/Anova&gt;</span>
 </pre></div>
 </div>
-</div></blockquote>
 </div>
 
 

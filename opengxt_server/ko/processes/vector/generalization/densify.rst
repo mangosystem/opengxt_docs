@@ -54,3 +54,7 @@ Densify (SimpleFeatureCollection inputFeatures, Expression tolerance) : SimpleFe
  - tolerance 파라미터는 수 또는 수식을 사용할 수 있다.
 
 **Examples**
+
+시작점, 종점으로 구성된 원본 라인에서 250m 간격의 Densify를 수행한 결과입니다. 파란색은 원본 버텍스, 빨강색은 추가된 버텍스 입니다.
+
+  .. image:: images/densify.png

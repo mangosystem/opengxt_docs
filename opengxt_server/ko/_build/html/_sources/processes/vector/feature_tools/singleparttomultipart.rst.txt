@@ -60,3 +60,7 @@ SinglepartToMultipart (SimpleFeatureCollection inputFeatures, String caseField, 
  - dissolve 파라미터가 True인 경우 인접한 폴리곤 또는 라인을 Dissolve한 Geometry를 반환한다.
 
 **Examples**
+
+Single Polygon으로 구성된 레이어를 시군구 이름을 기준으로 다시 MultiPolygon으로 변환한 예입니다.
+
+  .. image:: images/singleparttomultipart.png

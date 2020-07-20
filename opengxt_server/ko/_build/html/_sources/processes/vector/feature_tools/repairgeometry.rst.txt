@@ -49,6 +49,3 @@ RepairGeometry (SimpleFeatureCollection inputFeatures) : SimpleFeatureCollection
  - 좌표 유효성 검증 coordinates
  - 빈 shell/holes 처리
  - 중복 버텍스 및 포인트 수정
-
-
-**Examples**

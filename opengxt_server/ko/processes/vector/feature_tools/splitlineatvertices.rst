@@ -48,3 +48,8 @@ SplitLineAtVertices (SimpleFeatureCollection lineFeatures) : SimpleFeatureCollec
  - inputFeatures 파라미터는 라인 또는 폴리곤 레이어 이어야 한다. 
 
 **Examples**
+
+폴리곤 피처의 boundary를 버텍스마다 라인 피처로 변환환 결과입니다.
+
+  .. image:: images/splitlineatvertices.png
+

@@ -60,5 +60,8 @@ SnapPointsToLines (SimpleFeatureCollection pointFeatures, SimpleFeatureCollectio
  - lineFeatures 레이어는 라인 또는 폴리곤 타입 이어야 한다.
  - tolerance 파라미터가 0인 경우 가장 가까운 라인 피처로 이동하며, pointFeatures의 거리 단위를 사용한다.
 
-
 **Examples**
+
+도로 주변의 포인트를 가장 가까운 도로(라인)에 스냅한 결과입니다.
+
+  .. image:: images/snappointstolines.png

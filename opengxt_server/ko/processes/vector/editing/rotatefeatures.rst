@@ -57,7 +57,12 @@ RotateFeatures (SimpleFeatureCollection inputFeatures, Point anchor, Expression 
 
 **Constraints**
 
- 
+  - anchor 파라미터는 Point 지오메트리 유형이다.
+  - angle 파라미터는 도 단위의 회전 각도이며 Expression 표현식을 사용하여 각도를 정의할 수 있다.
 
 **Examples**
+
+폴리곤의 Centroid를 기준으로 45도 회전한 결과입니다.
+
+  .. image:: images/rotatefeatures.png
 

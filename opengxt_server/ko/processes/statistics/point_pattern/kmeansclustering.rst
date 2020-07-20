@@ -66,5 +66,8 @@ KMeansClustering (SimpleFeatureCollection inputFeatures, String targetField, Int
  - targetField 파라미터를 설정하지 않으면 기본값 cluster 필드를 사용한다.
  - numberOfClusters 파라미터를 설정하지 않으면 기본값 5를 사용한다.
 
-
 **Examples**
+
+포인트 레이어를 5개의 Cluster로 설정하여 실행한 결과입니다.
+
+  .. image:: images/kmeansclustering.png

@@ -66,5 +66,9 @@ FlowMap (SimpleFeatureCollection lineFeatures, Expression odValue, Expression do
  - lineFeatures 파라미터는 라인 레이어 이어야 한다.
  - maxSize 파라미터가 Null 또는 0이면 lineFeatures의 Extent의 넓이와 높이 중 작은값을 20으로 나눈 값을 사용한다.
 
-
 **Examples**
+
+서울시 구별 인구이동 데이터를 이용하여 Flow Map을 생성한 결과입니다.
+
+  .. image:: images/flowmap.png
+

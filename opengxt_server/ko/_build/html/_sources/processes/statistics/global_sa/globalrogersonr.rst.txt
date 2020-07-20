@@ -74,7 +74,7 @@ GlobalRogersonR (SimpleFeatureCollection inputFeatures, String xField, String yF
 
 **Examples**
 
-  .. code-block::
+.. code-block:: XML
   
     <?xml version="1.0" encoding="UTF-8"?>
     <GlobalRogersonsR>

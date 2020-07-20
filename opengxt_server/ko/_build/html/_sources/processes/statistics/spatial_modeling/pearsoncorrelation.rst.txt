@@ -57,7 +57,7 @@ Pearson (SimpleFeatureCollection inputFeatures, String inputFields) : PearsonRes
 
 pop2008, pop_den 두 필드를 이용하여 Pearson 상관 계수를 분석한 결과는 다음의 XML 포맷으로 반환됩니다.
 
-  .. code-block::
+.. code-block:: XML
 
     <?xml version="1.0" encoding="utf-8"?>
     <PearsonResult>
