@@ -14,3 +14,5 @@
    localleess
    localleesl
    localrogersonr
+   localsabinning
+   localsaoverlay
