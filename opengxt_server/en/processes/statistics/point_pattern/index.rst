@@ -10,5 +10,6 @@ Analyze the pattern of the point data.
 
    nearestneighbor
    knearestneighbormap
+   knearestneighborcircle
    quadratanalysis
    kmeansclustering

@@ -10,5 +10,6 @@
 
    nearestneighbor
    knearestneighbormap
+   knearestneighborcircle
    quadratanalysis
    kmeansclustering
