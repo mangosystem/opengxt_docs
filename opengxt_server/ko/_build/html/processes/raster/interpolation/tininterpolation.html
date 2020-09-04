@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>공간내삽(Interpolation) &mdash; OpenGXT for Server 1.0 문서</title>
+  <title>Triangulated Irregular Network(TIN) 보간 &mdash; OpenGXT for Server 1.0 문서</title>
   
 
   
@@ -38,8 +38,8 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="색인" href="../../../genindex.html" />
     <link rel="search" title="검색" href="../../../search.html" />
-    <link rel="next" title="IDW 보간" href="idw.html" />
-    <link rel="prev" title="식생지수(NDVI) 계산" href="../math/rasterndvi.html" /> 
+    <link rel="next" title="구역통계(Zonal Statistics)" href="../zonal/index.html" />
+    <link rel="prev" title="Thin Plate Spline(TPS) 보간" href="tps.html" /> 
   
   <!-- BOTTOM RIGHT RIBBON: START COPYING HERE -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
@@ -125,10 +125,10 @@
 <li class="toctree-l3"><a class="reference internal" href="../density/index.html">밀도분석(Density)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../distance/index.html">거리분석(Distance)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../math/index.html">수학연산(Math)</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">공간내삽(Interpolation)</a><ul>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">공간내삽(Interpolation)</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="idw.html">IDW 보간</a></li>
 <li class="toctree-l4"><a class="reference internal" href="tps.html">Thin Plate Spline(TPS) 보간</a></li>
-<li class="toctree-l4"><a class="reference internal" href="tininterpolation.html">Triangulated Irregular Network(TIN) 보간</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Triangulated Irregular Network(TIN) 보간</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../zonal/index.html">구역통계(Zonal Statistics)</a></li>
@@ -189,13 +189,15 @@
         
           <li><a href="../index.html">래스터 분석 프로세스</a> &raquo;</li>
         
-      <li>공간내삽(Interpolation)</li>
+          <li><a href="index.html">공간내삽(Interpolation)</a> &raquo;</li>
+        
+      <li>Triangulated Irregular Network(TIN) 보간</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <!-- a href="../../../_sources/processes/raster/interpolation/index.rst.txt" rel="nofollow"> View page source</a -->
+            <!-- a href="../../../_sources/processes/raster/interpolation/tininterpolation.rst.txt" rel="nofollow"> View page source</a -->
           
         
       </li>
@@ -208,16 +210,91 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="interpolation">
-<span id="id1"></span><h1>공간내삽(Interpolation)<a class="headerlink" href="#interpolation" title="제목 주소">¶</a></h1>
-<p>포인트와 속성값을 이용하여 Interpolation을 수행하는 프로세스들로 구성됩니다.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="idw.html">IDW 보간</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tps.html">Thin Plate Spline(TPS) 보간</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tininterpolation.html">Triangulated Irregular Network(TIN) 보간</a></li>
+  <div class="section" id="triangulated-irregular-network-tin">
+<span id="tininterpolation"></span><h1>Triangulated Irregular Network(TIN) 보간<a class="headerlink" href="#triangulated-irregular-network-tin" title="제목 주소">¶</a></h1>
+<p>입력 피처에 대해 Triangulated Irregular Network(TIN) (TPS) 보간법을 적용한 래스터를 생성합니다.</p>
+<p><strong>Syntax</strong></p>
+<p>TINInterpolation (SimpleFeatureCollection inputFeatures, Expression inputField, RasterPixelType pixelType, Double cellSize, ReferencedEnvelope extent) : GridCoverage2D</p>
+<p><strong>Input Parameters</strong></p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 50%" />
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Identifier</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+<td><p><strong>Type</strong></p></td>
+<td><p><strong>Default</strong></p></td>
+<td><p><strong>Required</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>inputFeatures</p></td>
+<td><p>보간할 입력 레이어입니다.</p></td>
+<td><p>SimpleFeatureCollection</p></td>
+<td></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>inputField</p></td>
+<td><p>각각의 샘플 포인트에 대한 높이 또는 크기 등 값을 포함한 필드입니다.</p></td>
+<td><p>Expression</p></td>
+<td></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>pixelType</p></td>
+<td><p>출력 래스터 레이어의 픽셀 유형입니다.</p></td>
+<td><p>RasterPixelType</p></td>
+<td><p>Float</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>cellSize</p></td>
+<td><p>출력 래스터 레이어의 셀 크기입니다.</p></td>
+<td><p>Double</p></td>
+<td><p>0.0</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>extent</p></td>
+<td><p>출력 래스터 레이어의 공간 범위입니다.</p></td>
+<td><p>ReferencedEnvelope</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Process Outputs</strong></p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 50%" />
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Identifier</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+<td><p><strong>Type</strong></p></td>
+<td><p><strong>Default</strong></p></td>
+<td><p><strong>Required</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>result</p></td>
+<td><p>보간한 출력 래스터 레이어입니다.</p></td>
+<td><p>GridCoverage2D</p></td>
+<td></td>
+<td><p>✓</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Constraints</strong></p>
+<ul class="simple">
+<li><p>pixelType: BYTE, SHORT, INTEGER, FLOAT(기본값), DOUBLE</p></li>
+<li><p>extent 파라미터를 설정하지 않으면 inputFeatures 레이어의 범위를 사용한다.</p></li>
+<li><p>cellSize 파라미터를 설정하지 않으면 Extent의 Width와 Height 중 작은 값을 250으로 나눈 값을 사용한다.</p></li>
+<li><p>입력 레이어가 라인스트링, 폴리곤인 경우 모든 버텍스를 추출하여 보간에 사용한다.</p></li>
 </ul>
-</div>
+<p><strong>Examples</strong></p>
 </div>
 
 
@@ -228,10 +305,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="idw.html" class="btn btn-neutral float-right" title="IDW 보간" accesskey="n" rel="next">다음 <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../zonal/index.html" class="btn btn-neutral float-right" title="구역통계(Zonal Statistics)" accesskey="n" rel="next">다음 <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../math/rasterndvi.html" class="btn btn-neutral float-left" title="식생지수(NDVI) 계산" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 이전</a>
+        <a href="tps.html" class="btn btn-neutral float-left" title="Thin Plate Spline(TPS) 보간" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 이전</a>
       
     </div>
   

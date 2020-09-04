@@ -10,3 +10,4 @@ Perform interpolation analysis, using points and attribute values.
 
    idw
    tps
+   tininterpolation

@@ -10,3 +10,4 @@
 
    idw
    tps
+   tininterpolation
