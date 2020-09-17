@@ -14,4 +14,5 @@ These processes are for generalization such as dissolve, simplification etc.
    simplify
    simplifypolygon
    densify
+   smooth
    eliminate

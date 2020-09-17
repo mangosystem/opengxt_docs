@@ -31,6 +31,7 @@ These processes are for conversions such as Geometry type conversion, and format
    featuretominimumrectangle
    featuretoconvexhull
    featuretominimumboundingcircle
+   concavehull
    ringmap
    windrosemap
    flowmap

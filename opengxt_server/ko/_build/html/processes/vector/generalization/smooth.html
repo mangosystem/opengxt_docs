@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>지도 단순화 및 일반화 (Generalization) &mdash; OpenGXT for Server 1.0 문서</title>
+  <title>곡선화 &mdash; OpenGXT for Server 1.0 문서</title>
   
 
   
@@ -38,8 +38,8 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="색인" href="../../../genindex.html" />
     <link rel="search" title="검색" href="../../../search.html" />
-    <link rel="next" title="디졸브" href="dissolve.html" />
-    <link rel="prev" title="Spatial Clump Map 생성" href="../aggregation/spatialclumpmap.html" /> 
+    <link rel="next" title="슬리버 폴리곤 제거" href="eliminate.html" />
+    <link rel="prev" title="라인의 버텍스 추가" href="densify.html" /> 
   
   <!-- BOTTOM RIGHT RIBBON: START COPYING HERE -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
@@ -123,14 +123,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../overlay/index.html">중첩 (Overlay)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../proximity/index.html">거리 및 근접 (Proximity)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../aggregation/index.html">집계 (Aggregation)</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">지도 단순화 및 일반화 (Generalization)</a><ul>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">지도 단순화 및 일반화 (Generalization)</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="dissolve.html">디졸브</a></li>
 <li class="toctree-l4"><a class="reference internal" href="removeholes.html">폴리곤 홀 제거</a></li>
 <li class="toctree-l4"><a class="reference internal" href="removeparts.html">폴리곤 파트 제거</a></li>
 <li class="toctree-l4"><a class="reference internal" href="simplify.html">라인 단순화</a></li>
 <li class="toctree-l4"><a class="reference internal" href="simplifypolygon.html">폴리곤 단순화</a></li>
 <li class="toctree-l4"><a class="reference internal" href="densify.html">라인의 버텍스 추가</a></li>
-<li class="toctree-l4"><a class="reference internal" href="smooth.html">곡선화</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">곡선화</a></li>
 <li class="toctree-l4"><a class="reference internal" href="eliminate.html">슬리버 폴리곤 제거</a></li>
 </ul>
 </li>
@@ -191,13 +191,15 @@
         
           <li><a href="../index.html">벡터 분석 프로세스</a> &raquo;</li>
         
-      <li>지도 단순화 및 일반화 (Generalization)</li>
+          <li><a href="index.html">지도 단순화 및 일반화 (Generalization)</a> &raquo;</li>
+        
+      <li>곡선화</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <!-- a href="../../../_sources/processes/vector/generalization/index.rst.txt" rel="nofollow"> View page source</a -->
+            <!-- a href="../../../_sources/processes/vector/generalization/smooth.rst.txt" rel="nofollow"> View page source</a -->
           
         
       </li>
@@ -210,21 +212,76 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="generalization">
-<span id="id1"></span><h1>지도 단순화 및 일반화 (Generalization)<a class="headerlink" href="#generalization" title="제목 주소">¶</a></h1>
-<p>Dissolve, Simplification 등 일반화와 관련된 프로세스들로 구성됩니다.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="dissolve.html">디졸브</a></li>
-<li class="toctree-l1"><a class="reference internal" href="removeholes.html">폴리곤 홀 제거</a></li>
-<li class="toctree-l1"><a class="reference internal" href="removeparts.html">폴리곤 파트 제거</a></li>
-<li class="toctree-l1"><a class="reference internal" href="simplify.html">라인 단순화</a></li>
-<li class="toctree-l1"><a class="reference internal" href="simplifypolygon.html">폴리곤 단순화</a></li>
-<li class="toctree-l1"><a class="reference internal" href="densify.html">라인의 버텍스 추가</a></li>
-<li class="toctree-l1"><a class="reference internal" href="smooth.html">곡선화</a></li>
-<li class="toctree-l1"><a class="reference internal" href="eliminate.html">슬리버 폴리곤 제거</a></li>
+  <div class="section" id="smooth">
+<span id="id1"></span><h1>곡선화<a class="headerlink" href="#smooth" title="제목 주소">¶</a></h1>
+<p>라인 또는 폴리곤 레이어의 도형을 부드럽게 합니다. 곡선화 알고리즘은 베이지어 스플라인을 사용하여 라인 상에서 버텍스를 삽입합니다.</p>
+<p><strong>Syntax</strong></p>
+<p>Smooth (SimpleFeatureCollection features, Double fit): SimpleFeatureCollection</p>
+<p><strong>Input Parameters</strong></p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 50%" />
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Identifier</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+<td><p><strong>Type</strong></p></td>
+<td><p><strong>Default</strong></p></td>
+<td><p><strong>Required</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>features</p></td>
+<td><p>곡선화를 적용할 입력 라인 또는 폴리곤 레이어입니다.</p></td>
+<td><p>SimpleFeatureCollection</p></td>
+<td></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>fit</p></td>
+<td><p>스무딩된 경계(0은 느슨)의 적합성을 지정하는 0과 1(포함) 사이의 값입니다.</p></td>
+<td><p>Double</p></td>
+<td><p>0.3</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Process Outputs</strong></p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 50%" />
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Identifier</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+<td><p><strong>Type</strong></p></td>
+<td><p><strong>Default</strong></p></td>
+<td><p><strong>Required</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>result</p></td>
+<td><p>출력 레이어입니다.</p></td>
+<td><p>SimpleFeatureCollection</p></td>
+<td></td>
+<td><p>✓</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Constraints</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>fit 파라미터는 0과 1 사이의 Double값을 사용한다.</p></li>
 </ul>
-</div>
+</div></blockquote>
+<p><strong>Examples</strong></p>
+<p>빨간선은 원본, 파란선은 Smooth 결과 입니다.</p>
+<blockquote>
+<div><img alt="../../../_images/smooth.png" src="../../../_images/smooth.png" />
+</div></blockquote>
 </div>
 
 
@@ -235,10 +292,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="dissolve.html" class="btn btn-neutral float-right" title="디졸브" accesskey="n" rel="next">다음 <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="eliminate.html" class="btn btn-neutral float-right" title="슬리버 폴리곤 제거" accesskey="n" rel="next">다음 <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../aggregation/spatialclumpmap.html" class="btn btn-neutral float-left" title="Spatial Clump Map 생성" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 이전</a>
+        <a href="densify.html" class="btn btn-neutral float-left" title="라인의 버텍스 추가" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 이전</a>
       
     </div>
   

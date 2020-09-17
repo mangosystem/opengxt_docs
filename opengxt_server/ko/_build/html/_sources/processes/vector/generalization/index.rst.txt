@@ -14,4 +14,5 @@ Dissolve, Simplification 등 일반화와 관련된 프로세스들로 구성됩
    simplify
    simplifypolygon
    densify
+   smooth
    eliminate

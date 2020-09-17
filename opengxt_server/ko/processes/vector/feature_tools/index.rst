@@ -31,6 +31,7 @@
    featuretominimumrectangle
    featuretoconvexhull
    featuretominimumboundingcircle
+   concavehull
    ringmap
    windrosemap
    flowmap
