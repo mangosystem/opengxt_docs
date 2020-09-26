@@ -13,3 +13,5 @@
    knearestneighborcircle
    quadratanalysis
    kmeansclustering
+   clustergam
+   clusterbesagnewell

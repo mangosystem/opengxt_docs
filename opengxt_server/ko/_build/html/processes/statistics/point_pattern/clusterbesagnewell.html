@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>포인트 패턴 분석(Pattern Analysis) &mdash; OpenGXT for Server 1.0 문서</title>
+  <title>공간 클러스터 탐색: Besag, Julian and Newell, James &mdash; OpenGXT for Server 1.0 문서</title>
   
 
   
@@ -38,8 +38,8 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="색인" href="../../../genindex.html" />
     <link rel="search" title="검색" href="../../../search.html" />
-    <link rel="next" title="최근린 이웃 지수" href="nearestneighbor.html" />
-    <link rel="prev" title="선형 방향 평균" href="../distributions/directionalmean.html" /> 
+    <link rel="next" title="전역적 공간 자기상관분석(Global SA)" href="../global_sa/index.html" />
+    <link rel="prev" title="공간 클러스터 탐색: Openshaw의 GAM" href="clustergam.html" /> 
   
   <!-- BOTTOM RIGHT RIBBON: START COPYING HERE -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
@@ -121,14 +121,14 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">공간통계 분석 프로세스</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../descriptive/index.html">기술통계(Descriptive Statistics)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../distributions/index.html">공간분포(Distributions)</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">포인트 패턴 분석(Pattern Analysis)</a><ul>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">포인트 패턴 분석(Pattern Analysis)</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="nearestneighbor.html">최근린 이웃 지수</a></li>
 <li class="toctree-l4"><a class="reference internal" href="knearestneighbormap.html">K-최근린 이웃 지도</a></li>
 <li class="toctree-l4"><a class="reference internal" href="knearestneighborcircle.html">K-최근린 이웃 원 생성</a></li>
 <li class="toctree-l4"><a class="reference internal" href="quadratanalysis.html">방격(Quadrat) 분석</a></li>
 <li class="toctree-l4"><a class="reference internal" href="kmeansclustering.html">K- 평균 군집화</a></li>
 <li class="toctree-l4"><a class="reference internal" href="clustergam.html">공간 클러스터 탐색: Openshaw의 GAM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="clusterbesagnewell.html">공간 클러스터 탐색: Besag, Julian and Newell, James</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">공간 클러스터 탐색: Besag, Julian and Newell, James</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../global_sa/index.html">전역적 공간 자기상관분석(Global SA)</a></li>
@@ -187,13 +187,15 @@
         
           <li><a href="../index.html">공간통계 분석 프로세스</a> &raquo;</li>
         
-      <li>포인트 패턴 분석(Pattern Analysis)</li>
+          <li><a href="index.html">포인트 패턴 분석(Pattern Analysis)</a> &raquo;</li>
+        
+      <li>공간 클러스터 탐색: Besag, Julian and Newell, James</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <!-- a href="../../../_sources/processes/statistics/point_pattern/index.rst.txt" rel="nofollow"> View page source</a -->
+            <!-- a href="../../../_sources/processes/statistics/point_pattern/clusterbesagnewell.rst.txt" rel="nofollow"> View page source</a -->
           
         
       </li>
@@ -206,20 +208,112 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="pattern-analysis">
-<span id="point-pattern"></span><h1>포인트 패턴 분석(Pattern Analysis)<a class="headerlink" href="#pattern-analysis" title="제목 주소">¶</a></h1>
-<p>포인트 데이터의 패턴을 분석하는 프로세스들로 구성됩니다.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="nearestneighbor.html">최근린 이웃 지수</a></li>
-<li class="toctree-l1"><a class="reference internal" href="knearestneighbormap.html">K-최근린 이웃 지도</a></li>
-<li class="toctree-l1"><a class="reference internal" href="knearestneighborcircle.html">K-최근린 이웃 원 생성</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quadratanalysis.html">방격(Quadrat) 분석</a></li>
-<li class="toctree-l1"><a class="reference internal" href="kmeansclustering.html">K- 평균 군집화</a></li>
-<li class="toctree-l1"><a class="reference internal" href="clustergam.html">공간 클러스터 탐색: Openshaw의 GAM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="clusterbesagnewell.html">공간 클러스터 탐색: Besag, Julian and Newell, James</a></li>
+  <div class="section" id="besag-julian-and-newell-james">
+<span id="clusterbesagnewell"></span><h1>공간 클러스터 탐색: Besag, Julian and Newell, James<a class="headerlink" href="#besag-julian-and-newell-james" title="제목 주소">¶</a></h1>
+<p>Besag, Julian and Newell, James의 알고리즘을 이용한 공간 클러스터를 탐색합니다.</p>
+<p><strong>Syntax</strong></p>
+<p>ClusterBesagNewell (SimpleFeatureCollection popFeatures, Expression popField, SimpleFeatureCollection caseFeatures, Expression caseField, Integer neighbours, FitnessFunctionType functionType, Double threshold): SimpleFeatureCollection, GridCoverage2D</p>
+<p><strong>Input Parameters</strong></p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 50%" />
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Identifier</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+<td><p><strong>Type</strong></p></td>
+<td><p><strong>Default</strong></p></td>
+<td><p><strong>Required</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>popFeatures</p></td>
+<td><p>The features containing the population at risk.</p></td>
+<td><p>SimpleFeatureCollection</p></td>
+<td></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>popField</p></td>
+<td><p>The feature attribute with the population at risk.</p></td>
+<td><p>Expression</p></td>
+<td></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>caseFeatures</p></td>
+<td><p>The features containing the incidents.</p></td>
+<td><p>SimpleFeatureCollection</p></td>
+<td></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>caseField</p></td>
+<td><p>The feature attribute with the incidents.</p></td>
+<td><p>Expression</p></td>
+<td></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>neighbours</p></td>
+<td><p>The Number of neighbours to be considered. the default value is 10.</p></td>
+<td><p>Integer</p></td>
+<td><p>10</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>functionType</p></td>
+<td><p>The type of fitness function to be used. Poisson(Default), Relative, RelativePercent</p></td>
+<td><p>Expression</p></td>
+<td><p>Poisson</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>threshold</p></td>
+<td><p>The significance threshold at which to accept the test.</p></td>
+<td><p>Double</p></td>
+<td><p>0.01</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Process Outputs</strong></p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 50%" />
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Identifier</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+<td><p><strong>Type</strong></p></td>
+<td><p><strong>Default</strong></p></td>
+<td><p><strong>Required</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>resultCircles</p></td>
+<td><p>Output significant circles.</p></td>
+<td><p>SimpleFeatureCollection</p></td>
+<td></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>resultDensity</p></td>
+<td><p>Output density results.</p></td>
+<td><p>GridCoverage2D</p></td>
+<td></td>
+<td><p>✓</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Constraints</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>neighbours의 기본값은 10이다.</p></li>
+<li><p>threshold의 기본값은 0.01이다.</p></li>
 </ul>
-</div>
+</div></blockquote>
+<p><strong>Examples</strong></p>
+<blockquote>
+<div><img alt="../../../_images/clusterbesagnewell.png" src="../../../_images/clusterbesagnewell.png" />
+</div></blockquote>
 </div>
 
 
@@ -230,10 +324,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="nearestneighbor.html" class="btn btn-neutral float-right" title="최근린 이웃 지수" accesskey="n" rel="next">다음 <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../global_sa/index.html" class="btn btn-neutral float-right" title="전역적 공간 자기상관분석(Global SA)" accesskey="n" rel="next">다음 <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../distributions/directionalmean.html" class="btn btn-neutral float-left" title="선형 방향 평균" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 이전</a>
+        <a href="clustergam.html" class="btn btn-neutral float-left" title="공간 클러스터 탐색: Openshaw의 GAM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 이전</a>
       
     </div>
   
