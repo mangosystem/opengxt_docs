@@ -72,6 +72,6 @@ SimplifyPolygon (SimpleFeatureCollection inputFeatures, Double tolerance, Boolea
 
 **Examples**
 
-파란선은 원본, 빨간 선은 Simplify 결과 입니다.
+파란선은 원본, 빨간 선은 폴리곤(좌) 및 라인(우) Simplify 비교 결과 입니다.
 
   .. image:: images/simplifypolygon.png

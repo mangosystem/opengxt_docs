@@ -61,6 +61,6 @@ OffsetFeatures (SimpleFeatureCollection inputFeatures, Expression offsetX, Expre
 
 **Examples**
 
-Sliver 폴리곤을 가진 원본 폴리곤 레이어에서 공유된 길이를 기준으로 Sliver 폴리곤을 제거한 원본과 결과입니다.
+폴리곤을 X, Y 축 방향으로 일정 거리만큼 이동한 결과입니다.
 
   .. image:: images/offsetfeatures.png

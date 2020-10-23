@@ -68,6 +68,6 @@ StandardDeviationalEllipse (SimpleFeatureCollection inputFeatures, String ellips
 
 **Examples**
 
-서울시 아파트 분포에 대한 시군구별 Standard Deviational Ecclipse를 분석한 결과입니다.
+서울시 아파트 분포에 대한 시군구별 Standard Deviational Ellipse를 분석한 결과입니다.
 
   .. image:: images/sde.png

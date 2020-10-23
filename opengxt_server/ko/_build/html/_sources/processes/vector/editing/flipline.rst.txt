@@ -49,6 +49,6 @@ FlipLine (SimpleFeatureCollection lineFeatures) : SimpleFeatureCollection
 
 **Examples**
 
-Sliver 폴리곤을 가진 원본 폴리곤 레이어에서 공유된 길이를 기준으로 Sliver 폴리곤을 제거한 원본과 결과입니다.
+라인의 시작/종점 방향을 변경한 결과입니다.
 
   .. image:: images/flipline.png

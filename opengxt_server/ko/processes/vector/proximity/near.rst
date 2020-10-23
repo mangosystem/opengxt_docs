@@ -76,7 +76,7 @@ Near (SimpleFeatureCollection inputFeatures, SimpleFeatureCollection nearFeature
 
 **Examples**
 
-포인트 레이어의 속성을 이용하여 Wedge 버퍼를 수행한 결과입니다.
+입력 피처에서 가장 가까운 대상 레이어의 피처와 거리를 계산한 결과입니다.
 
   .. image:: images/near.png
 

@@ -56,7 +56,7 @@ SplitPolygonByCount (SimpleFeatureCollection polygonFeatures, Expression count) 
 
 **Examples**
 
-폴리곤 피처의 boundary를 100미터 간격의 라인으로 분할한 결과입니다.
+빨강색 폴리곤을 기준으로 각각 10개의 폴리곤으로 분할한 결과입니다.
 
   .. image:: images/splitpolygonbycount.png
 

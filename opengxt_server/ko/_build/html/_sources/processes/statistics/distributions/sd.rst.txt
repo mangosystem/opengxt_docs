@@ -68,6 +68,6 @@ StandardDistance (SimpleFeatureCollection inputFeatures, String circleSize, Stri
 
 **Examples**
 
-서울시 아파트 분포에 대한 시군구별 Standard Distance 를 분석한 결과입니다.
+서울시 아파트 분포에 대한 시군구별 Standard Distance를 분석한 결과입니다.
 
   .. image:: images/sd.png

@@ -68,7 +68,7 @@ ScaleFeatures (SimpleFeatureCollection inputFeatures, Expression scaleX, Express
 
 **Examples**
 
-폴리곤의 Centroid를 기준으로 45도 회전한 결과입니다.
+폴리곤의 Centroid를 기준점으로 X, Y 방향으로 2배 늘린 결과입니다.
 
   .. image:: images/scalefeatures.png
 

@@ -68,6 +68,6 @@ SpatialClumpMap (SimpleFeatureCollection inputFeatures, Expression radius, Dista
 
 **Examples**
 
-시군구청에서 2000미터 내에 포함된 아파트의 수를 계산하여 지도화한 결과입니다.
+포인트 피처의 반경 5km를 기준으로 Clump Map을 생성한 결과입니다.
 
   .. image:: images/spatialclumpmap.png
