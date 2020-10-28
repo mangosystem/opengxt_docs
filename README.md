@@ -8,7 +8,7 @@
 OpenGXT documentation is provided using a [Attribution 3.0 Unported](LICENSE.md) license.
 
   - [GitHub](https://github.com/mapplus/opengxt)
-  - [OpenGXT for Server online documentation](http://www.mangosystem.com:8080/opengxt)
+  - [OpenGXT for Server online documentation](http://opengxt.mangosystem.com)
 
 ## How to write Documentation
 
