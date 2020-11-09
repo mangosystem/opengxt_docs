@@ -61,3 +61,5 @@ RasterRescale (GridCoverage2D inputCoverage, Double xScale, Double yScale) : Gri
  - xScale, yScale 파라미터의 값은 0보다 커야 한다.
 
 **Examples**
+
+  .. image:: images/rasterrescale.png

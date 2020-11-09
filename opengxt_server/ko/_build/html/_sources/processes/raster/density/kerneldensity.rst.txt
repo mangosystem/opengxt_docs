@@ -82,3 +82,5 @@ KernelDensity (SimpleFeatureCollection inputFeatures, KernelType kernelType, Str
  - 커널 함수는 `Kernel (statistics) <https://en.wikipedia.org/wiki/Kernel_%28statistics%29>`_ 참고
 
 **Examples**
+
+  .. image:: images/kerneldensity.png

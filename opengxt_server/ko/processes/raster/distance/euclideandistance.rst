@@ -67,5 +67,6 @@ EuclideanDistance (SimpleFeatureCollection inputFeatures, Double maximumDistance
  - extent 파라미터를 설정하지 않으면 inputFeatures 레이어의 범위를 사용한다.
  - cellSize 파라미터를 설정하지 않으면 Extent의 Width와 Height 중 작은 값을 250으로 나눈 값을 사용한다.
 
-
 **Examples**
+
+  .. image:: images/euclideandistance.png

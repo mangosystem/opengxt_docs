@@ -60,3 +60,5 @@ RasterMath (GridCoverage2D inputCoverage, Integer bandIndex, Expression expressi
  - expression 파라미터에서 사용할 수 있는 함수는 GeoTools의 Filter Function 을 사용한다.
 
 **Examples**
+
+  .. image:: images/rastermath.png

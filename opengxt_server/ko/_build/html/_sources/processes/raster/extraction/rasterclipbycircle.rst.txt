@@ -66,3 +66,5 @@ RasterClipByCircle (GridCoverage2D inputCoverage, Geometry center, Double radius
  - inside 파라미터가 False인 경우 원을 제외한 지역을 반환한다.
 
 **Examples**
+
+  .. image:: images/rasterclipbycircle.png

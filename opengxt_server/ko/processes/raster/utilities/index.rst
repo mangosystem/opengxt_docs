@@ -13,3 +13,4 @@
    rasterrescale
    rasterrotate
    rastershift
+   rasterreplacevalues

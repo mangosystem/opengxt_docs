@@ -66,3 +66,5 @@ RasterToPoint (GridCoverage2D inputCoverage, Integer bandIndex, String valueFiel
  - valueField가 Null이면 기본값으로 value 이름의 필드를 사용한다.
 
 **Examples**
+
+  .. image:: images/rastertopoint.png

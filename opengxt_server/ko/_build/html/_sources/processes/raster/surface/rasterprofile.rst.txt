@@ -60,5 +60,6 @@ RasterProfile (GridCoverage2D inputCoverage, Geometry userLine, Double interval)
  - interval 파라미터가 설정되지 않으면 userLine 길이를 20으로 나눈 값을 적용한다.
  - Output 포인트 레이어는 distance(누적 거리)와 value(높이값 등 래스터의 셀 값) 필드를 포함한다.
 
-
 **Examples**
+
+  .. image:: images/rasterprofile.png

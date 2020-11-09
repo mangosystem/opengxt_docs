@@ -67,5 +67,6 @@ RasterHighLowPoints (GridCoverage2D inputCoverage, Integer bandIndex, Geometry c
  - cropShape 파라미터는 반드시 Polygon 또는 MultiPolygon이어야 한다.
  - valueType 파라미터는 Both, High, Low 값을 사용하며, Null이면 High 값을 적용한다.
 
-
 **Examples**
+
+  .. image:: images/rasterhighlow.png

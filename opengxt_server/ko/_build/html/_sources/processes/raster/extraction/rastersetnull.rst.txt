@@ -72,5 +72,6 @@ RasterSetNull (GridCoverage2D inputCoverage, Integer bandIndex, Filter filter, B
  - filter 파라미터의 필드 이름은 반드시 Value 이어야 한다.
  - replaceNoData 파라미터의 값이 True인 경우 기존 NoData값을 newValue 파라미터 값으로 대체한다.
 
-
 **Examples**
+
+  .. image:: images/rastersetnull.png

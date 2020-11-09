@@ -54,3 +54,5 @@ RasterClipByGeometry (GridCoverage2D inputCoverage, Geometry cropShape) : GridCo
  - cropShape의 Geometry 타입은 Polygon 또는 MultiPolygon이어야 한다.
 
 **Examples**
+
+  .. image:: images/rasterclipbygeometry.png

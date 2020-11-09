@@ -23,7 +23,7 @@ RasterTPI (GridCoverage2D inputCoverage) : GridCoverage2D
    * - inputCoverage
      - 표고값을 저장(DEM, DSM 등)한 입력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Process Outputs**
@@ -40,12 +40,12 @@ RasterTPI (GridCoverage2D inputCoverage) : GridCoverage2D
    * - result
      - TPI(위상 위치 지수)값이 계산된 출력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
 
 **Examples**
 
+  .. image:: images/rastertpi.png

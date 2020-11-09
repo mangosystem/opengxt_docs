@@ -68,3 +68,5 @@ RasterToPolygon (GridCoverage2D inputCoverage, Integer bandIndex, Boolean weedin
 
 
 **Examples**
+
+  .. image:: images/rastertopolygon.png

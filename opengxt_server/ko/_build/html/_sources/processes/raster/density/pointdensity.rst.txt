@@ -75,3 +75,5 @@ PointDensity (SimpleFeatureCollection inputFeatures, String populationField, Str
 
 
 **Examples**
+
+  .. image:: images/pointdensity.png

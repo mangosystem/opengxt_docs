@@ -111,3 +111,5 @@ RasterDescribe (GridCoverage2D inputCoverage, Boolean detailed) : RasterDescribe
         <NoData>0.0</NoData>
       </Band>
     </RasterDescription>
+
+      .. image:: images/rasterdescribe.png

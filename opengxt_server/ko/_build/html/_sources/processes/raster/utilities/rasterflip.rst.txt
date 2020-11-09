@@ -48,3 +48,5 @@ RasterFlip (GridCoverage2D inputCoverage) : GridCoverage2D
  - Multi-Band래스터를 지원한다.
 
 **Examples**
+
+  .. image:: images/rasterflip.png

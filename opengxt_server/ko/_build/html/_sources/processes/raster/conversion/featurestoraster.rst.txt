@@ -65,7 +65,9 @@ FeaturesToRaster (SimpleFeatureCollection inputFeatures, String inputField, Doub
 
  - inputField 파라미터는 반드시 Numeric 필드 또는 상수값이어야 한다.
  - extent 파라미터를 설정하지 않으면 inputFeatures의 범위를 사용한다.
- - cellSize 파라미터를 설정하지 않으면 Extent의 Width와 Height 중 작은 값을 250으로 나눈 값을 사용한다. 
+ - cellSize 파라미터를 설정하지 않으면 Extent의 Width와 Height 중 작은 값을 250으로 나눈 값을 사용한다.
 
 
 **Examples**
+
+  .. image:: images/featurestoraster.png

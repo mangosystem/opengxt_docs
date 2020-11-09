@@ -70,3 +70,5 @@ RasterRotate (GridCoverage2D inputCoverage, Point anchorPoint, Double angle, Res
 
 
 **Examples**
+
+  .. image:: images/rasterrotate.png

@@ -23,7 +23,7 @@ RasterAspect (GridCoverage2D inputCoverage) : GridCoverage2D
    * - inputCoverage
      - 표고값을 저장(DEM, DSM 등)한 입력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Process Outputs**
@@ -40,12 +40,12 @@ RasterAspect (GridCoverage2D inputCoverage) : GridCoverage2D
    * - result
      - 출력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
 
 **Examples**
 
+  .. image:: images/rasteraspect.png

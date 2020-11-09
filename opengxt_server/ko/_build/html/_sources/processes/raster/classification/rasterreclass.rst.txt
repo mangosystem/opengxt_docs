@@ -66,3 +66,5 @@ RasterReclass (GridCoverage2D inputCoverage, Integer bandIndex, String ranges, B
  - ranges 파라미터 범위 내의 값들은 NoData값으로 처리한다.
 
 **Examples**
+
+  .. image:: images/rasterreclass.png

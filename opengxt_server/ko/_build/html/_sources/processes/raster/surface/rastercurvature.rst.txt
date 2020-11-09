@@ -54,3 +54,5 @@ RasterCurvature (GridCoverage2D inputCoverage, Double zFactor) : GridCoverage2D
  - 좌표체계의 x, y단위와 z값의 단위가 다르면 zFactor값을 x, y 단위로 적절하게 환산해서 설정한다.
 
 **Examples**
+
+  .. image:: images/rastercurvature.png

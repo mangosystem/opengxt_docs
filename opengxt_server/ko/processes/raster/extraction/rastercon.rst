@@ -73,5 +73,6 @@ RasterCon (GridCoverage2D inputCoverage, Integer bandIndex, Filter filter, Integ
  - trueValue와 falseValue 파라미터는 반드시 Integer값이어야 한다.
  - falseValue 파라미터값이 Null인 경우 NoData값을 적용한다.
 
-
 **Examples**
+
+  .. image:: images/rastercon.png

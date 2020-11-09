@@ -104,3 +104,5 @@ PointsToRaster (SimpleFeatureCollection inputFeatures, String inputField, PointA
        - 포인트의 개수, Numeric 필드가 아닐 경우에도 강제로 할당
 
 **Examples**
+
+  .. image:: images/pointstoraster.png

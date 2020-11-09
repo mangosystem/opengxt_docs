@@ -75,3 +75,5 @@ LineDensity (SimpleFeatureCollection inputFeatures, String populationField, Doub
 
 
 **Examples**
+
+  .. image:: images/linedensity.png

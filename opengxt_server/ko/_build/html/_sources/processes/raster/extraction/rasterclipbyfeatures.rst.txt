@@ -54,3 +54,5 @@ RasterClipByFeatures (GridCoverage2D inputCoverage, SimpleFeatureCollection crop
  - inside 파라미터가 False인 경우 원을 제외한 지역을 반환한다.
 
 **Examples**
+
+  .. image:: images/rasterclipbyfeatures.png

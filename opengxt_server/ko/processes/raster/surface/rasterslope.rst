@@ -61,5 +61,6 @@ RasterSlope (GridCoverage2D inputCoverage, SlopeType slopeType, Double zFactor) 
  - slopeType 파라미터는 Degree 또는 Percentrise 값을 사용하며, Null이면 Degree 값을 적용한다.
  - 좌표체계의 x, y단위와 z값의 단위가 다르면 zFactor값을 x, y 단위로 적절하게 환산해서 설정한다.
 
-
 **Examples**
+
+  .. image:: images/rasterslope.png

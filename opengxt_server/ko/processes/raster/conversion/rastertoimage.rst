@@ -98,3 +98,5 @@ RasterToImage (GridCoverage2D coverage, String bbox, CoordinateReferenceSystem c
 
 
 **Examples**
+
+  .. image:: images/rastertoimage.png

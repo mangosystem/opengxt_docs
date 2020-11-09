@@ -64,3 +64,5 @@ RasterShift (GridCoverage2D inputCoverage, Double xShift, Double yShift) : GridC
 
 
 **Examples**
+
+  .. image:: images/rastershift.png

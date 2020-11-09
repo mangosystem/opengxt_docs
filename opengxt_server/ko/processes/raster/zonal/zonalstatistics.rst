@@ -1,4 +1,4 @@
-.. _rasterzonalstatistics:
+.. _zonalstatistics:
 
 래스터 구역 통계
 ===========================
@@ -102,5 +102,7 @@ ZonalStatistics (SimpleFeatureCollection zoneFeatures, String targetField, GridC
     * - StdDev
       - 표준편차
 
-      
+
 **Examples**
+
+  .. image:: images/zonalstatistics.png

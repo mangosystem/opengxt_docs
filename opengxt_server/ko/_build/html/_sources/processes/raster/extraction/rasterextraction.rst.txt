@@ -60,5 +60,6 @@ RasterExtraction (GridCoverage2D inputCoverage, Integer bandIndex, Filter filter
  - filter 파라미터의 필드 이름은 반드시 Value 이어야 한다.
  - filter 파라미터는 공간 필터를 사용할 수 있다.
 
-
 **Examples**
+
+  .. image:: images/rasterextraction.png

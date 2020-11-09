@@ -54,7 +54,7 @@ RasterClipByExtent (GridCoverage2D inputCoverage, ReferencedEnvelope cropShape) 
  - Extent 파라미터는 BoundingBoxData 타입으로 다음과 같이 crs, dimensions, LowerCorner, UpperCorner로 구성된다.
 
   .. code-block::
-  
+
     <wps:Data>
       <wps:BoundingBoxData crs="EPSG:3857" dimensions="2">
         <ows:LowerCorner>0.0 0.0</ows:LowerCorner>
@@ -62,5 +62,6 @@ RasterClipByExtent (GridCoverage2D inputCoverage, ReferencedEnvelope cropShape) 
       </wps:BoundingBoxData>
     </wps:Data>
 
-
 **Examples**
+
+  .. image:: images/rasterclipbyextent.png

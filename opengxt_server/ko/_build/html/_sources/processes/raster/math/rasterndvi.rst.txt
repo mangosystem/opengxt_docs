@@ -66,3 +66,5 @@ RasterNDVI (GridCoverage2D nirCoverage, Integer nirIndex, GridCoverage2D redCove
  - 두 개의 셀값 중 하나가 NoData인 경우 NoData값을 반환한다.
 
 **Examples**
+
+  .. image:: images/rasterndvi.png

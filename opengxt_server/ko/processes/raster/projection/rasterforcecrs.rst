@@ -51,6 +51,8 @@ RasterForceCRS (GridCoverage2D inputCoverage, CoordinateReferenceSystem forcedCR
 
 **Constraints**
 
- - forcedCRS 파라미터는 반드시 [EPSG:코드번호] 형식이어야 한다. 
+ - forcedCRS 파라미터는 반드시 [EPSG:코드번호] 형식이어야 한다.
 
 **Examples**
+
+  .. image:: images/rasterforcecrs.png

@@ -48,3 +48,5 @@ RasterFlowDirection (GridCoverage2D inputCoverage) : GridCoverage2D
  - 좌표체계, NoData는 입력 데이터의 값을 따른다.
 
 **Examples**
+
+  .. image:: images/rasterflowdirection.png

@@ -67,5 +67,6 @@ RasterHillshade (GridCoverage2D inputCoverage, Double azimuth, Double altitude, 
  - altitude 파라미터는 수평선 위에서의 태양의 조도값으로 0 (수평선)에서 90 (수직)까지의 값을 사용한다. 기본 고도값은 45도를 사용한다.
  - 좌표체계의 x, y단위와 z값의 단위가 다르면 zFactor값을 x, y 단위로 적절하게 환산해서 설정한다.
 
-
 **Examples**
+
+  .. image:: images/rasterhillshade.png

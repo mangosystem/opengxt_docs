@@ -49,3 +49,5 @@ RasterMirror (GridCoverage2D inputCoverage) : GridCoverage2D
 
 
 **Examples**
+
+  .. image:: images/rastermirror.png

@@ -91,5 +91,6 @@ RadialLineOfSight (GridCoverage2D inputCoverage, Geometry observerPoint, Double 
  - useCurvature 파라미터가 True이고 useRefraction 파라미터가 False인 경우 refractionFactor는 0.13을 적용한다.
  - Output 라인 레이어는 Angle, Visible 필드를 포함하며, Visible 필드값이 1인 경우 가시영역, 0인 경우 비가시 영역이다.
 
-
 **Examples**
+
+  .. image:: images/rasterradiallos.png
