@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>지형분석(Surface Analysis) &mdash; OpenGXT for Server 1.0 문서</title>
+  <title>성절토량 계산 2 &mdash; OpenGXT for Server 1.0 문서</title>
   
 
   
@@ -38,8 +38,8 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="색인" href="../../../genindex.html" />
     <link rel="search" title="검색" href="../../../search.html" />
-    <link rel="next" title="래스터 단면도 분석" href="rasterprofile.html" />
-    <link rel="prev" title="리샘플링" href="../projection/rasterresample.html" /> 
+    <link rel="next" title="흐름 방향" href="rasterflowdirection.html" />
+    <link rel="prev" title="성절토량 계산" href="rastercutfill.html" /> 
   
   <!-- BOTTOM RIGHT RIBBON: START COPYING HERE -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
@@ -128,7 +128,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../interpolation/index.html">공간내삽(Interpolation)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../zonal/index.html">구역통계(Zonal Statistics)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../projection/index.html">좌표변환(Projection)</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">지형분석(Surface Analysis)</a><ul>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">지형분석(Surface Analysis)</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="rasterprofile.html">래스터 단면도 분석</a></li>
 <li class="toctree-l4"><a class="reference internal" href="rasterlinearlos.html">선형 가시선 분석</a></li>
 <li class="toctree-l4"><a class="reference internal" href="rasterradiallos.html">방사형 가시선 분석</a></li>
@@ -141,7 +141,7 @@
 <li class="toctree-l4"><a class="reference internal" href="rasterroughness.html">지표의 거칠기(Roughness)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="rastercurvature.html">지표 곡률 분석</a></li>
 <li class="toctree-l4"><a class="reference internal" href="rastercutfill.html">성절토량 계산</a></li>
-<li class="toctree-l4"><a class="reference internal" href="rastercutfill2.html">성절토량 계산 2</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">성절토량 계산 2</a></li>
 <li class="toctree-l4"><a class="reference internal" href="rasterflowdirection.html">흐름 방향</a></li>
 </ul>
 </li>
@@ -204,13 +204,15 @@
         
           <li><a href="../index.html">래스터 분석 프로세스</a> &raquo;</li>
         
-      <li>지형분석(Surface Analysis)</li>
+          <li><a href="index.html">지형분석(Surface Analysis)</a> &raquo;</li>
+        
+      <li>성절토량 계산 2</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <!-- a href="../../../_sources/processes/raster/surface/index.rst.txt" rel="nofollow"> View page source</a -->
+            <!-- a href="../../../_sources/processes/raster/surface/rastercutfill2.rst.txt" rel="nofollow"> View page source</a -->
           
         
       </li>
@@ -223,27 +225,89 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="surface-analysis">
-<span id="surface"></span><h1>지형분석(Surface Analysis)<a class="headerlink" href="#surface-analysis" title="제목 주소">¶</a></h1>
-<p>표고, 경사, 사면향 분석 등 지형 분석을 수행하는 프로세스들로 구성됩니다.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="rasterprofile.html">래스터 단면도 분석</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rasterlinearlos.html">선형 가시선 분석</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rasterradiallos.html">방사형 가시선 분석</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rasterhighlow.html">최고 최저점 찾기</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rasterslope.html">경사도 분석</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rasteraspect.html">사면향 분석</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rasterhillshade.html">음영기복도 생성</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rastertpi.html">Topographic Position Index</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rastertri.html">Terrain Ruggedness Index</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rasterroughness.html">지표의 거칠기(Roughness)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rastercurvature.html">지표 곡률 분석</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rastercutfill.html">성절토량 계산</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rastercutfill2.html">성절토량 계산 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rasterflowdirection.html">흐름 방향</a></li>
+  <div class="section" id="rastercutfill2">
+<span id="id1"></span><h1>성절토량 계산 2<a class="headerlink" href="#rastercutfill2" title="제목 주소">¶</a></h1>
+<p>성절토 전과 후의 DEM을 이용하여 절성토량을 계산합니다.</p>
+<p><strong>Syntax</strong></p>
+<p>RasterCutFill2 (GridCoverage2D beforeCoverage, GridCoverage2D afterCoverage, Geometry cropShape): SimpleFeatureCollection</p>
+<p><strong>Input Parameters</strong></p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 50%" />
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Identifier</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+<td><p><strong>Type</strong></p></td>
+<td><p><strong>Default</strong></p></td>
+<td><p><strong>Required</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>beforeCoverage</p></td>
+<td><p>성절토 전 입력 지형 래스터 레이어입니다.</p></td>
+<td><p>GridCoverage2D</p></td>
+<td></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>afterCoverage</p></td>
+<td><p>성절토 후 지형 래스터 레이어입니다.</p></td>
+<td><p>GridCoverage2D</p></td>
+<td></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>cropShape</p></td>
+<td><p>지형 래스터 레이어를 잘라낼 폴리곤 또는 멀티폴리곤 지오메트리입니다.</p></td>
+<td><p>Geometry</p></td>
+<td></td>
+<td><p>✓</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Process Outputs</strong></p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 50%" />
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Identifier</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+<td><p><strong>Type</strong></p></td>
+<td><p><strong>Default</strong></p></td>
+<td><p><strong>Required</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>result</p></td>
+<td><p>성절토량이 계산된 출력 레이어입니다. 지오메트리가 포함되어 있지 않습니다.</p></td>
+<td><p>SimpleFeatureCollection</p></td>
+<td></td>
+<td><p>✓</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Constraints</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>cropShape의 Geometry 타입은 Polygon 또는 MultiPolygon이어야 한다.</p></li>
+<li><p>절성토량이 계산된 출력 레이어는 category, count, area, volume 필드를 포함한다.</p></li>
+<li><p>category 필드의 값은 -1(성토, Fill), 0(변화없음), 1(절토, Cut) 값으로 구분한다.</p></li>
+<li><p>count 필드는 폴리곤을 구성하는 래스터 셀의 갯수이다.</p></li>
+<li><p>area 필드는 폴리곤을 구성하는 래스터 셀의 면적 합니다.</p></li>
+<li><p>volume 필드는 폴리곤을 구성하는 래스터의 절/성토량이다.</p></li>
+<li><p>area와 volume의 단위는 입력 래스터 데이터의 좌표계를 따르며, 입력 래스터 데이터는 미터 단위의 좌표계를 사용해야 올바른 절/성토량이 계산된다.</p></li>
 </ul>
-</div>
+</div></blockquote>
+<p><strong>Examples</strong></p>
+<p>DEM으로부터 특정 영역(버퍼영역)의 절성토량을 계산한 출력 레이어의 예입니다.
+category, count, area, volume 속성정보를 포함합니다.</p>
+<blockquote>
+<div><img alt="../../../_images/rastercutfill-table.png" src="../../../_images/rastercutfill-table.png" />
+</div></blockquote>
 </div>
 
 
@@ -254,10 +318,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="rasterprofile.html" class="btn btn-neutral float-right" title="래스터 단면도 분석" accesskey="n" rel="next">다음 <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="rasterflowdirection.html" class="btn btn-neutral float-right" title="흐름 방향" accesskey="n" rel="next">다음 <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../projection/rasterresample.html" class="btn btn-neutral float-left" title="리샘플링" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 이전</a>
+        <a href="rastercutfill.html" class="btn btn-neutral float-left" title="성절토량 계산" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 이전</a>
       
     </div>
   

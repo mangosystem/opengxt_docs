@@ -20,4 +20,5 @@
    rasterroughness
    rastercurvature
    rastercutfill
+   rastercutfill2
    rasterflowdirection
