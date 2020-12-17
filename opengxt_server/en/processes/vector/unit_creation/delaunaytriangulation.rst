@@ -1,9 +1,9 @@
 .. _delaunaytriangulation:
 
-Delaunay Triangulation Polygons
-===============================
+델라니 삼각망(Delaunay Triangulation)
+=============================================================================================
 
-Creates delaunay triangulation polygons from input point features.
+포인트 레이어로부터 델라니 삼각망(Delaunay Triangulation)을 생성합니다.
 
 **Syntax**
 
@@ -21,16 +21,16 @@ DelaunayTriangulation (SimpleFeatureCollection inputFeatures, Geometry clipArea)
      - **Required**
 
    * - inputFeatures
-     - The point input features from which delaunay Triangulations will be generated.
+     - 델라니 삼각망을 구성할 입력 포인트 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - clipArea
-     - Clip area polygon.
+     - 델라니 삼각망을 구성 후 잘라낼 폴리곤 영역을 설정합니다.
      - Geometry
-     - 
-     - 
+     -
+     -
 
 **Process Outputs**
 
@@ -44,14 +44,17 @@ DelaunayTriangulation (SimpleFeatureCollection inputFeatures, Geometry clipArea)
      - **Required**
 
    * - result
-     - Result Polygons.
+     - 델라니 삼각망을 포함한 출력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - clipArea 파라미터가 주어지면 해당 영역으로 클립한 폴리곤을 반환한다.
 
 **Examples**
 
+포인트를 이용하여 행정경계 등 폴리곤 레이어의 영역 내에만 Delaunay Triangulation Polygon을 생성한 예입니다.
+
+  .. image:: images/delaunaytriangulation.png

@@ -1,9 +1,9 @@
 .. _meancenter:
 
-Mean Center
-===========
+평균중심점 생성
+========================
 
-Identifies the geographic center (or the center of concentration) for a set of features.
+입력 피쳐들의 지리적 중심점을 산출합니다.
 
 **Syntax**
 
@@ -21,28 +21,28 @@ MeanCenter (SimpleFeatureCollection inputFeatures, String weightField, String ca
      - **Required**
 
    * - inputFeatures
-     - A features for which the mean center will be calculated.
+     - 평균중심점을 계산하는데 사용될 입력 피처 레이어를 설정합니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - weightField
-     - The numeric field used to create a weighted mean center.
+     - 가중평균 중심점을 생성하는데 사용될 필드를 설정합니다.
      - String
-     - 
-     - 
+     -
+     -
 
    * - caseField
-     - The field used to group features for separate mean center calculations.
+     - 그룹별 중심을 적용하는 경우 그룹을 구분하는데 사용되는 필드를 설정합니다.
      - String
-     - 
-     - 
+     -
+     -
 
    * - dimensionField
-     - A numeric field containing attribute values from which an average value will be calculated.
+     - 속성 값의 평균을 계산할 필드를 설정합니다.
      - String
-     - 
-     - 
+     -
+     -
 
 **Process Outputs**
 
@@ -56,14 +56,17 @@ MeanCenter (SimpleFeatureCollection inputFeatures, String weightField, String ca
      - **Required**
 
    * - result
-     - A point features that will contain the features representing the mean centers of the input features.
+     - 저장할 결과 포인트 레이어를 설정합니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - inputFeatures의 Centroid를 이용하여 계산한다.
 
 **Examples**
 
+서울시 아파트 분포에 대한 시군구별 Mean Center를 분석한 결과입니다.
+
+  .. image:: images/meancenter.png

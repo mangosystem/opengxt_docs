@@ -1,9 +1,9 @@
 .. _thiessenpolygon:
 
-Thiessen Polygons
-=================
+티센(Thiessen) 폴리곤
+================================================
 
-Creates Thiessen polygons from input point features.
+포인트 레이어를 이용하여 티센(Thiessen) 폴리곤을 생성합니다.
 
 **Syntax**
 
@@ -21,22 +21,22 @@ ThiessenPolygon (SimpleFeatureCollection inputFeatures, ThiessenAttributeMode at
      - **Required**
 
    * - inputFeatures
-     - The input point features from which thiessen polygons will be generated.
+     - 티센 폴리곤을 생성할 입력 포인트 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - attributes
-     - Attribute mode : ONLY_FID(default), ALL.
+     - 속성 모드 : ONLY_FID(기본값), ALL(입력 레이어의 모든 속성값을 유지합니다).
      - ThiessenAttributeMode
      - OnlyFID
-     - 
+     -
 
    * - clipArea
-     - Clip area polygon.
+     - 잘라낼 영역 폴리곤입니다.
      - Geometry
-     - 
-     - 
+     -
+     -
 
 **Process Outputs**
 
@@ -50,14 +50,21 @@ ThiessenPolygon (SimpleFeatureCollection inputFeatures, ThiessenAttributeMode at
      - **Required**
 
    * - result
-     - Result Polygons.
+     - 출력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- - attributes: OnlyFID(Default), All
+ - attributes: OnlyFID(기본값), All
+ - inputFeatures는 포인트, 라인, 폴리곤 모두 가능하지만, 무게중심점을 추출하여 Thiessen Polygon을 생성한다.
+ - Attributes 파라미터가 ALL 인 경우 inputFeatures의 모든 속성값을 유지한다.
+ - clipArea 파라미터가 주어지면 해당 영역으로 클립한 폴리곤을 반환한다.
+
 
 **Examples**
 
+전국의 기차/전철역을 기준으로 현재화면 범위의 Thiessen Polygon을 생성한 예입니다.
+
+  .. image:: images/thiessenpolygon.png

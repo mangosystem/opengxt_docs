@@ -1,9 +1,9 @@
 .. _rasterrotate:
 
-Rotate
+회전
 ======
 
-Turns a raster dataset around the specified pivot point by the angle specified angle in degrees.
+지정된 피벗 포인트를 중심으로 도 단위로 지정된 각도값 만큼 래스터를 회전합니다.
 
 **Syntax**
 
@@ -21,28 +21,28 @@ RasterRotate (GridCoverage2D inputCoverage, Point anchorPoint, Double angle, Res
      - **Required**
 
    * - inputCoverage
-     - The input raster to be converted.
+     - 회전할 입력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
    * - anchorPoint
-     - The pivot point around which to rotate the raster. The default is the lower left corner of the input raster dataset.
+     - 래스터를 회전시킬 피벗 포인트입니다. 기본값은 입력 래스터 데이터 세트의 왼쪽 하단입니다.
      - Point
-     - 
-     - 
+     -
+     -
 
    * - angle
-     - The angle in degrees to rotate the raster.
+     - 래스터를 회전할 도 단위의 각도를 설정합니다.
      - Double
      - 0.0
      - ✓
 
    * - interpolation
-     - The resampling algorithm to be used. NEAREST(default), BILINEAR, BICUBIC.
+     - 리샘플링 방법을 설정합니다. NEAREST(기본값), BILINEAR, BICUBIC.
      - ResampleType
      - NEAREST
-     - 
+     -
 
 **Process Outputs**
 
@@ -56,14 +56,19 @@ RasterRotate (GridCoverage2D inputCoverage, Point anchorPoint, Double angle, Res
      - **Required**
 
    * - result
-     - Output Raster.
+     - 회전한 출력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Constraints**
 
- - interpolation: NEAREST(Default), BILINEAR, BICUBIC
+ - interpolation: NEAREST(기본값), BILINEAR, BICUBIC
+ - Multi-Band래스터를 지원한다.
+ - anchorPoint 파라미터가 Null이면 래스터 Extent의 좌하단을 기준으로 한다.
+ - angle 파라미터의 단위는 도(Degree) 단위를 사용한다.
+
 
 **Examples**
 
+  .. image:: images/rasterrotate.png

@@ -1,9 +1,9 @@
 .. _clipwithfeatures:
 
-Clip With Polygon Features
-==========================
+폴리곤 피처로 잘라내기
+====================================
 
-Extracts input features that overlay the clip polygon features.
+클립 폴리곤 피처와 중첩하는 입력 피처를 잘라냅니다.
 
 **Syntax**
 
@@ -21,15 +21,15 @@ ClipWithFeatures (SimpleFeatureCollection inputFeatures, SimpleFeatureCollection
      - **Required**
 
    * - inputFeatures
-     - The features to be clipped.
+     - 입력 피처 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - clipFeatures
-     - The features used to clip the input features.
+     - 입력 피처 레이어를 클립할 폴리곤 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Process Outputs**
@@ -44,14 +44,17 @@ ClipWithFeatures (SimpleFeatureCollection inputFeatures, SimpleFeatureCollection
      - **Required**
 
    * - result
-     - Output features.
+     - 출력 레이어.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - clipFeatures는 반드시 Polygon 또는 MultiPolygon 피처 타입이어야 한다.
 
 **Examples**
 
+임의의 폴리곤 레이어를 이용하여 읍면동경계 폴리곤 레이어를 clip한 예입니다.
+
+  .. image:: images/clipwithfeatures.png

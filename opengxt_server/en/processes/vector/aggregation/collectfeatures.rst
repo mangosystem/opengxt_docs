@@ -1,9 +1,9 @@
 .. _collectfeatures:
 
-Collect Features
-================
+중복 피처 수집
+========================
 
-Collect Features combines coincident point, line, polygon features.
+중복되는 포인트, 라인, 폴리곤 피처를 결합하는 기능으로 범죄 또는 질병 발생과 같은 데이터를 가중치가 적용된 데이터로 변환합니다.
 
 **Syntax**
 
@@ -21,22 +21,22 @@ CollectFeatures (SimpleFeatureCollection inputFeatures, String countField, Doubl
      - **Required**
 
    * - inputFeatures
-     - The features representing coincident data.
+     - 입력 데이터 레이어.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - countField
-     - The field to be calculated coincident features count. icount(Default).
+     - 중복되는 피처의 개수가 저장될 필드(기본값:icount)입니다.
      - String
      - icount
-     - 
+     -
 
    * - tolerance
-     - The tolerance distance for considering two features equal.
+     - 두 피처의 지오메트리가 일치하는 기준 거리 허용오차
      - Double
      - 0.1
-     - 
+     -
 
 **Process Outputs**
 
@@ -50,14 +50,19 @@ CollectFeatures (SimpleFeatureCollection inputFeatures, String countField, Doubl
      - **Required**
 
    * - result
-     - Result coincident features.
+     - 출력 레이어.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - countField 파라미터를 설정하지 않으면 icount 필드를 기본값으로 사용한다.
+ - tolerance값이 0이면 정확히 일치하는 포인트를, 0보다 크면 tolerance 거리 이내의 피처를 동일한 것으로 간주한다.
+
 
 **Examples**
 
+설정한 기준 거리 허용오차 이내의 포인트들을 하나로 합친 결과입니다.
+
+  .. image:: images/collectfeatures.png

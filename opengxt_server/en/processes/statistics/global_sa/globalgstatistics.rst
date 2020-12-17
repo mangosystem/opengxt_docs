@@ -1,9 +1,9 @@
 .. _globalgstatistics:
 
-Getis-Ord General G
-===================
+Getis-Ord의 전역적 G 통계량
+============================================================
 
-Measures the degree of clustering for either high values or low values using the Getis-Ord General G statistic. 
+Getis-Ord의 전역적 G 통계량을 계산합니다.
 
 **Syntax**
 
@@ -21,40 +21,40 @@ GlobalGStatistics (SimpleFeatureCollection inputFeatures, String inputField, Spa
      - **Required**
 
    * - inputFeatures
-     - The features for which the General G statistic will be calculated.
+     - 통계량을 계산할 입력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - inputField
-     - The numeric field to be evaluated.
+     - 수치형 입력 필드 변수를 설정합니다.
      - String
-     - 
+     -
      - ✓
 
    * - spatialConcept
-     - Specifies how spatial relationships among features are conceptualized.
+     - 피처들 간에 공간 관계를 설정하는 방식을 선택합니다.
      - SpatialConcept
      - InverseDistance
-     - 
+     -
 
    * - distanceMethod
-     - Specifies how distances are calculated from each feature to neighboring features.
+     - 분석 대상 피처로부터 이웃 피처까지의 거리를 계산하는 방법을 설정합니다.
      - DistanceMethod
      - Euclidean
-     - 
+     -
 
    * - standardization
-     - Row Standardization.
+     - 통계량 계산시 행 표준화 적용 여부를 설정합니다.
      - StandardizationMethod
      - None
-     - 
+     -
 
    * - searchDistance
-     - Specifies a cutoff distance for Inverse Distance and Fixed Distance options. 
+     - 역거리 혹은 고정 거리 옵션 선택 시 기준 값을 지정합니다.
      - Double
      - 0.0
-     - 
+     -
 
 **Process Outputs**
 
@@ -68,16 +68,33 @@ GlobalGStatistics (SimpleFeatureCollection inputFeatures, String inputField, Spa
      - **Required**
 
    * - result
-     - Result Document.
+     - 출력 레이어입니다.
      - GStatisticsProcessResult
-     - 
+     -
      - ✓
 
 **Constraints**
 
- - spatialConcept: InverseDistance(Default), InverseDistanceSquared, FixedDistance, ZoneOfIndifference, KNearestNeighbors, ContiguityEdgesNodes, ContiguityEdgesOnly, ContiguityNodesOnly, WeightsFromFile
- - distanceMethod: Euclidean(Default), Manhattan
- - standardization: None(Default), Row
+ - spatialConcept: InverseDistance(기본값), InverseDistanceSquared, FixedDistance, ZoneOfIndifference, KNearestNeighbors, ContiguityEdgesNodes, ContiguityEdgesOnly, ContiguityNodesOnly, WeightsFromFile
+ - distanceMethod: Euclidean(기본값), Manhattan
+ - standardization: None(기본값), Row
+ - Output은 XML로 반환한다.
 
 **Examples**
 
+.. code-block:: XML
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <GStatistics>
+      <TypeName>korea_sgg</TypeName>
+      <PropertyName>a3_2005</PropertyName>
+      <Observed_Index>0.004492</Observed_Index>
+      <Expected_Index>0.004292</Expected_Index>
+      <Variance>0</Variance>
+      <Z_Score>4.275913</Z_Score>
+      <P_Value>0.000019</P_Value>
+      <Conceptualization>InverseDistance</Conceptualization>
+      <DistanceMethod>Euclidean</DistanceMethod>
+      <RowStandardization>Row</RowStandardization>
+      <DistanceThreshold>191807.950591</DistanceThreshold>
+    </GStatistics>

@@ -1,9 +1,9 @@
 .. _attributejoin:
 
-Join Features By Attributes
-===========================
+속성 기반 조인
+========================
 
-Joins features to another features or attribute table based on a common field.
+공통 필드를 이용하여 두 레이어를 조인합니다.
 
 **Syntax**
 
@@ -21,34 +21,34 @@ AttributeJoin (SimpleFeatureCollection inputFeatures, String primaryKey, SimpleF
      - **Required**
 
    * - inputFeatures
-     - Input features.
+     - 입력 레이어.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - primaryKey
-     - Primary key field.
+     - 입력 레이어의 원본 키 필드입니다.
      - String
-     - 
+     -
      - ✓
 
    * - joinFeatures
-     - Join features.
+     - 조인 대상 레이어.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - foreignKey
-     - Foreign key field.
+     - 조인 레이어의 키 필드입니다.
      - String
-     - 
+     -
      - ✓
 
    * - joinType
-     - Join type.
+     - 조인 유형입니다.
      - Type
      - INNER
-     - 
+     -
 
 **Process Outputs**
 
@@ -62,14 +62,18 @@ AttributeJoin (SimpleFeatureCollection inputFeatures, String primaryKey, SimpleF
      - **Required**
 
    * - result
-     - Output features.
+     - 출력 레이어.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- - joinType: INNER(Default), OUTER
+ - joinType: INNER(기본값), OUTER
+ - joinType이 INNER인 경우 조인되는 inputFeatures 의 피처만을 반환한다.
 
 **Examples**
 
+대형매장과 시군구 행정경계의 시군구코드를 Join 필드로 사용하여 조인한 결과입니다.
+
+  .. image:: images/attributejoin.png

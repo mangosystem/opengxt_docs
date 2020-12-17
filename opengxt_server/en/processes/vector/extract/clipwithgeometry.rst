@@ -1,9 +1,9 @@
 .. _clipwithgeometry:
 
-Clip With Polygon Geometry
-==========================
+폴리곤 지오메트리로 잘라내기
+=============================================
 
-Extracts input features that overlay the clip polygon geometry.
+잘라낼 폴리곤 지오메트리와 중첩하는 입력 피처를 잘라냅니다.
 
 **Syntax**
 
@@ -21,15 +21,15 @@ ClipWithGeometry (SimpleFeatureCollection inputFeatures, Geometry clipGeometry) 
      - **Required**
 
    * - inputFeatures
-     - The features to be clipped.
+     - 입력 레이어.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - clipGeometry
-     - The polygon geometry used to clip the input features.
+     - 잘라낼 폴리곤 지오메트리입니다.
      - Geometry
-     - 
+     -
      - ✓
 
 **Process Outputs**
@@ -44,14 +44,17 @@ ClipWithGeometry (SimpleFeatureCollection inputFeatures, Geometry clipGeometry) 
      - **Required**
 
    * - result
-     - Output features.
+     - 출력 레이어.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - clipGeometry는 반드시 Polygon 또는 MultiPolygon이어야 한다.
 
 **Examples**
 
+읍면동 경계 데이터에서 폴리곤 지오메트리로 clip한 결과입니다.
+
+  .. image:: images/clipwithgeometry.png

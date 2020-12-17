@@ -1,9 +1,9 @@
 .. _symdifference:
 
-Symmetrical Difference
-======================
+대칭 차집합
+==================
 
-Creates a features by overlaying the Input Features with the polygons of the symmetrical difference features.
+두 레이어간의 대칭 차집합 중첩분석을 수행합니다. 두 레이어의 속성값은 유지됩니다.
 
 **Syntax**
 
@@ -21,15 +21,15 @@ SymDifference (SimpleFeatureCollection inputFeatures, SimpleFeatureCollection di
      - **Required**
 
    * - inputFeatures
-     - Input features.
+     - 입력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - differenceFeatures
-     - Difference features.
+     - 대칭 차집합에 사용할 중첩 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Process Outputs**
@@ -44,14 +44,19 @@ SymDifference (SimpleFeatureCollection inputFeatures, SimpleFeatureCollection di
      - **Required**
 
    * - result
-     - Output features.
+     - 출력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - 입력 레이어는 폴리곤 피처 타입이어야 하며, 출력 레이어의 피처 타입은 inputFeatures 레이어를 따른다.
+ - 출력 레이어는 inputFeatures, differenceFeatures의 속성값을 모두 포함한다.
+
 
 **Examples**
 
+두 폴리곤 레이어간 Symmetrical Difference Overlay 분석을 수행한 결과입니다. 두 레이어의 속성값을 모두 포함합니다.
+
+  .. image:: images/symdifference.png

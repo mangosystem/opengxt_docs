@@ -1,9 +1,9 @@
 .. _repairgeometry:
 
-Repair Geometry
-===============
+지오메트리 오류 수정
+=================================
 
-Inspects and repair each feature in a features for geometry problems.
+각 피처의 지오메트리 오류를 검사하고 수정합니다.
 
 **Syntax**
 
@@ -21,9 +21,9 @@ RepairGeometry (SimpleFeatureCollection inputFeatures) : SimpleFeatureCollection
      - **Required**
 
    * - inputFeatures
-     - Input features that will be repaired.
+     - 지오메트리의 오류를 수정할 입력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Process Outputs**
@@ -38,14 +38,14 @@ RepairGeometry (SimpleFeatureCollection inputFeatures) : SimpleFeatureCollection
      - **Required**
 
    * - result
-     - Output Features.
+     - 출력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
-
-**Examples**
-
+ - Null 지오메트리, self-intersection 확인 및 수정
+ - 좌표 유효성 검증 coordinates
+ - 빈 shell/holes 처리
+ - 중복 버텍스 및 포인트 수정

@@ -1,9 +1,9 @@
 .. _rasterclipbygeometry:
 
-Clip By Geometry
-================
+폴리곤으로 래스터 추출
+====================================
 
-Extracts the subset of a raster based on a polygon geometry.
+설정한 폴리곤 지오메트리로 래스터를 추출합니다.
 
 **Syntax**
 
@@ -21,15 +21,15 @@ RasterClipByGeometry (GridCoverage2D inputCoverage, Geometry cropShape) : GridCo
      - **Required**
 
    * - inputCoverage
-     - The input raster to be clipped.
+     - 잘라낼 입력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
    * - cropShape
-     - The Polygon or MultiPolygon to clip raster.
+     - 래스터를 잘라낼 폴리곤 또는 멀티폴리곤 지오메트리입니다.
      - Geometry
-     - 
+     -
      - ✓
 
 **Process Outputs**
@@ -44,14 +44,15 @@ RasterClipByGeometry (GridCoverage2D inputCoverage, Geometry cropShape) : GridCo
      - **Required**
 
    * - result
-     - Output raster.
+     - 잘라낸 출력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - cropShape의 Geometry 타입은 Polygon 또는 MultiPolygon이어야 한다.
 
 **Examples**
 
+  .. image:: images/rasterclipbygeometry.png

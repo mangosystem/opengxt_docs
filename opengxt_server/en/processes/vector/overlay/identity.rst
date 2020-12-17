@@ -1,9 +1,9 @@
 .. _identity:
 
-Identity
-========
+아이덴터티
+===============
 
-Computes a geometric intersection of the input features and identity features. The input features or portions thereof that overlap identity features will get the attributes of those identity features.
+두 레이어간의 아이덴터티 중첩분석을 수행합니다.
 
 **Syntax**
 
@@ -21,15 +21,15 @@ Identity (SimpleFeatureCollection inputFeatures, SimpleFeatureCollection identit
      - **Required**
 
    * - inputFeatures
-     - Input features.
+     - 입력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - identityFeatures
-     - Identity features.
+     - 아이덴터티 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Process Outputs**
@@ -44,14 +44,19 @@ Identity (SimpleFeatureCollection inputFeatures, SimpleFeatureCollection identit
      - **Required**
 
    * - result
-     - Output features.
+     - 출력 레이어
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - inputFeatures, identityFeatures는 반드시 Polygon 또는 MultiPolygon 피처 타입이어야 한다.
+ - 출력 레이어는 inputFeatures, identityFeatures의 필드값을 모두 포함한다.
+
 
 **Examples**
 
+두 폴리곤 레이어간 Identity Overlay 분석을 수행한 결과입니다. 두 레이어의 속성값을 모두 포함합니다.
+
+  .. image:: images/identity.png

@@ -1,9 +1,9 @@
 .. _rasterroughness:
 
-Roughness
-=========
+지표의 거칠기(Roughness)
+======================================================
 
-Derives Roughness from a raster surface. Roughness is the largest difference between any two cells.
+DEM 래스터 데이터를 이용하여 거칠기(Roughness)를 추출합니다. Roughness란 표면의 불규칙성의 정도를 말하며, 중심 셀과 그 주변 셀 중 가장 큰 값을 계산합니다.
 
 **Syntax**
 
@@ -21,9 +21,9 @@ RasterRoughness (GridCoverage2D inputCoverage) : GridCoverage2D
      - **Required**
 
    * - inputCoverage
-     - The input surface raster.
+     - 표고값을 저장(DEM, DSM 등)한 입력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Process Outputs**
@@ -38,14 +38,14 @@ RasterRoughness (GridCoverage2D inputCoverage) : GridCoverage2D
      - **Required**
 
    * - result
-     - Output raster.
+     - 지표의 거칠기가 계산된 출력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
 
 **Examples**
 
+  .. image:: images/rasterroughness.png

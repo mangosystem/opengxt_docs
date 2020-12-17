@@ -1,9 +1,9 @@
 .. _collectevents:
 
-Collect Events
-==============
+이벤트 수집
+==================
 
-Collect Event combines coincident points. It converts event data, such as crime or disease incidents, to weighted point data
+중복되는 포인트를 결합하는 기능으로 범죄 또는 질병 발생과 같은 데이터를 가중치가 적용된 데이터로 변환합니다.
 
 **Syntax**
 
@@ -21,22 +21,22 @@ CollectEvents (SimpleFeatureCollection inputFeatures, String countField, Double 
      - **Required**
 
    * - inputFeatures
-     - The features representing event or incident data.
+     - 이벤트 데이터 레이어.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - countField
-     - The field to be calculated coincident points count. icount(Default).
+     - 중복되는 포인트 개수가 저장될 필드(기본값:icount)입니다.
      - String
      - icount
-     - 
+     -
 
    * - tolerance
-     - The tolerance distance for considering two points equal.
+     - 두 포인트가 일치하는 기준 거리
      - Double
      - 0.1
-     - 
+     -
 
 **Process Outputs**
 
@@ -50,14 +50,19 @@ CollectEvents (SimpleFeatureCollection inputFeatures, String countField, Double 
      - **Required**
 
    * - result
-     - Result coincident features.
+     - 출력 레이어.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - countField 파라미터를 설정하지 않으면 icount 필드를 기본값으로 사용한다.
+ - tolerance값이 0이면 정확히 일치하는 포인트를, 0보다 크면 tolerance 거리 이내의 피처를 동일한 것으로 간주한다.
+
 
 **Examples**
 
+설정한 기준 거리 허용오차 이내의 포인트들을 하나로 합친 결과입니다.
+
+  .. image:: images/collectevents.png

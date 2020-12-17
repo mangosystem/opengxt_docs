@@ -1,9 +1,9 @@
 .. _rastertpi:
 
 Topographic Position Index
-==========================
+==============================================================================
 
-Derives TPI from a raster surface. Topographic Position Index is the difference between the central cell and the mean of the surrounding cells.
+DEM 래스터 데이터를 이용하여 TPI(위상 위치 지수, Topographic Position Index)를 추출합니다. TPI는 중심 셀값과 주변 셀의 평균과의 차이입니다.
 
 **Syntax**
 
@@ -21,9 +21,9 @@ RasterTPI (GridCoverage2D inputCoverage) : GridCoverage2D
      - **Required**
 
    * - inputCoverage
-     - The input surface raster.
+     - 표고값을 저장(DEM, DSM 등)한 입력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Process Outputs**
@@ -38,14 +38,14 @@ RasterTPI (GridCoverage2D inputCoverage) : GridCoverage2D
      - **Required**
 
    * - result
-     - Output raster.
+     - TPI(위상 위치 지수)값이 계산된 출력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
 
 **Examples**
 
+  .. image:: images/rastertpi.png

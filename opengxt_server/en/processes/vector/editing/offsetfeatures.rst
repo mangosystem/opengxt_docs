@@ -1,9 +1,9 @@
 .. _offsetfeatures:
 
-Offset Features
-===============
+피처 위치 변경
+========================
 
-Offset features using x, y offset value.
+X, Y 값을 사용하여 피처의 위치를 변경합니다.
 
 **Syntax**
 
@@ -21,19 +21,19 @@ OffsetFeatures (SimpleFeatureCollection inputFeatures, Expression offsetX, Expre
      - **Required**
 
    * - inputFeatures
-     - Input features.
+     - 변환할 입력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - offsetX
-     - X offset.
+     - X축 이동 거리입니다.
      - Expression
      - 0.0
      - ✓
 
    * - offsetY
-     - Y offset.
+     - Y축 이동 거리입니다.
      - Expression
      - 0.0
      - ✓
@@ -50,14 +50,17 @@ OffsetFeatures (SimpleFeatureCollection inputFeatures, Expression offsetX, Expre
      - **Required**
 
    * - result
-     - Output features.
+     - 출력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - 원본 위치를 기준으로 offsetX 값이 양수이면 우, 음수이면 좌로 이동하고, offsetY 값이 양수이면 상, 음수이면 하로 이동한다.
 
 **Examples**
 
+폴리곤을 X, Y 축 방향으로 일정 거리만큼 이동한 결과입니다.
+
+  .. image:: images/offsetfeatures.png

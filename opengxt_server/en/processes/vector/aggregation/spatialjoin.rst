@@ -1,9 +1,9 @@
 .. _spatialjoin:
 
-Join Features By Spatial
+공간 기반 조인
 ========================
 
-Joins attributes from one feature to another based on the spatial relationship.
+공간관계를 이용하여 두 레이어를 조인합니다.
 
 **Syntax**
 
@@ -21,34 +21,34 @@ SpatialJoin (SimpleFeatureCollection inputFeatures, SimpleFeatureCollection join
      - **Required**
 
    * - inputFeatures
-     - Input features.
+     - 입력 레이어.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - joinFeatures
-     - Join features.
+     - 조인 대상 레이어.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - joinType
-     - Join Type. KeepAllRecord(default) or OnlyMatchingRecord.
+     - 조인 유형입니다. KeepAllRecord(기본값) 또는 OnlyMatchingRecord.
      - SpatialJoinType
      - KeepAllRecord
-     - 
+     -
 
    * - searchRadius
-     - Search Radius.
+     - 탐색 반경.
      - Double
      - 0.0
-     - 
+     -
 
    * - radiusUnit
-     - The desired linear unit.
+     - 탐색 반경값의 거리 단위입니다.
      - DistanceUnit
      - Default
-     - 
+     -
 
 **Process Outputs**
 
@@ -62,15 +62,21 @@ SpatialJoin (SimpleFeatureCollection inputFeatures, SimpleFeatureCollection join
      - **Required**
 
    * - result
-     - Output Features.
+     - 출력 레이어.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- - joinType: KeepAllRecord(Default), OnlyMatchingRecord
- - radiusUnit: Default(Default), Meters, Kilometers, Inches, Feet, Yards, Miles, NauticalMiles
+ - joinType: KeepAllRecord(기본값), OnlyMatchingRecord
+ - radiusUnit: Default(기본값), Meters, Kilometers, Inches, Feet, Yards, Miles, NauticalMiles
+ - joinType 파라미터의 값이 KeepAllRecord인 경우 공간 조인이 수행되지 않은 inputFeatures의 모든 피처를 포함하여 반환한다.
+ - searchRadius 파라미터 값이 주어지면 searchRadius 내에 포함되는 피처와 조인한다.
+
 
 **Examples**
 
+대형매장 포인트 레이어가 속한 시군구 레이어의 정보를 Spatial Join한 결과입니다. Pont나 Line 레이어의 경우 탐색반경을 설정하여 가까운 피처의 속성을 가져올 수 있습니다.
+
+  .. image:: images/spatialjoin.png

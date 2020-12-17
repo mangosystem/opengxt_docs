@@ -1,9 +1,9 @@
 .. _area:
 
-Sum Polygon Feature's Area
-==========================
+면적 계산
+===============
 
-Sum up the areas of all polygon features.
+폴리곤 피처 각각의 면적 합을 계산합니다.
 
 **Syntax**
 
@@ -21,22 +21,22 @@ SumAreas (SimpleFeatureCollection inputFeatures, Filter filter, AreaUnit areaUni
      - **Required**
 
    * - inputFeatures
-     - The polygon features to be calculated.
+     - 폴리곤 레이어.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - filter
-     - The filter to apply.
+     - 필터 표현식
      - Filter
-     - 
-     - 
+     -
+     -
 
    * - areaUnit
-     - The output area unit.
+     - 출력 면적 단위.
      - AreaUnit
      - Default
-     - 
+     -
 
 **Process Outputs**
 
@@ -50,14 +50,16 @@ SumAreas (SimpleFeatureCollection inputFeatures, Filter filter, AreaUnit areaUni
      - **Required**
 
    * - result
-     - The area of features.
+     - 레이어의 면적
      - Double
-     - 
+     -
      - ✓
 
 **Constraints**
 
- - areaUnit: Default(Default), SquareMeters, SquareKilometers, SquareFeet, SquareYards, SquareMiles, Hectare, Acre
+ - areaUnit: Default(기본값), SquareMeters, SquareKilometers, SquareFeet, SquareYards, SquareMiles, Hectare, Acre
+ - 폴리곤 레이어와 필터를 이용하여 피처의 Geometry 면적 합을 반환한다.
 
 **Examples**
 
+폴리곤 레이어의 모든 피처의 면적 합을 Double 값으로 반환합니다.

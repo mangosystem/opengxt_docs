@@ -1,9 +1,9 @@
 .. _featurestoraster:
 
-Features To Raster
-==================
+피처를 래스터로 변환
+=================================
 
-Converts features to a raster dataset.
+포인트, 라인, 폴리곤 피처 레이어를 래스터로 변환합니다.
 
 **Syntax**
 
@@ -21,28 +21,28 @@ FeaturesToRaster (SimpleFeatureCollection inputFeatures, String inputField, Doub
      - **Required**
 
    * - inputFeatures
-     - The input feature to be converted to a raster dataset.
+     - 래스터로 변환할 입력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - inputField
-     - The field used to assign values to the output raster.
+     - 출력 래스터의 셀 값에 적용될 숫자로 변환가능한 필드입니다.
      - String
-     - 
-     - 
+     -
+     -
 
    * - cellSize
-     - The cell size for the output raster.
+     - 출력 래스터 레이어의 셀 크기입니다.
      - Double
      - 0.0
-     - 
+     -
 
    * - extent
-     - The extent for the output raster.
+     - 출력 래스터 레이어의 공간 범위입니다.
      - ReferencedEnvelope
-     - 
-     - 
+     -
+     -
 
 **Process Outputs**
 
@@ -56,14 +56,18 @@ FeaturesToRaster (SimpleFeatureCollection inputFeatures, String inputField, Doub
      - **Required**
 
    * - result
-     - The output raster.
+     - 변환된 출력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - inputField 파라미터는 반드시 Numeric 필드 또는 상수값이어야 한다.
+ - extent 파라미터를 설정하지 않으면 inputFeatures의 범위를 사용한다.
+ - cellSize 파라미터를 설정하지 않으면 Extent의 Width와 Height 중 작은 값을 250으로 나눈 값을 사용한다.
+
 
 **Examples**
 
+  .. image:: images/featurestoraster.png

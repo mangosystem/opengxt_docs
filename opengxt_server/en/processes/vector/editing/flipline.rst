@@ -1,9 +1,9 @@
 .. _flipline:
 
-Reverse Line Direction
-======================
+라인 방향 변경
+========================
 
-Reverses the direction of line features.
+라인의 시점-종점 방향을 변경합니다.
 
 **Syntax**
 
@@ -21,9 +21,9 @@ FlipLine (SimpleFeatureCollection lineFeatures) : SimpleFeatureCollection
      - **Required**
 
    * - lineFeatures
-     - The input line features.
+     - 라인의 시작/종점을 변경할 입력 라인 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Process Outputs**
@@ -38,14 +38,17 @@ FlipLine (SimpleFeatureCollection lineFeatures) : SimpleFeatureCollection
      - **Required**
 
    * - result
-     - Result features.
+     - 라인의 방향을 변경한 출력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - lineFeatures 파라미터는 라인 레이어 이어야 한다. 
 
 **Examples**
 
+라인의 시작/종점 방향을 변경한 결과입니다.
+
+  .. image:: images/flipline.png

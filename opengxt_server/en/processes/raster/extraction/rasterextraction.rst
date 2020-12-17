@@ -1,9 +1,9 @@
 .. _rasterextraction:
 
-Extract by Attributes
-=====================
+셀값으로 래스터 추출
+=================================
 
-Extracts the cells of a raster based on a logical query.
+설정한 필터 표현식에 해당하는 래스터를 추출합니다.
 
 **Syntax**
 
@@ -21,21 +21,21 @@ RasterExtraction (GridCoverage2D inputCoverage, Integer bandIndex, Filter filter
      - **Required**
 
    * - inputCoverage
-     - The input raster from which cells will be extracted.
+     - 추출할 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
    * - bandIndex
-     - The zero-based band index, default index is a 0.
+     - 0 부터 시작하는 밴드 인덱스, 기본 인덱스는 0입니다.
      - Integer
      - 0
-     - 
+     -
 
    * - filter
-     - A logical expression that selects a subset of raster cells. ex> Value > 250
+     - 래스터의 셀값을 추출할 필터 표현식입니다. 예) Value > 250
      - Filter
-     - 
+     -
      - ✓
 
 **Process Outputs**
@@ -50,14 +50,16 @@ RasterExtraction (GridCoverage2D inputCoverage, Integer bandIndex, Filter filter
      - **Required**
 
    * - result
-     - Output raster.
+     - 필터 표현식으로 추출한 출력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - filter 파라미터의 필드 이름은 반드시 Value 이어야 한다.
+ - filter 파라미터는 공간 필터를 사용할 수 있다.
 
 **Examples**
 
+  .. image:: images/rasterextraction.png

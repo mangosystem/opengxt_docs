@@ -1,9 +1,9 @@
 .. _multipleringbuffer:
 
-Multiple Ring Buffer
-====================
+다중 링 버퍼
+=====================
 
-Creates a new features of buffer features using a set of buffer distances.
+거리값, 필드값 또는 필드의 조합을 이용한 여러 개의 거리 표현식들을 정의하여  다중 링 버퍼를 생성합니다.
 
 **Syntax**
 
@@ -21,34 +21,34 @@ MultipleRingBuffer (SimpleFeatureCollection inputFeatures, String distances, Dis
      - **Required**
 
    * - inputFeatures
-     - The input point, line, or polygon features to be buffered.
+     - 버퍼를 적용할 입력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - distances
-     - The comma separated list of buffer distances.
+     - 쉼표로 구분된 버퍼 거리 목록입니다.
      - String
-     - 
+     -
      - ✓
 
    * - distanceUnit
-     - The desired linear unit.
+     - 거리 단위입니다.
      - DistanceUnit
      - Default
-     - 
+     -
 
    * - outsideOnly
-     - The area inside of the input polygon features will excluded from the resulting buffer.
+     - 입력 폴리곤 피처 내부 영역이 결과 버퍼에서 제외할 지 여부를 설정합니다.
      - Boolean
      - true
-     - 
+     -
 
    * - dissolve
-     - Determines if buffers will be dissolved to resemble rings around the input features.
+     - 버퍼한 피처가 중첩되는 경우 디졸브를 수행할 지 여부를 설정합니다.
      - Boolean
      - false
-     - 
+     -
 
 **Process Outputs**
 
@@ -62,14 +62,20 @@ MultipleRingBuffer (SimpleFeatureCollection inputFeatures, String distances, Dis
      - **Required**
 
    * - result
-     - The output multiple buffers.
+     - 출력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- - distanceUnit: Default(Default), Meters, Kilometers, Inches, Feet, Yards, Miles, NauticalMiles
+ - distanceUnit: Default(기본값), Meters, Kilometers, Inches, Feet, Yards, Miles, NauticalMiles
+ - inputFeatures는 포인트, 라인, 폴리곤 모두 가능하다.
+ - Dissolve 파라미터 값이 True인 경우 inputFeatures의 속성값은 무시되고 거리값만, False인 경우 inputFeatures의 속성값을 유지한다.
+
 
 **Examples**
 
+시군구청 포인트를 250,500,750,1000,1250,1500미터 간격으로 Buffer 분석을 처리한 결과입니다.
+
+  .. image:: images/multipleringbuffer.png

@@ -1,9 +1,9 @@
 .. _rasterndvi:
 
-NDVI
-====
+식생지수(NDVI) 계산
+=======================================
 
-Derives Normalized Difference Vegetation Index (NDVI) from two rasters.
+2개의 래스터 밴드로부터 Normalized Difference Vegetation Index (NDVI)를 계산합니다.
 
 **Syntax**
 
@@ -21,25 +21,25 @@ RasterNDVI (GridCoverage2D nirCoverage, Integer nirIndex, GridCoverage2D redCove
      - **Required**
 
    * - nirCoverage
-     - The near infrared band raster.
+     - 근적외선(near infrared) 밴드 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
    * - nirIndex
-     - The zero-based band index, default index is a 0.
+     - 0 부터 시작하는 근적외선(Near Infrared) 밴드 인덱스, 기본 인덱스는 0입니다.
      - Integer
      - 0
      - ✓
 
    * - redCoverage
-     - The visible red band raster.
+     - 가시광선(Red) 밴드 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
    * - redIndex
-     - The zero-based band index, default index is a 0.
+     - 0 부터 시작하는 가시광선(Red) 밴드 인덱스, 기본 인덱스는 0입니다.
      - Integer
      - 0
      - ✓
@@ -56,14 +56,15 @@ RasterNDVI (GridCoverage2D nirCoverage, Integer nirIndex, GridCoverage2D redCove
      - **Required**
 
    * - result
-     - Output raster.
+     - 식생지수가 계산된 출력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - 두 개의 셀값 중 하나가 NoData인 경우 NoData값을 반환한다.
 
 **Examples**
 
+  .. image:: images/rasterndvi.png

@@ -1,9 +1,9 @@
 .. _rastercurvature:
 
-Curvature
-=========
+지표 곡률 분석
+========================
 
-Calculates the curvature of a raster surface.
+ DEM 래스터 데이터를 이용하여 지표면의 곡률을 계산합니다.
 
 **Syntax**
 
@@ -21,16 +21,16 @@ RasterCurvature (GridCoverage2D inputCoverage, Double zFactor) : GridCoverage2D
      - **Required**
 
    * - inputCoverage
-     - The input surface raster.
+     - 표고값을 저장(DEM, DSM 등)한 입력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
    * - zFactor
-     - The number of ground x,y units in one surface z unit. default value is 1.0.
+     - Z(고도) 단위의 측정 단위가 x, y(선형) 단위의 측정 단위와 같은 경우 Z 계수는 1이지만, 서로 다른 경우 정확한 값 산출을 위해 이 값을 조정해야 합니다.
      - Double
      - 1.0
-     - 
+     -
 
 **Process Outputs**
 
@@ -44,14 +44,15 @@ RasterCurvature (GridCoverage2D inputCoverage, Double zFactor) : GridCoverage2D
      - **Required**
 
    * - result
-     - Output raster.
+     - 출력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - 좌표체계의 x, y단위와 z값의 단위가 다르면 zFactor값을 x, y 단위로 적절하게 환산해서 설정한다.
 
 **Examples**
 
+  .. image:: images/rastercurvature.png

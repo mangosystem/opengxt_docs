@@ -1,9 +1,9 @@
 .. _update:
 
-Update
-======
+업데이트
+============
 
-Computes the geometric intersection of the input Features and update features. The attributes and geometry of the input features are updated by the update features in the output feature class.
+두 레이어간의 업데이트 중첩분석을 수행합니다. 업데이트 피처와 중첩되는 입력 피처는 업데이트 피처로 대체됩니다.
 
 **Syntax**
 
@@ -21,15 +21,15 @@ Update (SimpleFeatureCollection inputFeatures, SimpleFeatureCollection updateFea
      - **Required**
 
    * - inputFeatures
-     - Input point features.
+     - 입력 폴리곤 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - updateFeatures
-     - Update polygon features.
+     - 업데이트할 폴리곤 레이어 입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Process Outputs**
@@ -44,14 +44,19 @@ Update (SimpleFeatureCollection inputFeatures, SimpleFeatureCollection updateFea
      - **Required**
 
    * - result
-     - Output features.
+     - 업데이트 한 출력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - inputFeatures, identityFeatures는 반드시 Polygon 또는 MultiPolygon 피처 타입이어야 한다.
+ - 출력 레이어는 inputFeatures, updateFeatures의 필드값을 모두 포함한다.
+
 
 **Examples**
 
+두 폴리곤 레이어간 Update Overlay 분석을 수행한 결과입니다. Input 레이어와 Update 레이어가 중첩되는 부분은 Update 레이어의 피처로 대체됩니다.
+
+  .. image:: images/update.png

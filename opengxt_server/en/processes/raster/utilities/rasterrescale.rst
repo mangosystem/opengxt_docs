@@ -1,9 +1,9 @@
 .. _rasterrescale:
 
-Rescale
-=======
+크기 조절
+===============
 
-Resizes a raster by the specified x and y scale factors.
+지정된 x, y 스케일 값으로 래스터의 크기를 조정합니다.
 
 **Syntax**
 
@@ -21,22 +21,22 @@ RasterRescale (GridCoverage2D inputCoverage, Double xScale, Double yScale) : Gri
      - **Required**
 
    * - inputCoverage
-     - The input raster to be converted.
+     - 변환할 입력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
    * - xScale
-     - The factor in which to scale the cell size in the x direction. The factor must be greater than zero.
+     - X 방향의 래스터 셀 크기에 대한 축척값입니다. 반드시 0보다 커야 하며, 1.0은 원본 값과 동일합니다.
      - Double
      - 1.0
-     - 
+     -
 
    * - yScale
-     - The factor in which to scale the cell size in the y direction. The factor must be greater than zero.
+     - Y 방향의 래스터 셀 크기에 대한 축척값입니다. 반드시 0보다 커야 하며, 1.0은 원본 값과 동일합니다.
      - Double
      - 1.0
-     - 
+     -
 
 **Process Outputs**
 
@@ -50,14 +50,16 @@ RasterRescale (GridCoverage2D inputCoverage, Double xScale, Double yScale) : Gri
      - **Required**
 
    * - result
-     - Output Raster.
+     - 출력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - Multi-Band래스터를 지원한다.
+ - xScale, yScale 파라미터의 값은 0보다 커야 한다.
 
 **Examples**
 
+  .. image:: images/rasterrescale.png

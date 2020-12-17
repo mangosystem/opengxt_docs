@@ -1,9 +1,9 @@
 .. _overlay:
 
-Overlay
-=======
+중첩 (Overlay)
+=====================
 
-These processes are for overlay analysis between two layers such as Union, Intersect, Symmetrical Difference, Difference, Identity, Update etc.
+Union, Intersect, Symmetrical Difference, Difference, Identity, Update 등 두 레이어 간의 Overlay 분석 프로세스들로 구성됩니다.
 
 .. toctree::
    :maxdepth: 2

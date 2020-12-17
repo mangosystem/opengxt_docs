@@ -1,9 +1,9 @@
 .. _deleteduplicates:
 
-Delete Duplicate Features
-=========================
+중복 피처 삭제
+========================
 
-Finds duplicated geometries(not attributes) in features and removes them.
+중복(지오메트리가 동일)된 피처를 찾아서 제거합니다.
 
 **Syntax**
 
@@ -21,9 +21,9 @@ DeleteDuplicates (SimpleFeatureCollection inputFeatures) : SimpleFeatureCollecti
      - **Required**
 
    * - inputFeatures
-     - The input features to be processed.
+     - 중복 피처를 제거할 입력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Process Outputs**
@@ -38,14 +38,17 @@ DeleteDuplicates (SimpleFeatureCollection inputFeatures) : SimpleFeatureCollecti
      - **Required**
 
    * - result
-     - Output features.
+     - 중복 피처가 삭제된 출력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - inputFeatures는 포인트, 라인, 폴리곤 모두 가능하며, 각 피처의 Geometry가 동일한 경우에만 중복으로 처리한다. 
 
 **Examples**
 
+다음과 같이 중복된 포인트는 하나의 피처만 저장됩니다.
+
+  .. image:: images/deleteduplicates.png

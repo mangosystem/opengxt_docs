@@ -1,9 +1,9 @@
 .. _knearestneighborcircle:
 
-K-Nearest Neighbor Circle
+K-최근린 이웃 원 생성
 =================================
 
-Creates a k-nearest neighbor circle polygons from two features.
+두 레이어간의 k-최근린 이웃에 대한 원 폴리곤을 생성합니다.
 
 **Syntax**
 
@@ -21,31 +21,31 @@ KNearestNeighborCircle (SimpleFeatureCollection inputFeatures, SimpleFeatureColl
      - **Required**
 
    * - inputFeatures
-     - The input features that can be point, line, polygon. The nearest distance is calculated using the centroid of the input feature.
+     - 포인트, 라인, 폴리곤 유형의 입력 레이어입니다. 거리는 입력 피처의 중심점을 이용하여 계산합니다.
      - SimpleFeatureCollection
      -
      - ✓
 
    * - nearFeatures
-     - The near features that can be point, line, polygon.
+     - 포인트, 라인, 폴리곤 유형의 거리를 계산할 이웃 레이어입니다.
      - SimpleFeatureCollection
      -
      - ✓
 
    * - neighbor
-     - The number of neighbors to be considered.
+     - 원을 생성할 최근린 이웃 수를 설정합니다.
      - Integer
      - 1
      - 
 
    * - maximumDistance
-     - The maximum distance to search for near features. The default is 0. If the distance is 0, the nearest feature is searched regardless of distance.
+     - 최근린 이웃을 탐색할 최대 거리입니다. 기본값은 0이며 만약 거리 기본값이 0인 경우, 최근린 피처는 거리에 상관 없이 탐색합니다.
      - Double
      - 0.0
      -
 
    * - distanceUnit
-     - The desired linear unit.
+     - 탐색 거리의 단위입니다.
      - DistanceUnit
      - Default
      -
@@ -62,7 +62,7 @@ KNearestNeighborCircle (SimpleFeatureCollection inputFeatures, SimpleFeatureColl
      - **Required**
 
    * - result
-     - The output polygon features.
+     - 최근린 이웃 원 출력 폴리곤 레이어입니다.
      - SimpleFeatureCollection
      -
      - ✓
@@ -70,6 +70,10 @@ KNearestNeighborCircle (SimpleFeatureCollection inputFeatures, SimpleFeatureColl
 **Constraints**
 
  - distanceUnit: Default(Default), Meters, Kilometers, Inches, Feet, Yards, Miles, NauticalMiles
+ - maximumDistance 파라미터의 기본값은 0이며 만약 거리 기본값이 0인 경우, 최근린 피처는 거리에 상관 없이 탐색한다.
 
 **Examples**
 
+Neighbor 파라미터를 3으로 설정하고 실행한 K-Nearest Neighbor Circle을 실행한 결과입니다.
+
+  .. image:: images/knearestneighborcircle.png

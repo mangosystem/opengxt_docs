@@ -1,9 +1,9 @@
 .. _randompointsperfeatures:
 
-Create random points per polygon features
-=========================================
+피처별 랜덤 포인트 생성
+=======================================
 
-Create random points per polygon features.
+폴리곤 피처별로 랜덤 포인트를 생성합니다.
 
 **Syntax**
 
@@ -21,15 +21,15 @@ RandomPointsPerFeatures (SimpleFeatureCollection polygonFeatures, Expression exp
      - **Required**
 
    * - polygonFeatures
-     - The features which contains the features into which the random points will be placed.
+     - 랜덤 포인트가 생성될 폴리곤 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - expression
-     - Field or Expression representing Number of Points.
+     - 포인트 갯수를 지정하는 필드 또는 계산식 입니다.
      - Expression
-     - 
+     -
      - ✓
 
 **Process Outputs**
@@ -44,14 +44,18 @@ RandomPointsPerFeatures (SimpleFeatureCollection polygonFeatures, Expression exp
      - **Required**
 
    * - result
-     - Generated random point features.
+     - 랜덤 포인트 피처컬렉션
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - Expression 파라미터를 숫자, 필드 또는 수식(여러 공간 및 속성 필드의 연산 조합)으로 입력이 가능하다.
+ - 수식을 이용하는 경우 폴리곤 레이어의 각 피처별로 랜덤 포인트의 개수 설정이 가능하다.
 
 **Examples**
 
+폴리곤 레이어의 지역별 인구밀도 속성정보를 이용한 Random Point 생성 예입니다.
+
+  .. image:: images/randompointsperfeatures.png

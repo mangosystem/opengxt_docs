@@ -1,9 +1,9 @@
 .. _utilities:
 
-Utilities
-=========
+래스터 처리 도구(Utilities)
+===========================
 
-These processes are for transformations such as rotate, flip, mirror, shift, rescale.
+래스터 데이터의 이동, 크기조절, 회전, 반전 등을 수행하는 프로세스로 구성됩니다.
 
 .. toctree::
    :maxdepth: 2
@@ -13,3 +13,4 @@ These processes are for transformations such as rotate, flip, mirror, shift, res
    rasterrescale
    rasterrotate
    rastershift
+   rasterreplacevalues

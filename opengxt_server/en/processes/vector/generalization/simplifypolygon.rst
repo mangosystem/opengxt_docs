@@ -1,9 +1,9 @@
 .. _simplifypolygon:
 
-Simplify Polygon
-================
+폴리곤 단순화
+=====================
 
-Simplifies polygon outlines by removing relatively extraneous vertices while preserving shape.
+폴리곤 모양과 인접 폴리곤과의 위상관계를  보존하면서 폴리곤을 단순화합니다.
 
 **Syntax**
 
@@ -21,28 +21,28 @@ SimplifyPolygon (SimpleFeatureCollection inputFeatures, Double tolerance, Boolea
      - **Required**
 
    * - inputFeatures
-     - The input polygon features to be simplified.
+     - 단순화할 폴리곤 레이어입니다. 슬리버 폴리곤이 있는 경우 경계선에 슬리버 폴리곤이 생성될 수 있습니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - tolerance
-     - Distance tolerance to simplify ex) 10.0
+     - 단순화 알고리즘에 사용할 거리 오차 표현식입니다. 예) 10.0 또는 필터 표현식.
      - Double
      - 0.0
      - ✓
 
    * - preserveTopology
-     - If True, ensures that simplified features are topologically valid.
+     - 만약 참이면, 단순화된 피처는 유효한 토폴로지를 보장합니다.
      - Boolean
      - true
-     - 
+     -
 
    * - minimumArea
-     - The minimum area for a polygon to be retained. The default value is zero, that is, to keep all polygons.
+     - 폴리곤을 유지할 최소 면적입니다. 기본값은 0입니다. 이 값은 모든 폴리곤을 유지합니다.
      - Double
      - 0.0
-     - 
+     -
 
 **Process Outputs**
 
@@ -56,14 +56,22 @@ SimplifyPolygon (SimpleFeatureCollection inputFeatures, Double tolerance, Boolea
      - **Required**
 
    * - result
-     - Output features.
+     - 출력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - inputFeatures 파라미터는 폴리곤 유형의 레이어 이어야 한다.
+ - tolerance 파라미터는 수 또는 수식을 사용할 수 있으며, Douglas–Peucker 알고리즘을 사용한다.
+ - preserveTopology 파라미터 값이 True이면, Tolerance 값에 상관없이 최소한의 토폴로지 규칙은 유지된다.
+ - minimumArea 파라미터는 폴리곤을 유지할 최소 면적이다. 기본값은 0이며, 이 값은 모든 폴리곤을 유지한다.
+ - 이 분석도구의 모든 거리 및 면적 단위는 입력 레이어의 좌표체계를 따른다.
+
 
 **Examples**
 
+파란선은 원본, 빨간 선은 폴리곤(좌) 및 라인(우) Simplify 비교 결과 입니다.
+
+  .. image:: images/simplifypolygon.png

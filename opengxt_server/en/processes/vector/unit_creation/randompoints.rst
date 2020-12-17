@@ -1,9 +1,9 @@
 .. _randompoints:
 
-Create random points
-====================
+랜덤 포인트 생성
+===========================
 
-Create random points from extent or polygon boundary.
+직사각형 또는 폴리곤 영역으로 랜덤 포인트를 생성합니다
 
 **Syntax**
 
@@ -21,19 +21,19 @@ RandomPoints (ReferencedEnvelope extent, SimpleFeatureCollection polygonFeatures
      - **Required**
 
    * - extent
-     - Random points will be generated inside the extent.
+     - 랜덤 포인트가 생성될 영역입니다
      - ReferencedEnvelope
-     - 
+     -
      - ✓
 
    * - polygonFeatures
-     - The features which contains the features into which the random points will be placed.
+     - 랜덤 포인트가 생성될 폴리곤 레이어입니다.
      - SimpleFeatureCollection
-     - 
-     - 
+     -
+     -
 
    * - pointCount
-     - The number of points to be randomly generated.
+     - 생성할 포인트의 갯수입니다.
      - Integer
      - 1000
      - ✓
@@ -50,14 +50,17 @@ RandomPoints (ReferencedEnvelope extent, SimpleFeatureCollection polygonFeatures
      - **Required**
 
    * - result
-     - Generated random point features.
+     - 랜덤 포인트 피처컬렉션
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - BoundingBox 또는 폴리곤 레이어를 기준 레이어로 사용할 수 있다.
 
 **Examples**
 
+폴리곤 레이어 영역을 기준으로 1000개의 Random Point를 생성한 예입니다. Dot Density(점묘도) 작성에 활용할 수 있습니다.
+
+  .. image:: images/randompoints.png

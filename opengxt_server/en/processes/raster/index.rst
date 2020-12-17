@@ -1,9 +1,8 @@
 .. _raster:
 
-Raster
-======
 
-These process groups are associated with raster analysis and processing.
+래스터 분석 프로세스
+========================
 
 .. toctree::
    :maxdepth: 2

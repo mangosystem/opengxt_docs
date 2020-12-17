@@ -87,7 +87,7 @@ GeoServer WPS Extension을 설치하면 Geometry, Vector, Raster 기본 WPS 프�
 다음의 URL에서 OpenGXT for Server 설치파일을 다운로드 합니다.
 
   - OpenGXT for Server
-  - https://sourceforge.net/projects/mango-spatialstatistics/files/GeoServer/
+  - https://sourceforge.net/projects/opengxt/files/GeoServer/
   - GeoServer-Extension-OpenGxT-2.15.x.zip
 
 

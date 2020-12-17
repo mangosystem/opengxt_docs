@@ -4,17 +4,17 @@
 Open Geospatial Consortium (OGC)
 ====================================
 
-Overview
----------
+개요
+------
 OGC는 전세계 530여 개 이상 정부 기관, 기업, 대학이 참여하고 있는 세계 최대 공간정보산업 표준화 기구입니다
 
-**Standards**
+**주요 표준**
 
   - 데이터 포맷(GML, KML, IndoorGML, CityGML, NetCDF, GeoTIFF, 3DTiles 등)
   - OGC Web Service(WMS, WFS, WCS, WPS, CSW 등)에 이르는 표준 제정 및 인증
   - 사이트: http://www.opengeospatial.org
 
-**Membership**
+**주요 참여 기관**
 
   - 해외: 미국 국토안보부, NASA, 마이크로소프트, 구글, 오라클, ESRI, 오토데스크 등
   - 국내: 국토교통부, 공간정보산업진흥원, 공간정보연구원, 한국건설기술연구원, ETRI, 국토연구원, 부산대학교, 서울대학교, 안양대학교, 한국외국어대학교, 삼성 SDS, 현대 MN소프트 등
@@ -80,8 +80,8 @@ WPS 서비스의 주요 Operation은 다음과 같습니다.
 
 
 
-Operations
------------
+연산자
+----------
 Web Processing Service 1.0.0 버전은 GetCapabilities, DescribeProcess, Execute의 3가지 Operation으로 구성됩니다.
 
 
@@ -123,16 +123,16 @@ HTTT Get/Post 기반의 프로세스를 실행하는 Operation입니다. 다음 
 .. code-block::
 
     <?xml version="1.0" encoding="UTF-8"?>
-    <wps:Execute version="1.0.0" service="WPS"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xmlns="http://www.opengis.net/wps/1.0.0"
-      xmlns:wfs="http://www.opengis.net/wfs"
-      xmlns:wps="http://www.opengis.net/wps/1.0.0"
-      xmlns:ows="http://www.opengis.net/ows/1.1"
-      xmlns:gml="http://www.opengis.net/gml"
-      xmlns:ogc="http://www.opengis.net/ogc"
-      xmlns:wcs="http://www.opengis.net/wcs/1.1.1"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
+    <wps:Execute version="1.0.0" service="WPS" 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xmlns="http://www.opengis.net/wps/1.0.0" 
+      xmlns:wfs="http://www.opengis.net/wfs" 
+      xmlns:wps="http://www.opengis.net/wps/1.0.0" 
+      xmlns:ows="http://www.opengis.net/ows/1.1" 
+      xmlns:gml="http://www.opengis.net/gml" 
+      xmlns:ogc="http://www.opengis.net/ogc" 
+      xmlns:wcs="http://www.opengis.net/wcs/1.1.1" 
+      xmlns:xlink="http://www.w3.org/1999/xlink" 
       xsi:schemaLocation="http://www.opengis.net/wps/1.0.0 http://schemas.opengis.net/wps/1.0.0/wpsAll.xsd">
       <ows:Identifier>statistics:Simplify</ows:Identifier>
       <wps:DataInputs>
@@ -164,23 +164,24 @@ HTTT Get/Post 기반의 프로세스를 실행하는 Operation입니다. 다음 
 GeoServer WPS에 대한 자세한 정보는 `Web Processing Service (WPS) <https://docs.geoserver.org/stable/en/user/services/wps/operations.html>`_ 참고하십시오.
 
 
-Data inputs
+입출력 파라미터
 ------------------
 
 WPS에서 사용되는 파라미터는 다음과 같이 Data Input과 Process Output으로 구분됩니다.
 
   .. figure:: images/wps-parameters.png
 
-
+ 
 Data Input 파라미터는 LiteralData, BoundingBoxData, ComplexData로, Process Output 파라미터는 LiteralOutput, BoundingBoxOutput, ComplexOutput으로 세분화됩니다.
 
   .. figure:: images/wps-parameters-input.png
 
 
 
-Process outputs
+응답 파라미터
 ------------------
 
 WPS 요청문에서 Process Output을 요청하는 형식은 크게 RawDataOutput과 ResponseDocument 2가지가 있습니다.
 
   .. figure:: images/wps-response-form.png
+

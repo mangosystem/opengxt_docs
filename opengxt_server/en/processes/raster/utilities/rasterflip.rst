@@ -1,9 +1,9 @@
 .. _rasterflip:
 
-Flip
-====
+플립
+======
 
-Reorients the raster by turning it over, from top to bottom, along the horizontal axis through the center of the raster.
+래스터의 중심을 기준으로 수평 축을 따라 위쪽에서 아래쪽으로 뒤집어 래스터의 방향을 조정합니다.
 
 **Syntax**
 
@@ -21,9 +21,9 @@ RasterFlip (GridCoverage2D inputCoverage) : GridCoverage2D
      - **Required**
 
    * - inputCoverage
-     - The input raster to be converted.
+     - 변환할 입력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Process Outputs**
@@ -38,14 +38,15 @@ RasterFlip (GridCoverage2D inputCoverage) : GridCoverage2D
      - **Required**
 
    * - result
-     - Output Raster.
+     - 플립한 출력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - Multi-Band래스터를 지원한다.
 
 **Examples**
 
+  .. image:: images/rasterflip.png

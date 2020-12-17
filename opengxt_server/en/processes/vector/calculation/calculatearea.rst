@@ -1,9 +1,9 @@
 .. _calculatearea:
 
-Calculate Area or Perimeter
-===========================
+면적 또는 둘레 계산
+=================================
 
-Calculates feature's area or perimeter.
+폴리곤 레이어의 면적 및 둘레를 계산합니다.
 
 **Syntax**
 
@@ -21,34 +21,34 @@ CalculateArea (SimpleFeatureCollection inputFeatures, String areaField, AreaUnit
      - **Required**
 
    * - inputFeatures
-     - The input polygon features to be calculated.
+     - 면적을 계산할 폴리곤 레이어
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - areaField
-     - Area field that will be calculated. geom_area is a default.
+     - 면적이 계산될 필드. geom_area 가 기본값 입니다.
      - String
      - geom_area
-     - 
+     -
 
    * - areaUnit
-     - The output area unit.
+     - 출력 면적 단위.
      - AreaUnit
      - Default
-     - 
+     -
 
    * - perimeterField
-     - Perimeter field that will be calculated.
+     - 둘레가 계산될 필드입니다.
      - String
-     - 
-     - 
+     -
+     -
 
    * - perimeterUnit
-     - The output perimeter unit.
+     - 출력 둘레 단위.
      - DistanceUnit
      - Default
-     - 
+     -
 
 **Process Outputs**
 
@@ -62,15 +62,21 @@ CalculateArea (SimpleFeatureCollection inputFeatures, String areaField, AreaUnit
      - **Required**
 
    * - result
-     - Output features.
+     - 출력 레이어.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- - areaUnit: Default(Default), SquareMeters, SquareKilometers, SquareFeet, SquareYards, SquareMiles, Hectare, Acre
- - perimeterUnit: Default(Default), Meters, Kilometers, Inches, Feet, Yards, Miles, NauticalMiles
+ - areaUnit: Default(기본값), SquareMeters, SquareKilometers, SquareFeet, SquareYards, SquareMiles, Hectare, Acre
+ - perimeterUnit: Default(기본값), Meters, Kilometers, Inches, Feet, Yards, Miles, NauticalMiles
+ - inputFeatures는 반드시 폴리곤 이어야 한다.
+ - 면적, 둘레의 계산값은 inputFeatures의 좌표계 단위를 따른다.
+
 
 **Examples**
 
+폴리곤의 면적값을 ara 필드에 계산한 결과입니다.
+
+  .. image:: images/calculatearea.png

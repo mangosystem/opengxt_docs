@@ -1,9 +1,9 @@
 .. _global_sa:
 
-Global Spatial Auto-Correlation
-================================
+전역적 공간 자기상관분석(Global SA)
+=====================================
 
-It consists of processes for analyzing global spatial autocorrelation.
+전역적 공간 자기상관(Global Spatial Auto-Correlation)을 분석하는 프로세스들로 구성됩니다.
 
 .. toctree::
    :maxdepth: 2

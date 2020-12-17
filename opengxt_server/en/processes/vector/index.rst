@@ -1,9 +1,8 @@
 .. _vector:
 
-Vector
-======
 
-These processes are for vector data analysis and processing.
+벡터 분석 프로세스
+========================
 
 .. toctree::
    :maxdepth: 2

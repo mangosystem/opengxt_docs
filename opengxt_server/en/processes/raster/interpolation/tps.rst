@@ -1,9 +1,9 @@
 .. _tps:
 
-Thin Plate Spline(TPS) Interpolation
-====================================
+Thin Plate Spline(TPS) 보간
+===========================================================================
 
-Interpolates a surface from points using a Thin Plate Spline(TPS) interpolation technique.
+포인트 피처에 대해 Thin Plate Spline (TPS) 보간법을 적용한 래스터를 생성합니다.
 
 **Syntax**
 
@@ -21,28 +21,28 @@ TPS (SimpleFeatureCollection inputFeatures, String inputField, Double cellSize, 
      - **Required**
 
    * - inputFeatures
-     - The input point features for which to calculate the interpolation.
+     - 보간할 입력 포인트 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - inputField
-     - The field that holds a height or magnitude value for each point.
+     - 각각의 샘플 포인트에 대한 높이 또는 크기 등 값을 포함한 필드입니다.
      - String
-     - 
+     -
      - ✓
 
    * - cellSize
-     - The cell size for the output raster.
+     - 출력 래스터 레이어의 셀 크기입니다.
      - Double
      - 0.0
-     - 
+     -
 
    * - extent
-     - The extent for the output raster.
+     - 출력 래스터 레이어의 공간 범위입니다.
      - ReferencedEnvelope
-     - 
-     - 
+     -
+     -
 
 **Process Outputs**
 
@@ -56,14 +56,16 @@ TPS (SimpleFeatureCollection inputFeatures, String inputField, Double cellSize, 
      - **Required**
 
    * - result
-     - The output raster.
+     - 보간한 출력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+- extent 파라미터를 설정하지 않으면 inputFeatures 레이어의 범위를 사용한다.
+- cellSize 파라미터를 설정하지 않으면 Extent의 Width와 Height 중 작은 값을 250으로 나눈 값을 사용한다.
 
 **Examples**
 
+  .. image:: images/tps.png

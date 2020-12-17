@@ -7,7 +7,7 @@
 
 OpenGXT documentation is provided using a [Attribution 3.0 Unported](LICENSE.md) license.
 
-  - [GitHub](https://github.com/mapplus/opengxt)
+  - [GitHub](https://github.com/mangosystem/opengxt)
   - [OpenGXT for Server online documentation](http://opengxt.mangosystem.com)
 
 ## How to write Documentation
@@ -31,7 +31,7 @@ OpenGXT uses reStructuredText with [Sphinx](http://www.sphinx-doc.org).
 
 ### Preview
 
-![screenshot](https://github.com/mangosystem/opengxt_docs/blob/master/images/OpenGXT-Online-processes.png?width=600)
+![screenshot](images/OpenGXT-Online-processes.png?width=600)
 
 
 ## Sphinx Syntax

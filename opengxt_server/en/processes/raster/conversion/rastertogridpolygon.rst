@@ -1,9 +1,9 @@
 .. _rastertogridpolygon:
 
-Raster To Grid Polygon Features
-===============================
+래스터를 격자 폴리곤으로 변환
+================================================
 
-Converts each pixel of a raster to grid polygon features.
+래스터 레이어의 각 픽셀을 그리드 폴리곤으로 변환합니다.
 
 **Syntax**
 
@@ -21,28 +21,28 @@ RasterToGridPolygon (GridCoverage2D inputCoverage, Integer bandIndex, String val
      - **Required**
 
    * - inputCoverage
-     - The input raster to be converted.
+     - 변환할 입력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
    * - bandIndex
-     - The zero-based band index, default index is a 0.
+     - 0 부터 시작하는 밴드 인덱스, 기본 인덱스는 0입니다.
      - Integer
      - 0
-     - 
+     -
 
    * - valueField
-     - The field used to assign values from the cells.
+     - 입력 래스터의 셀값을 저장할 필드를 설정합니다. 기본값은 value 입니다.
      - String
      - value
-     - 
+     -
 
    * - retainNoData
-     - Denotes whether output features retain NoData cells. Default is False.
+     - 출력 격자 레이어에 NoData 셀을 포함할 지 여부를 설정합니다. 기본값은 아니오(False)이고, 예(True)인 경우 해당 격자 셀은 Null값이 저장됩니다.
      - Boolean
      - false
-     - 
+     -
 
 **Process Outputs**
 
@@ -56,14 +56,14 @@ RasterToGridPolygon (GridCoverage2D inputCoverage, Integer bandIndex, String val
      - **Required**
 
    * - result
-     - Output Features.
+     - 격자로 변환한 출력 래스터 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - valueField가 Null이면 기본값으로 value 이름의 필드를 사용한다.
+
 
 **Examples**
-

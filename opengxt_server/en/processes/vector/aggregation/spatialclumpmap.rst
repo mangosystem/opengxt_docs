@@ -1,9 +1,9 @@
 .. _spatialclumpmap:
 
-Spatial Clump Map
-=================
+Spatial Clump Map 생성
+============================================================
 
-Creates a spatial clump map using point features and distance expression.
+포인트 피처와 반경 표현식을 이용하여 Spatial Clump Map을 생성합니다.
 
 **Syntax**
 
@@ -21,28 +21,28 @@ SpatialClumpMap (SimpleFeatureCollection inputFeatures, Expression radius, Dista
      - **Required**
 
    * - inputFeatures
-     - Input features to be processed.
+     - 입력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - radius
-     - The radius expression used to create distance. ex) 1000 or [field] or [field] * 0.5 etc...
+     - 거리를 생성할 반경 표현식입니다. 예) 1000 또는 [field] 또는 [field] * 0.5 등...
      - Expression
-     - 
+     -
      - ✓
 
    * - radiusUnit
-     - The desired linear unit.
+     - 반경 단위입니다.
      - DistanceUnit
      - Default
-     - 
+     -
 
    * - quadrantSegments
-     - The number of line segments used to represent a quadrant of a circle.
+     - 원의 사분면을 나타내는데 사용되는 세그먼트의 개수입니다.
      - Integer
      - 8
-     - 
+     -
 
 **Process Outputs**
 
@@ -56,14 +56,18 @@ SpatialClumpMap (SimpleFeatureCollection inputFeatures, Expression radius, Dista
      - **Required**
 
    * - result
-     - Output features.
+     - 출력 레이어.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- - radiusUnit: Default(Default), Meters, Kilometers, Inches, Feet, Yards, Miles, NauticalMiles
+ - radiusUnit: Default(기본값), Meters, Kilometers, Inches, Feet, Yards, Miles, NauticalMiles
+ - quatrantSegments 파라미터의 기본값은 8이다.
 
 **Examples**
 
+포인트 피처의 반경 5km를 기준으로 Clump Map을 생성한 결과입니다.
+
+  .. image:: images/spatialclumpmap.png

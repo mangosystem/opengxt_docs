@@ -1,9 +1,9 @@
 .. _point_pattern:
 
-Point Pattern
-=============
+포인트 패턴 분석(Pattern Analysis)
+=======================================
 
-Analyze the pattern of the point data.
+포인트 데이터의 패턴을 분석하는 프로세스들로 구성됩니다.
 
 .. toctree::
    :maxdepth: 2
@@ -13,3 +13,5 @@ Analyze the pattern of the point data.
    knearestneighborcircle
    quadratanalysis
    kmeansclustering
+   clustergam
+   clusterbesagnewell

@@ -37,8 +37,8 @@ OpenGXT의 공간분석기능은 Geometry, 벡터, 래스터, 공간통계, 사�
 
 **uDig Processing Toolbox Manual**
 
-  - `Korean v2.0 - 28MB(PDF) <https://github.com/mapplus/opengxt-udig-plugin/blob/master/docs/manual/uDig_ProcessingToolbox_1.0_User_Manual_ko_v.2.0.pdf>`_  
-  - `Korean v3.x-latest - 35MB(PDF) <https://github.com/mapplus/opengxt-udig-plugin/blob/master/docs/manual/uDig_ProcessingToolbox_1.0_User_Manual_ko_v.3.latest.pdf>`_  
+  - `Korean v2.0 - 28MB(PDF) <https://github.com/mangosystem/opengxt-udig-plugin/blob/master/docs/manual/uDig_ProcessingToolbox_1.0_User_Manual_ko_v.2.0.pdf>`_  
+  - `Korean v3.x-latest - 35MB(PDF) <https://github.com/mangosystem/opengxt-udig-plugin/blob/master/docs/manual/uDig_ProcessingToolbox_1.0_User_Manual_ko_v.3.latest.pdf>`_  
   - `2018 OSGeo UN Committee Educational Challenge - Training Material for UN Open GIS Spiral 3(HTML) <https://wiki.osgeo.org/wiki/Training_Material_for_UN_Open_GIS_Spiral_3>`_  
 
 
@@ -48,7 +48,7 @@ OpenGXT의 공간분석기능은 Geometry, 벡터, 래스터, 공간통계, 사�
   - `GeoTools <http://geotools.org>`_
   - `GeoServer <http://geoserver.org>`_
   - `uDig <http://locationtech.org/projects/technology.udig>`_  
-  - `uDig Processing Toolbox <https://github.com/mapplus/opengxt-udig-plugin>`_  
+  - `uDig Processing Toolbox <https://github.com/mangosystem/opengxt-udig-plugin>`_  
 
 
 라이선스
@@ -65,8 +65,8 @@ OpenGXT의 공간분석기능은 Geometry, 벡터, 래스터, 공간통계, 사�
 OpenGXT는 소스코드에서부터, 지역화, 배포에 이르기까지 모든 과정이 공개되어 있으며, GitHub, Transifex, SourceForge 등 오픈소스를 지원하는 플랫폼을 활용합니다.
 
   - `GitHub <https://github.com/mangosystem/opengxt>`_  
-  - `Transifex 지역화 <https://www.transifex.com/mangosystem/ss-rd/dashboard>`_  
-  - `SourceForge 배포 <https://sourceforge.net/projects/mango-spatialstatistics>`_  
+  - `Transifex 지역화 <https://www.transifex.com/mangosystem/opengxt/dashboard>`_  
+  - `SourceForge 배포 <https://sourceforge.net/projects/opengxt>`_  
 
 
 활용사례

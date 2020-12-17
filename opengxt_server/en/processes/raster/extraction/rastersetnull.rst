@@ -1,9 +1,9 @@
 .. _rastersetnull:
 
-Set Null
-========
+래스터 Null값 설정
+====================================
 
-Sets identified cell locations to NoData based on a specified filter expression.
+필터 표현식에 해당하는 셀값을 Null(NoData)값으로 처리한 래스터를 생성합니다.
 
 **Syntax**
 
@@ -21,34 +21,34 @@ RasterSetNull (GridCoverage2D inputCoverage, Integer bandIndex, Filter filter, B
      - **Required**
 
    * - inputCoverage
-     - The input raster to be evaluated.
+     - 변환할 입력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
    * - bandIndex
-     - The zero-based band index, default index is a 0.
+     - 0 부터 시작하는 밴드 인덱스, 기본 인덱스는 0입니다.
      - Integer
      - 0
-     - 
+     -
 
    * - filter
-     - A logical expression that determines which of the input cells are to be nodata. ex> Value > 250
+     - NoData로 설정할 필터 표현식입니다. 예) Value > 250
      - Filter
-     - 
+     -
      - ✓
 
    * - replaceNoData
-     - If true, nodata value will be replaced as a newValue parameter. Default is False.
+     - 만약 예(True)이면 기존 NoData값을 새로운 NoData 값으로 대체합니다. 기본값은 아니오(False)입니다.
      - Boolean
      - false
-     - 
+     -
 
    * - newValue
-     - The new valid value to replace nodata.
+     - 기존 NoData 값을 대체할 새로운 값을 설정합니다.
      - Double
      - 0.0
-     - 
+     -
 
 **Process Outputs**
 
@@ -62,14 +62,16 @@ RasterSetNull (GridCoverage2D inputCoverage, Integer bandIndex, Filter filter, B
      - **Required**
 
    * - result
-     - Output raster.
+     - Null값이 설정된 출력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - filter 파라미터의 필드 이름은 반드시 Value 이어야 한다.
+ - replaceNoData 파라미터의 값이 True인 경우 기존 NoData값을 newValue 파라미터 값으로 대체한다.
 
 **Examples**
 
+  .. image:: images/rastersetnull.png

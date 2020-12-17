@@ -1,9 +1,9 @@
 .. _extraction:
 
-Extraction
-==========
+래스터 데이터 추출(Extraction)
+==============================
 
-Extract the raster that matches a space or attribute filter condition.
+Geometry, Extent 등을 이용하여 래스터를 추출하는 프로세스들로 구성됩니다.
 
 .. toctree::
    :maxdepth: 2

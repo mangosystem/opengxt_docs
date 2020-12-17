@@ -1,9 +1,9 @@
 .. _mediancenter:
 
-Median Center
-=============
+중앙값중심점 생성
+===========================
 
-Identifies the location that minimizes overall Euclidean distance to the features in a dataset.
+각 피처에 대한 전체 유클리드 거리를 최소화하는 위치의 중심점을 생성합니다.
 
 **Syntax**
 
@@ -21,28 +21,28 @@ MedianCenter (SimpleFeatureCollection inputFeatures, String weightField, String 
      - **Required**
 
    * - inputFeatures
-     - A features for which the median center will be calculated.
+     - 중앙값중심점을 계산하는데 사용될 입력 피처 레이어를 설정합니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - weightField
-     - The numeric field used to create a weighted median center.
+     - 가중평균 중심점을 생성하는데 사용될 필드를 설정합니다.
      - String
-     - 
-     - 
+     -
+     -
 
    * - caseField
-     - The field used to group features for separate median center calculations.
+     - 그룹별 중심을 적용하는 경우 그룹을 구분하는데 사용되는 필드를 설정합니다.
      - String
-     - 
-     - 
+     -
+     -
 
    * - attributeFields
-     - (Comma separated) Numeric field(s) for which the data median value will be computed.
+     - 중앙값을 계산할 (쉼표로 구분된) 숫자 필드 또는 목록입니다.
      - String
-     - 
-     - 
+     -
+     -
 
 **Process Outputs**
 
@@ -56,14 +56,17 @@ MedianCenter (SimpleFeatureCollection inputFeatures, String weightField, String 
      - **Required**
 
    * - result
-     - A point features that will contain the features representing the median centers of the input features.
+     - 저장할 결과 포인트 레이어를 설정합니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - inputFeatures의 Centroid를 이용하여 계산한다.
 
 **Examples**
 
+서울시 아파트 분포에 대한 시군구별 Median Center를 분석한 결과입니다.
+
+  .. image:: images/mediancenter.png

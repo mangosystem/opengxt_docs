@@ -1,9 +1,9 @@
 .. _rasteraspect:
 
-Aspect
-======
+사면향 분석
+==================
 
-Derives aspect from a raster surface. The aspect identifies the downslope direction of the maximum rate of change in value from each cell to its neighbors.
+DEM 래스터 레이어를 이용하여 사면의 향 분석을 수행합니다.
 
 **Syntax**
 
@@ -21,9 +21,9 @@ RasterAspect (GridCoverage2D inputCoverage) : GridCoverage2D
      - **Required**
 
    * - inputCoverage
-     - The input surface raster.
+     - 표고값을 저장(DEM, DSM 등)한 입력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Process Outputs**
@@ -38,14 +38,14 @@ RasterAspect (GridCoverage2D inputCoverage) : GridCoverage2D
      - **Required**
 
    * - result
-     - Output raster.
+     - 출력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
 
 **Examples**
 
+  .. image:: images/rasteraspect.png

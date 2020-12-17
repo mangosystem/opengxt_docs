@@ -1,9 +1,9 @@
 .. _featuretoconvexhull:
 
-Feature To ConvexHull
-=====================
+ConvexHull 폴리곤으로 변환
+=========================================================
 
-Creates a polygon features, each of which represents the convexhull polygon of an input feature.
+각 피처를 둘러싸는 Convex Hull을 폴리곤 피처로 변환합니다.
 
 **Syntax**
 
@@ -21,16 +21,16 @@ FeatureToConvexHull (SimpleFeatureCollection inputFeatures, Boolean singlePart) 
      - **Required**
 
    * - inputFeatures
-     - Input features that can be multipoint, line, polygon.
+     - ConvexHull 폴리곤으로 변환할 입력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - singlePart
-     - Specifies whether to use one convexhull for each entire multipart feature or one convexhull per part of a multipart feature.
+     - 멀티파트를 각각의 싱글파트로 변환 후 생성할 지 여부를 설정합니다.
      - Boolean
      - true
-     - 
+     -
 
 **Process Outputs**
 
@@ -44,14 +44,19 @@ FeatureToConvexHull (SimpleFeatureCollection inputFeatures, Boolean singlePart) 
      - **Required**
 
    * - result
-     - Output features.
+     - ConvexHull 폴리곤으로 변환한 출력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - inputFeatures는 포인트, 라인, 폴리곤 모두 가능하다.
+ - singlePart가 True이고 Geometry가 MultiPart인 경우 모든 Part의 Geometry를 변환한다.
 
 **Examples**
+
+폴리곤 피처를 ConvexHull로 변환한 결과입니다.
+
+  .. image:: images/featuretoconvexhull.png
 

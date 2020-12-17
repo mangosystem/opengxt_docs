@@ -1,9 +1,9 @@
 .. _extract:
 
-Extract
-=======
+추출 (Extract)
+=====================
 
-These processes are for selecting or cutting features using filter or geometry. 
+필터나 지오메트리를 이용하여 피처를 선택하거나 잘라내는 프로세스들로 구성됩니다.
 
 .. toctree::
    :maxdepth: 2

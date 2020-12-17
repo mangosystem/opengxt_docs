@@ -1,9 +1,9 @@
 .. _polargridsfromfeatures:
 
-Polar Grids From Features
-=========================
+피처 레이어 방사형 그리드
+==========================================
 
-Creates a radial polar grids from features.
+피처 레이어의 중심으로부터 여러 개의 반경을 이용한 방사형 그리드를 생성합니다.
 
 **Syntax**
 
@@ -21,34 +21,34 @@ PolarGridsFromFeatures (SimpleFeatureCollection origin, String radius, DistanceU
      - **Required**
 
    * - origin
-     - The center of polar grids.
+     - 방사형 그리드의 중심점입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - radius
-     - The list of radius(unit:data unit) : ex)200, 300, 400, 500.
+     - 쉼표로 구분된 반경값(단위: 입력 레이어 좌표계 기준) 목록입니다 : 예) 200, 300, 400, 500.
      - String
-     - 
+     -
      - ✓
 
    * - radiusUnit
-     - The desired linear unit.
+     - 반경의 거리 단위입니다.
      - DistanceUnit
      - Default
-     - 
+     -
 
    * - radialType
-     - Radial Type: Polar(Default), Base.
+     - 방사 유형입니다:  Polar(기본값), Base.
      - RadialType
      - Polar
-     - 
+     -
 
    * - sides
-     - The number of sides. The default value is 8.
+     - 면의 개수. 기본값은 8입니다.
      - Integer
      - 8
-     - 
+     -
 
 **Process Outputs**
 
@@ -62,15 +62,21 @@ PolarGridsFromFeatures (SimpleFeatureCollection origin, String radius, DistanceU
      - **Required**
 
    * - result
-     - Output features.
+     - 출력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- - radiusUnit: Default(Default), Meters, Kilometers, Inches, Feet, Yards, Miles, NauticalMiles
- - radialType: Base, Polar(Default)
+ - radiusUnit: Default(기본값), Meters, Kilometers, Inches, Feet, Yards, Miles, NauticalMiles
+ - radialType: Base, Polar(기본값)
+ - 출력 레이어의 각 셀에는 angle, radius 값이 계산된다.
+ - sides 파라미터의 기본값(8)을 사용하는 경우 azimuth 필드가 추가되고 NE, N, NW, W, SW, S, SE, E 등의 방향값이 계산된다.
+
 
 **Examples**
 
+시군구청을 기준으로 반경 250,500,750,1000,1250,1500 미터의 8방향 Polar Grid를 생성 후 각 셀마다 아파트의 수를 계산할 결과를 지도화한 결과입니다.
+
+  .. image:: images/polargridsfromfeatures.png

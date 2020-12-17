@@ -1,9 +1,9 @@
 .. _localleess:
 
-Local Lee's S
-=============
+Lee의 국지적 S 통계량
+==========================================
 
-Calculate Local Lee's S values.
+Lee의 국지적 S 통계량을 계산합니다.
 
 **Syntax**
 
@@ -21,46 +21,46 @@ LocalLeesS (SimpleFeatureCollection inputFeatures, String inputField, SpatialCon
      - **Required**
 
    * - inputFeatures
-     - The features for which analysis will be performed.
+     - 통계량을 계산할 입력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - inputField
-     - The numeric field to be evaluated.
+     - 수치형 입력 필드 변수를 설정합니다.
      - String
-     - 
+     -
      - ✓
 
    * - spatialConcept
-     - Specifies how spatial relationships among features are conceptualized.
+     - 피처들 간에 공간 관계를 설정하는 방식을 선택합니다.
      - SpatialConcept
      - InverseDistance
-     - 
+     -
 
    * - distanceMethod
-     - Specifies how distances are calculated from each feature to neighboring features.
+     - 분석 대상 피처로부터 이웃 피처까지의 거리를 계산하는 방법을 설정합니다.
      - DistanceMethod
      - Euclidean
-     - 
+     -
 
    * - standardization
-     - Row Standardization.
+     - 통계량 계산시 행 표준화 적용 여부를 설정합니다.
      - StandardizationMethod
      - None
-     - 
+     -
 
    * - searchDistance
-     - Specifies a cutoff distance for Inverse Distance and Fixed Distance options. 
+     - 역거리 혹은 고정 거리 옵션 선택 시 기준 값을 지정합니다.
      - Double
      - 0.0
-     - 
+     -
 
    * - selfNeighbors
-     - Includes itself in its own list of neighbors.
+     - 분석 대상 피처 자체를 자신의 이웃 리스트에 포함할 것인지 여부를 선택합니다.
      - Boolean
      - true
-     - 
+     -
 
 **Process Outputs**
 
@@ -74,16 +74,18 @@ LocalLeesS (SimpleFeatureCollection inputFeatures, String inputField, SpatialCon
      - **Required**
 
    * - result
-     - The output features to receive the results fields.
+     - 출력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- - spatialConcept: InverseDistance(Default), InverseDistanceSquared, FixedDistance, ZoneOfIndifference, KNearestNeighbors, ContiguityEdgesNodes, ContiguityEdgesOnly, ContiguityNodesOnly, WeightsFromFile
- - distanceMethod: Euclidean(Default), Manhattan
- - standardization: None(Default), Row
+ - spatialConcept: InverseDistance(기본값), InverseDistanceSquared, FixedDistance, ZoneOfIndifference, KNearestNeighbors, ContiguityEdgesNodes, ContiguityEdgesOnly, ContiguityNodesOnly, WeightsFromFile
+ - distanceMethod: Euclidean(기본값), Manhattan
+ - standardization: None(기본값), Row
+ - Output 레이어는 inputFeatures의 모든 필드를 포함해서 LLsIndex, LLsZScore, LLsPValue 필드가 추가된다.
 
 **Examples**
 
+  .. image:: images/localleess.png

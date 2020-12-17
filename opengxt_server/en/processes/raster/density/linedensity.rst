@@ -1,9 +1,9 @@
 .. _linedensity:
 
-Line Density
-============
+라인 밀도분석
+=====================
 
-Calculates the density of linear features in the neighborhood of each output raster cell.
+설정한 탐색반경을 이용하여 라인 피처에 대한 밀도분석을 수행합니다.
 
 **Syntax**
 
@@ -21,34 +21,34 @@ LineDensity (SimpleFeatureCollection inputFeatures, String populationField, Doub
      - **Required**
 
    * - inputFeatures
-     - The input line features for which to calculate the density.
+     - 밀도를 계산할 라인 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - populationField
-     - The field denoting population values for each feature.
+     - 각 피처에 대한 모집단 값을 나타내는 필드입니다.
      - String
-     - 
-     - 
+     -
+     -
 
    * - searchRadius
-     - The search radius within which to calculate density.
+     - 밀도를 계산할 탐색 반경입니다.
      - Double
      - 0.0
-     - 
+     -
 
    * - cellSize
-     - The cell size for the output raster.
+     - 출력 래스터 레이어의 셀 크기입니다.
      - Double
      - 0.0
-     - 
+     -
 
    * - extent
-     - The extent for the output raster.
+     - 출력 래스터 레이어의 공간 범위입니다.
      - ReferencedEnvelope
-     - 
-     - 
+     -
+     -
 
 **Process Outputs**
 
@@ -62,14 +62,18 @@ LineDensity (SimpleFeatureCollection inputFeatures, String populationField, Doub
      - **Required**
 
    * - result
-     - The output density raster.
+     - 출력 밀도 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - searchRadius 파라미터를 설정하지 않으면 Extent의 Width와 Height 중 작은 값을 30으로 나눈 값을 사용한다.
+ - extent 파라미터를 설정하지 않으면 inputFeatures 레이어의 범위를 사용한다.
+ - cellSize 파라미터를 설정하지 않으면 Extent의 Width와 Height 중 작은 값을 250으로 나눈 값을 사용한다.
+
 
 **Examples**
 
+  .. image:: images/linedensity.png

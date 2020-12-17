@@ -1,9 +1,9 @@
 .. _rasterflowdirection:
 
-Flow Direction
-==============
+흐름 방향
+===============
 
-Creates a raster of flow direction from each cell to its downslope neighbor, or neighbors, using D8 methods.
+D8 방법을 사용하여 각 셀에서 아래쪽 경사 방향의 이웃 또는 이웃하는 셀들로부터 흐름 방향의 래스터를 만듭니다.
 
 **Syntax**
 
@@ -21,9 +21,9 @@ RasterFlowDirection (GridCoverage2D inputCoverage) : GridCoverage2D
      - **Required**
 
    * - inputCoverage
-     - The input surface raster.
+     - 표고값을 저장(DEM, DSM 등)한 입력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Process Outputs**
@@ -38,14 +38,15 @@ RasterFlowDirection (GridCoverage2D inputCoverage) : GridCoverage2D
      - **Required**
 
    * - result
-     - Output raster.
+     - 흐름 방향이 계산된 출력 래스터 레이어입니다.
      - GridCoverage2D
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - 좌표체계, NoData는 입력 데이터의 값을 따른다.
 
 **Examples**
 
+  .. image:: images/rasterflowdirection.png

@@ -1,9 +1,9 @@
 .. _centralfeature:
 
-Central Feature
-===============
+중심 피처 찾기
+========================
 
-Identifies the most centrally located feature in a point, line, or polygon feature class.
+입력 피쳐들의 지리적 중심점에 가장 가까운 피처를 반환합니다.
 
 **Syntax**
 
@@ -21,34 +21,34 @@ CentralFeature (SimpleFeatureCollection inputFeatures, DistanceMethod distanceMe
      - **Required**
 
    * - inputFeatures
-     - The features containing a distribution of features from which to identify the most centrally located feature.
+     - 중심 피처를 찾는데 사용될 입력 피처 레이어를 설정합니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - distanceMethod
-     - Specifies how distances are calculated from each feature to neighboring features
+     - 분석 대상 피처로부터 이웃 피처까지의 거리를 계산하는 방법을 설정합니다.
      - DistanceMethod
      - Euclidean
-     - 
+     -
 
    * - weightField
-     - The numeric field used to weight distances in the origin-destination distance matrix.
+     - 가중평균 중심점을 생성하는데 사용될 필드를 설정합니다.
      - String
-     - 
-     - 
+     -
+     -
 
    * - selfPotentialWeightField
-     - The field representing self-potential. the distance or weight between a feature and itself.
+     - 자기 자신과 다른피처와의 거리 또는 가중치 값을 나타내는 필드를 설정합니다.
      - String
-     - 
-     - 
+     -
+     -
 
    * - caseField
-     - The field used to group features for separate central feature computations.
+     - 그룹별 중심을 적용하는 경우 그룹을 구분하는데 사용되는 필드를 설정합니다.
      - String
-     - 
-     - 
+     -
+     -
 
 **Process Outputs**
 
@@ -62,14 +62,18 @@ CentralFeature (SimpleFeatureCollection inputFeatures, DistanceMethod distanceMe
      - **Required**
 
    * - result
-     - A point features that will contain the features representing the centers of the input features.
+     - 저장할 결과 레이어를 설정합니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- - distanceMethod: Euclidean(Default), Manhattan
+ - distanceMethod: Euclidean(기본값), Manhattan
+ - inputFeatures의 Centroid를 이용하여 계산한다.
 
 **Examples**
 
+서울시 아파트 분포에 대한 시군구별 Central Feature를 분석한 결과입니다.
+
+  .. image:: images/centralfeature.png

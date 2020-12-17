@@ -1,9 +1,9 @@
 .. _calculatelength:
 
-Calculate Length
-================
+길이 계산
+===============
 
-Adds the length field to the input features and calculates feature's length.
+입력 레이어에 길이 필드를 추가한 후 길이를 계산합니다.
 
 **Syntax**
 
@@ -21,22 +21,22 @@ CalculateLength (SimpleFeatureCollection inputFeatures, String lengthField, Dist
      - **Required**
 
    * - inputFeatures
-     - The input line or polygon features to be calculated.
+     - 길이를 계산할 라인 또는 폴리곤 레이어.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - lengthField
-     - Length field that will be calculated. geom_len is a default.
+     - 계산될 길이 필드. geom_len 이 기본값 입니다.
      - String
      - geom_len
-     - 
+     -
 
    * - lengthUnit
-     - Length unit that will be applied.
+     - 계산될 길이의 단위입니다.
      - DistanceUnit
      - Default
-     - 
+     -
 
 **Process Outputs**
 
@@ -50,14 +50,20 @@ CalculateLength (SimpleFeatureCollection inputFeatures, String lengthField, Dist
      - **Required**
 
    * - result
-     - Output features.
+     - 출력 레이어.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- - lengthUnit: Default(Default), Meters, Kilometers, Inches, Feet, Yards, Miles, NauticalMiles
+ - lengthUnit: Default(기본값), Meters, Kilometers, Inches, Feet, Yards, Miles, NauticalMiles
+ - inputFeatures 파라미터는 폴리곤 또는 라인 피처 타입이어야 한다.
+ - 길이(둘레) 계산값은 inputFeatures의 좌표계 단위를 따른다.
+
 
 **Examples**
 
+라인의 길이를 len 필드에 계산한 결과입니다.
+
+  .. image:: images/calculatelength.png

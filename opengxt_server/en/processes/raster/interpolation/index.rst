@@ -1,9 +1,9 @@
 .. _interpolation:
 
-Interpolation
-=============
+공간내삽(Interpolation)
+=======================================
 
-Perform interpolation analysis, using points and attribute values.
+포인트와 속성값을 이용하여 Interpolation을 수행하는 프로세스들로 구성됩니다.
 
 .. toctree::
    :maxdepth: 2

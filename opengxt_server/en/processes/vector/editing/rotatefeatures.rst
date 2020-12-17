@@ -1,9 +1,9 @@
 .. _rotatefeatures:
 
-Rotate Features
+피처 회전
 ===============
 
-Rotate features using anchor point and angle in degree unit.
+앵커 포인트 및 각도 (도 단위)를 사용하여 피쳐를 회전합니다.
 
 **Syntax**
 
@@ -21,19 +21,19 @@ RotateFeatures (SimpleFeatureCollection inputFeatures, Point anchor, Expression 
      - **Required**
 
    * - inputFeatures
-     - Input features that can be multipoint, line, polygon.
+     - 회전할 입력 레이어입니다.
      - SimpleFeatureCollection
      - 
      - ✓
 
    * - anchor
-     - The pivot point around which to rotate the feature. The default is the center of the input features.
+     - 피처 레이어를 회전시킬 피벗 포인트입니다. 기본값은 입력 피처 레이어 범위의 중심점입니다.
      - Point
      - 
      - 
 
    * - angle
-     - Angle in degree unit.
+     - 도 단위의 회전 각도입니다.
      - Expression
      - 0.0
      - ✓
@@ -50,14 +50,19 @@ RotateFeatures (SimpleFeatureCollection inputFeatures, Point anchor, Expression 
      - **Required**
 
    * - result
-     - Output features.
+     - 회전한 출력 레이어입니다.
      - SimpleFeatureCollection
      - 
      - ✓
 
 **Constraints**
 
- 
+  - anchor 파라미터는 Point 지오메트리 유형이다.
+  - angle 파라미터는 도 단위의 회전 각도이며 Expression 표현식을 사용하여 각도를 정의할 수 있다.
 
 **Examples**
+
+폴리곤의 Centroid를 기준으로 45도 회전한 결과입니다.
+
+  .. image:: images/rotatefeatures.png
 

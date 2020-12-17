@@ -1,9 +1,9 @@
 .. _pearsoncorrelation:
 
-Pearson Correlation Coefficient
-===============================
+피어슨 상관 계수
+===========================
 
-Pearson correlation coefficient is obtained by dividing the covariance of the two variables by the product of their standard deviations.
+피어슨 상관 계수는 두 변수의 공분산을 표준 편차의 곱으로 나눔으로써 구합니다.
 
 **Syntax**
 
@@ -21,15 +21,15 @@ Pearson (SimpleFeatureCollection inputFeatures, String inputFields) : PearsonRes
      - **Required**
 
    * - inputFeatures
-     - Input features to be calculated.
+     - 피어슨 상관계수를 계산할 입력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - inputFields
-     - The comma separated numeric field(s) containing attribute values used to calculate the specified statistic.
+     - 피어슨 상관계수를 계산할 속성을 담고 있는 쉼표로 구분된 숫자 필드의 목록입니다.
      - String
-     - 
+     -
      - ✓
 
 **Process Outputs**
@@ -44,14 +44,37 @@ Pearson (SimpleFeatureCollection inputFeatures, String inputFields) : PearsonRes
      - **Required**
 
    * - result
-     - Result Pearson Correlation Coefficient.
+     - 피어슨 상관계수 분석결과입니다.
      - PearsonResult
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - Output은 XML로 반환한다.
 
 **Examples**
 
+pop2008, pop_den 두 필드를 이용하여 Pearson 상관 계수를 분석한 결과는 다음의 XML 포맷으로 반환됩니다.
+
+.. code-block:: XML
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <PearsonResult>
+      <PropertyName Name="pop2008">
+        <Item Name="pop2008">
+          <Value>1.0</Value>
+        </Item>
+        <Item Name="pop_den">
+          <Value>0.3002549407911261</Value>
+        </Item>
+      </PropertyName>
+      <PropertyName Name="pop_den">
+        <Item Name="pop2008">
+          <Value>0.3002549407911261</Value>
+        </Item>
+        <Item Name="pop_den">
+          <Value>1.0</Value>
+        </Item>
+      </PropertyName>
+    </PearsonResult>

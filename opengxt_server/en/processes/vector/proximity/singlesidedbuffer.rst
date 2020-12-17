@@ -1,9 +1,9 @@
 .. _singlesidedbuffer:
 
-Single-Sided Buffer Features
-============================
+단면 버퍼
+===============
 
-Buffers a features using a certain distance expression.
+거리값, 필드값 또는 필드의 조합을 이용한 거리 표현식을 정의하여  라인 레이어의 단면 버퍼를 생성합니다.
 
 **Syntax**
 
@@ -21,28 +21,28 @@ SingleSidedBuffer (SimpleFeatureCollection inputFeatures, Expression distance, D
      - **Required**
 
    * - inputFeatures
-     - Line features to be buffered.
+     - 버퍼를 적용할 입력 라인 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - distance
-     - The distance expression used to create distance. Positive for the right side, negative for the left side. ex) 1000 or [field] or [field] * 0.5 etc...
+     - 거리를 설정하기 위해 사용되는 거리 표현식입니다. 예) 1000 또는 [field] 또는 [field] * 0.5 등...
      - Expression
-     - 
+     -
      - ✓
 
    * - distanceUnit
-     - The desired linear unit.
+     - 거리 단위입니다.
      - DistanceUnit
      - Default
-     - 
+     -
 
    * - quadrantSegments
-     - the number of line segments used to represent a quadrant of a circle.
+     - 원의 사분면을 나타내는데 사용되는 세그먼트의 개수입니다.
      - Integer
      - 8
-     - 
+     -
 
 **Process Outputs**
 
@@ -56,14 +56,21 @@ SingleSidedBuffer (SimpleFeatureCollection inputFeatures, Expression distance, D
      - **Required**
 
    * - result
-     - Output features.
+     - 출력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- - distanceUnit: Default(Default), Meters, Kilometers, Inches, Feet, Yards, Miles, NauticalMiles
+ - distanceUnit: Default(기본값), Meters, Kilometers, Inches, Feet, Yards, Miles, NauticalMiles
+ - inputFeatures는 라인 타입이어야 한다.
+ - distance expression은 숫자, 숫자가 리턴되는 `함수식 <http://docs.geoserver.org/stable/en/user/filter/function_reference.html>`_ 모두 가능하다.
+ - distance 파라미터의 값이 양수일 경우 라인 진행방향의 왼쪽, 음수일 경우 진행방향의 오른쪽으로 버퍼가 생성된다.
+
 
 **Examples**
 
+버퍼 거리값이 양수인 경우 다음과 같인 라인 진행방향의 왼쪽을 기준으로 버퍼가 생성됩니다.
+
+  .. image:: images/singlesidedbuffer.png

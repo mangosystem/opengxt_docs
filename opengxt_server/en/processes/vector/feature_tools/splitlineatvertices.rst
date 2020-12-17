@@ -1,9 +1,9 @@
 .. _splitlineatvertices:
 
-Split Line At Vertices
-======================
+라인을 세그먼트로 분할
+====================================
 
-Splits line features based on their vertices.
+라인/폴리곤 피처의 각 버텍스별(라인 세그먼트)로 분할한 라인을 생성합니다.
 
 **Syntax**
 
@@ -21,9 +21,9 @@ SplitLineAtVertices (SimpleFeatureCollection lineFeatures) : SimpleFeatureCollec
      - **Required**
 
    * - lineFeatures
-     - The line or polygon features that will be splitted.
+     - 세그먼트별로 분할할 라인 또는 폴리곤 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Process Outputs**
@@ -38,14 +38,18 @@ SplitLineAtVertices (SimpleFeatureCollection lineFeatures) : SimpleFeatureCollec
      - **Required**
 
    * - result
-     - Result line features.
+     - 세그먼트로 분할한 출력 라인 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - inputFeatures 파라미터는 라인 또는 폴리곤 레이어 이어야 한다. 
 
 **Examples**
+
+폴리곤 피처의 boundary를 버텍스마다 라인 피처로 변환환 결과입니다.
+
+  .. image:: images/splitlineatvertices.png
 

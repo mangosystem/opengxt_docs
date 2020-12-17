@@ -1,9 +1,9 @@
 .. _pointstoline:
 
-Points To Line
-==============
+포인트를 라인으로 변환
+====================================
 
-Creates line features from points.
+포인트의 정렬 필드값을 이용하여 속성이 같은 필드값별로 라인을 생성합니다.
 
 **Syntax**
 
@@ -21,40 +21,40 @@ PointsToLine (SimpleFeatureCollection inputFeatures, String lineField, String so
      - **Required**
 
    * - inputFeatures
-     - The point features to be converted into lines.
+     - 라인을 생성할 포인트 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
    * - lineField
-     - Each feature in the output will be based on unique values in the Line Group Field. 
+     - 라인 그룹 필드를 설정하면 그룹별로 각각의 라인을 생성할 수 있습니다.
      - String
-     - 
-     - 
+     -
+     -
 
    * - sortField
-     - By default, points used to create each output line feature will be used in the order they are found. If a different order is desired, specify a Sort Field.
+     - 기본값으로 저장된 포인트의 순서대로 라인을 생성합니다. 만약 정해진 정렬 필드가 있다면 이를 설정할 수 있습니다.
      - String
-     - 
-     - 
+     -
+     -
 
    * - useBezierCurve
-     - Use Bezier Curve.
+     - 선을 생성할 때 베이지어 커브를 사용할 지 여부를 설정합니다.
      - Boolean
      - false
-     - 
+     -
 
    * - closeLine
-     - Specifies whether output line features should be closed.
+     - 생성된 라인의 폐합 여부를 설정합니다.
      - Boolean
      - false
-     - 
+     -
 
    * - geodesicLine
-     - Specifies whether output line should be geodesic line. Only geographical CRSs are supported.
+     - 출력 라인 생성 시 측지선을 사용할 지 여부를 설정합니다. 지리좌표계만 지원합니다.
      - Boolean
      - false
-     - 
+     -
 
 **Process Outputs**
 
@@ -68,14 +68,23 @@ PointsToLine (SimpleFeatureCollection inputFeatures, String lineField, String so
      - **Required**
 
    * - result
-     - The line feature class which will be created from the input points. 
+     - 입력 포인트로부터 라인을 생성한 출력 레이어입니다.
      - SimpleFeatureCollection
-     - 
+     -
      - ✓
 
 **Constraints**
 
- 
+ - lineField 파라미터를 설정하면 lineField의 고유값에 따른 각각의 라인을 생성한다.
+ - sortField 파라미터를 설정하면 sortField로 정렬한 포인트를 이용하여 라인을 생성한다.
+ - closeLine 파라미터가 True인 경우 시작점과 끝점을 연결하여 폴리곤을 생성한다.
 
 **Examples**
 
+카테고리와 일련번호를 포함한 포인트를 Line올 변환한 결과입니다. 일련번호 순서에 따라 라인이 생성되며 2개의 카테고리로 구성됩니다.
+
+  .. image:: images/pointstoline1.png
+
+위 예에서 closeLine을 True로 설정하면 폴리곤이 생성됩니다.
+
+  .. image:: images/pointstoline2.png

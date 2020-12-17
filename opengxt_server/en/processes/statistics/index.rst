@@ -1,9 +1,8 @@
 .. _statistics:
 
-Statistics
-==========
 
-A process group associated with spatial statistical analysis.
+공간통계 분석 프로세스
+========================
 
 .. toctree::
    :maxdepth: 2

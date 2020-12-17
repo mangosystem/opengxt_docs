@@ -1,9 +1,9 @@
 .. _tininterpolation:
 
-Triangulated Irregular Network(TIN) Interpolation
+Triangulated Irregular Network(TIN) 보간
 ===========================================================================
 
-Interpolates a raster surface from points using an Triangulated Irregular Network(TIN) technique.
+입력 피처에 대해 Triangulated Irregular Network(TIN) (TPS) 보간법을 적용한 래스터를 생성합니다.
 
 **Syntax**
 
@@ -21,31 +21,31 @@ TINInterpolation (SimpleFeatureCollection inputFeatures, Expression inputField, 
      - **Required**
 
    * - inputFeatures
-     - The input features for which to calculate the interpolation.
+     - 보간할 입력 레이어입니다.
      - SimpleFeatureCollection
      -
      - ✓
 
    * - inputField
-     - The field that holds a height or magnitude value for each point.
+     - 각각의 샘플 포인트에 대한 높이 또는 크기 등 값을 포함한 필드입니다.
      - Expression
      -
      - ✓
 
    * - pixelType
-     - The pixel type for the output raster.
+     - 출력 래스터 레이어의 픽셀 유형입니다.
      - RasterPixelType
      - Float
      -
 
    * - cellSize
-     - The cell size for the output raster.
+     - 출력 래스터 레이어의 셀 크기입니다.
      - Double
      - 0.0
      -
 
    * - extent
-     - The extent for the output raster.
+     - 출력 래스터 레이어의 공간 범위입니다.
      - ReferencedEnvelope
      -
      -
@@ -62,13 +62,18 @@ TINInterpolation (SimpleFeatureCollection inputFeatures, Expression inputField, 
      - **Required**
 
    * - result
-     - The output TIN Interpolation raster.
+     - 보간한 출력 래스터 레이어입니다.
      - GridCoverage2D
      -
      - ✓
 
 **Constraints**
 
-- pixelType: BYTE, SHORT, INTEGER, FLOAT(default), DOUBLE
+- pixelType: BYTE, SHORT, INTEGER, FLOAT(기본값), DOUBLE
+- extent 파라미터를 설정하지 않으면 inputFeatures 레이어의 범위를 사용한다.
+- cellSize 파라미터를 설정하지 않으면 Extent의 Width와 Height 중 작은 값을 250으로 나눈 값을 사용한다.
+- 입력 레이어가 라인스트링, 폴리곤인 경우 모든 버텍스를 추출하여 보간에 사용한다.
 
 **Examples**
+
+  .. image:: images/tininterpolation.png
