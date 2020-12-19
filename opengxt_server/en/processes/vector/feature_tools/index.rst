@@ -34,5 +34,6 @@
    concavehull
    ringmap
    windrosemap
+   multiwindrosemap
    flowmap
    reproject
