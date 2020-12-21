@@ -50,7 +50,7 @@ RasterCutFill2 (GridCoverage2D beforeCoverage, GridCoverage2D afterCoverage, Geo
      - **Required**
 
    * - result
-     - 성절토량이 계산된 출력 레이어입니다. 지오메트리가 포함되어 있지 않습니다.
+     - 성절토량이 계산된 출력 레이어입니다.
      - SimpleFeatureCollection
      -
      - ✓
@@ -68,6 +68,9 @@ RasterCutFill2 (GridCoverage2D beforeCoverage, GridCoverage2D afterCoverage, Geo
 **Examples**
 
 DEM으로부터 특정 영역(버퍼영역)의 절성토량을 계산한 출력 레이어의 예입니다.
-category, count, area, volume 속성정보를 포함합니다.
+
+  .. image:: images/rastercutfill.png
+
+category, count, area, volume 필드를 포함한 출력 레이어의 예입니다. 
 
   .. image:: images/rastercutfill-table.png
