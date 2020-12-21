@@ -10,6 +10,7 @@
 
    fishnetcount
    fishnetsize
+   regularpoints
    hexagon
    triangulargrid
    circulargrid
