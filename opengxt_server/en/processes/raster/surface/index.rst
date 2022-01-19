@@ -9,6 +9,7 @@
    :maxdepth: 2
 
    rasterprofile
+   rastersurfacearea
    rasterlinearlos
    rasterradiallos
    rasterhighlow

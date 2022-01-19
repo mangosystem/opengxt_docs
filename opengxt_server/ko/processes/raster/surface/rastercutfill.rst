@@ -7,7 +7,7 @@ DEM과 관심영역의 기준 높이를 이용하여 절성토량을 계산합�
 
 **Syntax**
 
-RasterCutFill(GridCoverage2D inputDEM, Geometry cropShape, Double baseHeight): SimpleFeatureCollection
+RasterCutFill(GridCoverage2D inputCoverage, Geometry cropShape, Double baseHeight): SimpleFeatureCollection
 
 **Input Parameters**
 

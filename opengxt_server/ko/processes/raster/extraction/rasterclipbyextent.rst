@@ -7,7 +7,7 @@
 
 **Syntax**
 
-RasterClipByExtent (GridCoverage2D inputCoverage, ReferencedEnvelope cropShape) : GridCoverage2D
+RasterClipByExtent (GridCoverage2D inputCoverage, ReferencedEnvelope extent) : GridCoverage2D
 
 **Input Parameters**
 
@@ -26,7 +26,7 @@ RasterClipByExtent (GridCoverage2D inputCoverage, ReferencedEnvelope cropShape) 
      -
      - ✓
 
-   * - cropShape
+   * - extent
      - 래스터를 잘라낼 공간 범위입니다. 설정한 범위의 좌표체계가 잘라낼 래스터 레이어의 좌표체계와 다를 경우 래스터 레이어의 좌표체계로 변환합니다.
      - ReferencedEnvelope
      -
@@ -51,7 +51,7 @@ RasterClipByExtent (GridCoverage2D inputCoverage, ReferencedEnvelope cropShape) 
 
 **Constraints**
 
- - Extent 파라미터는 BoundingBoxData 타입으로 다음과 같이 crs, dimensions, LowerCorner, UpperCorner로 구성된다.
+ - extent 파라미터는 BoundingBoxData 타입으로 다음과 같이 crs, dimensions, LowerCorner, UpperCorner로 구성된다.
 
   .. code-block::
 
