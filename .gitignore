@@ -9,6 +9,7 @@ hs_err_pid*
 
 # Build results
 _build/
+__pycache__
 
 # =========================
 # Operating System Files
