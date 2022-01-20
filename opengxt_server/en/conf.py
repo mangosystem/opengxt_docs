@@ -44,7 +44,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'OpenGXT for Server'
-copyright = '2010-2020, Mango System inc., CC-SA'
+copyright = '2010-2022, Mango System inc., CC-SA'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -244,7 +244,7 @@ man_pages = [
 epub_title = 'OpenGXT'
 epub_author = 'OpenGXT Development Team'
 epub_publisher = 'OpenGXT Development Team'
-epub_copyright = '2010-2020, Mango System inc., CC-SA'
+epub_copyright = '2010-2022, Mango System inc., CC-SA'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
