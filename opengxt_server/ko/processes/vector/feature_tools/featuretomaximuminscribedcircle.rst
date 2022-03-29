@@ -1,0 +1,63 @@
+.. _featuretomaximuminscribedcircle:
+
+Maximum Inscribed Circle 폴리곤으로 변환
+================================================================================================
+
+각 폴리곤 피처마다 가장 내접하는 최대 크기의 원을 반환합니다.
+
+**Syntax**
+
+FeatureToMaximumInscribedCircle (SimpleFeatureCollection inputFeatures, Boolean singlePart) : SimpleFeatureCollection
+
+**Input Parameters**
+
+.. list-table::
+   :widths: 10 50 20 10 10
+
+   * - **Identifier**
+     - **Description**
+     - **Type**
+     - **Default**
+     - **Required**
+
+   * - inputFeatures
+     - 폴리곤 또는 멀티폴리곤 입력 레이어입니다.
+     - SimpleFeatureCollection
+     -
+     - ✓
+
+   * - singlePart
+     - 멀티파트를 각각의 싱글파트로 변환 후 생성할 지 여부를 설정합니다.
+     - Boolean
+     - true
+     -
+
+**Process Outputs**
+
+.. list-table::
+   :widths: 10 50 20 10 10
+
+   * - **Identifier**
+     - **Description**
+     - **Type**
+     - **Default**
+     - **Required**
+
+   * - result
+     - 출력 레이어입니다.
+     - SimpleFeatureCollection
+     -
+     - ✓
+
+**Constraints**
+
+ - inputFeatures는 폴리곤 또는 멀티폴리곤이어야 합니다.
+ - singlePart가 True이고 Geometry가 MultiPart인 경우 모든 Part의 Geometry를 변환한다.
+ - GeoServer 2.17.x(GeoTools 23.x) 이상의 버전만 지원합니다.
+
+**Examples**
+
+폴리곤 피처의 최대 내접 원으로 변환한 결과입니다.
+
+  .. image:: images/featuretomaximuminscribedcircle.png
+

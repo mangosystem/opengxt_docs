@@ -12,6 +12,7 @@
    singlesidedbuffer
    multipleringbuffer
    wedgebuffer
+   variablebuffer
    near
    nearestneighborcount
    polargridsfromgeometry

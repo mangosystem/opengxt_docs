@@ -20,9 +20,40 @@ OpenGXT의 공간분석기능은 Geometry, 벡터, 래스터, 공간통계, 사�
 .. image:: images/process-categories.png
 
 
+관련 프로젝트
+-----------------
+
+  - `GeoTools <http://geotools.org>`_
+  - `GeoServer <http://geoserver.org>`_
+  - `uDig <http://locationtech.org/projects/technology.udig>`_  
+  - `uDig Processing Toolbox <https://github.com/mangosystem/opengxt-udig-plugin>`_  
+
+
+
+라이선스
+=========
+
+  - GeoTools process-spatialstatistics : `LGPL <http://www.gnu.org/licenses/lgpl.html>`_. `License guide <http://docs.geotools.org/latest/userguide/welcome/license.html>`_  
+  - GeoServer gs-wps-spatialstatistics : `GPL <http://www.gnu.org/licenses/old-licenses/gpl-2.0.html>`_  
+  - uDig org.locationtech.udig.processingtoolbox : `EPL <http://www.eclipse.org/legal/epl-v10.html>`_ + `BSD <http://udig.refractions.net/files/bsd3-v10.html>`_  
+
+
+
+참여하기
+============
+
+OpenGXT는 소스코드에서부터, 지역화, 배포에 이르기까지 모든 과정이 공개되어 있으며, GitHub, Transifex, SourceForge 등 오픈소스를 지원하는 플랫폼을 활용합니다.
+
+  - `GitHub <https://github.com/mangosystem/opengxt>`_  
+  - `Transifex 지역화 <https://www.transifex.com/mangosystem/opengxt>`_  
+  - `SourceForge 배포 <https://sourceforge.net/projects/opengxt>`_  
+
+
+
 관련 문서
------------------------------
-**GeoTools Developer Guide**
+============
+
+**OpenGXT Developer Guide**
 
   - `Korean v1.0-latest - 2MB(PDF) <https://github.com/mangosystem/opengxt/blob/master/docs/manual/GeoTools_Process_1.0_Developer_Guide_ko_v.1.latest.pdf>`_  
 
@@ -39,35 +70,15 @@ OpenGXT의 공간분석기능은 Geometry, 벡터, 래스터, 공간통계, 사�
   - `2018 OSGeo UN Committee Educational Challenge - Training Material for UN Open GIS Spiral 3(HTML) <https://wiki.osgeo.org/wiki/Training_Material_for_UN_Open_GIS_Spiral_3>`_  
 
 
-관련 프로젝트
------------------
-
-  - `GeoTools <http://geotools.org>`_
-  - `GeoServer <http://geoserver.org>`_
-  - `uDig <http://locationtech.org/projects/technology.udig>`_  
-  - `uDig Processing Toolbox <https://github.com/mangosystem/opengxt-udig-plugin>`_  
-
-
-라이선스
-=========
-
-  - GeoTools process-spatialstatistics : `LGPL <http://www.gnu.org/licenses/lgpl.html>`_. `License guide <http://docs.geotools.org/latest/userguide/welcome/license.html>`_  
-  - GeoServer gs-wps-spatialstatistics : `GPL <http://www.gnu.org/licenses/old-licenses/gpl-2.0.html>`_  
-  - uDig org.locationtech.udig.processingtoolbox : `EPL <http://www.eclipse.org/legal/epl-v10.html>`_ + `BSD <http://udig.refractions.net/files/bsd3-v10.html>`_  
-
-
-참여하기
-============
-
-OpenGXT는 소스코드에서부터, 지역화, 배포에 이르기까지 모든 과정이 공개되어 있으며, GitHub, Transifex, SourceForge 등 오픈소스를 지원하는 플랫폼을 활용합니다.
-
-  - `GitHub <https://github.com/mangosystem/opengxt>`_  
-  - `Transifex 지역화 <https://www.transifex.com/mangosystem/opengxt>`_  
-  - `SourceForge 배포 <https://sourceforge.net/projects/opengxt>`_  
-
 
 활용사례
 ============
+
+(주)망고시스템의 공간정보에 대한 수집, 편집, 공간분석, 시각화, 공유를 위한 [`PINOGIO PLATFORM <http://mangosystem.com/download/PINOGIO_PLATFORM-V3.0_PRODUCT_INTRODUCTION.pdf>`_]에 분석도구로 OpenGXT가 기본 탑재되어 있습니다.
+
+.. image:: images/showcase-pinogio.png
+
+
 
 2018년 NIPA가 발주하고 국방지형정보단이 수요자인 [`오픈소스 기반 군 공간정보 포털 시스템 <http://nipa.mago3d.net>`_]입니다. 가이아쓰리디(주)와 망고시스템이 수행했고 군에서 사용하는 지형분석 및 경로분석을 적용하였습니다.
 
@@ -111,7 +122,7 @@ LH 도시문제 해결을 위한 데이터 플랫폼인 [`COMPAS <https://compas
 
 
 
-데모 프로젝트
+기타 활용 케이스
 
 .. image:: images/showcase-demo.png
 

@@ -29,8 +29,10 @@
    intersectionpoints
    featuretooctagonalenvelope
    featuretominimumrectangle
+   featuretomaximuminscribedrectangle
    featuretoconvexhull
    featuretominimumboundingcircle
+   featuretomaximuminscribedcircle
    concavehull
    ringmap
    windrosemap
